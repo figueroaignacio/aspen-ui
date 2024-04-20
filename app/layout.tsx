@@ -1,3 +1,6 @@
+// Components
+import { Navbar } from "@/components/navbar";
+
 // Global Styles
 import "./globals.css";
 
@@ -49,6 +52,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Navbar />
       <body>{children}</body>
     </html>
   );
