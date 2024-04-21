@@ -1,4 +1,5 @@
 // Components
+import { Navbar } from "@/components/navbar";
 
 // Providers
 import { ThemeProvider } from "next-themes";
@@ -47,13 +48,14 @@ export const metadata: Metadata = {
   keywords: siteConfig.keywords,
 };
 
-export default function RootLayout({
+export default function LobbyLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <Navbar />
       <body>
         <ThemeProvider
           attribute="class"
