@@ -5,7 +5,7 @@ import { Navbar } from "@/components/navbar";
 import { ThemeProvider } from "next-themes";
 
 // Global Styles
-import "./globals.css";
+import "@/styles/globals.css";
 
 // Config
 import { siteConfig } from "@/config/site";
