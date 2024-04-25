@@ -1,3 +1,3 @@
 export default function ComponentsPage() {
-  return <div>page</div>;
+  return <div>Components page goes here</div>;
 }

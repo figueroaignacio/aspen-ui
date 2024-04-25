@@ -1,3 +1,3 @@
 export default function DocsPage() {
-  return <div>page</div>;
+  return <div>Docs component goes here!</div>;
 }

@@ -1,3 +1,3 @@
 export default function TemplatesPage() {
-  return <div>page</div>;
+  return <div>Templates component goes here!</div>;
 }
