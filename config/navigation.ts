@@ -8,6 +8,10 @@ export const navigation = Object.freeze([
     href: "/components",
   },
   {
+    title: "Templates",
+    href: "/templates",
+  },
+  {
     title: "GitHub",
     href: "https://github.com/figueroaignacio/ui.nio",
   },
