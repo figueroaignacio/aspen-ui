@@ -1,13 +1,8 @@
 // Components
-import { Navbar } from "@/components/navbar";
-
-// Providers
-import { ThemeProvider } from "next-themes";
+import { Navbar } from "@/components/Navbar";
 
 // Global Styles
 import "@/styles/globals.css";
-
-// Config
 
 export default function LobbyLayout({
   children,
@@ -16,16 +11,11 @@ export default function LobbyLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <Navbar />
       <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <Navbar />
+        <main className="px-6 lg:px-0 min-h-screen py-6 m-auto container max-w-7xl">
           {children}
-        </ThemeProvider>
+        </main>
       </body>
     </html>
   );
