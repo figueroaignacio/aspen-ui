@@ -65,9 +65,6 @@ export function Header() {
             </li>
           ))}
         </ul>
-        <li>
-          <ToggleTheme />
-        </li>
       </nav>
     </header>
   );
