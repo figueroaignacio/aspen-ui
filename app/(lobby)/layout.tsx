@@ -14,7 +14,7 @@ export default function LobbyLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-background text-foreground">
+      <body>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

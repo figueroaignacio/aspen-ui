@@ -4,14 +4,23 @@
 
 @layer base {
   :root {
-    --background: #f8f8f8;
-    --foreground: #090909;
-    --border: rgba(0, 0, 0, 0.2);
+    --background: hsl(0, 0%, 97%);
+    --foreground: hsl(0, 0%, 4%);
+    --border: hsla(0, 0%, 0%, 0.2);
   }
 
   .dark {
-    --background: #090909;
-    --foreground: #f8f8f8;
-    --border: rgba(255, 255, 255, 0.1);
+    --background: hsl(0, 0%, 4%);
+    --foreground: hsl(0, 0%, 97%);
+    --border: hsla(0, 0%, 100%, 0.1);
+  }
+}
+
+@layer base {
+  * {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
