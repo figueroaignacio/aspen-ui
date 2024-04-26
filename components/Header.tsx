@@ -42,7 +42,7 @@ export function Header() {
       {/* Backdrop */}
       {isMenuOpen && (
         <div
-          className="fixed top-0 left-0 w-full h-full backdrop-blur-3xl z-10"
+          className="fixed top-0 left-0 w-full h-full backdrop-blur-sm z-10"
           onClick={toggleMenu}
         ></div>
       )}
