@@ -17,6 +17,7 @@ export default function LobbyLayout({
       <body>
         <ThemeProvider
           attribute="class"
+          enableSystem
           defaultTheme="dark"
           disableTransitionOnChange
         >
