@@ -22,7 +22,7 @@ export function Header() {
   };
 
   return (
-    <header className="relative flex sm:border-b-0 border-b-[.0625rem] border-border px-12 py-3 bg-background justify-between">
+    <header className="relative flex border-b-[.0625rem] border-border px-12 py-3 bg-background justify-between">
       <div className="md:hidden flex items-center">
         <Bars3Icon className="h-6 w-6 cursor-pointer" onClick={toggleMenu} />
       </div>

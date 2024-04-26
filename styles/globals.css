@@ -6,12 +6,12 @@
   :root {
     --background: #f8f8f8;
     --foreground: #090909;
-    --border: #252525;
+    --border: rgba(0, 0, 0, 0.2);
   }
 
   .dark {
     --background: #090909;
     --foreground: #f8f8f8;
-    --border: #252525;
+    --border: rgba(255, 255, 255, 0.1);
   }
 }
