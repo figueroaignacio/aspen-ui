@@ -5,6 +5,7 @@ import { useState } from "react";
 
 // Components
 import Link from "next/link";
+import { ToggleTheme } from "./ToggleTheme";
 import { Wordmark } from "./Wordmark";
 
 // Icons
@@ -21,12 +22,9 @@ export function Header() {
   };
 
   return (
-    <header className="relative flex sm:border-b-0 border-b-[.0625rem] px-12 py-3">
+    <header className="relative flex sm:border-b-0 border-b-[.0625rem] border-border px-12 py-3 bg-background justify-between">
       <div className="md:hidden flex items-center">
-        <Bars3Icon
-          className="h-6 w-6 text-gray-700 cursor-pointer"
-          onClick={toggleMenu}
-        />
+        <Bars3Icon className="h-6 w-6 cursor-pointer" onClick={toggleMenu} />
       </div>
       <nav className="hidden md:flex items-center">
         <ul className="flex items-center">
@@ -35,16 +33,12 @@ export function Header() {
           </li>
           {navigation.map((navItem, index) => (
             <li key={index} className="mr-6">
-              <Link
-                href={navItem.href}
-                className="text-gray-700 hover:text-gray-900"
-              >
-                {navItem.title}
-              </Link>
+              <Link href={navItem.href}>{navItem.title}</Link>
             </li>
           ))}
         </ul>
       </nav>
+      <ToggleTheme />
       {/* Backdrop */}
       {isMenuOpen && (
         <div
@@ -56,13 +50,10 @@ export function Header() {
       <nav
         className={`${
           isMenuOpen ? "left-0" : "-left-full"
-        } opacity-100 fixed md:hidden top-0 h-screen w-64 z-20 transition-all duration-300 ease-in-out bg-white`}
+        } opacity-100 fixed md:hidden top-0 h-screen w-64 z-20 transition-all duration-300 ease-in-out bg-background`}
       >
         <div className="flex justify-end p-4">
-          <XMarkIcon
-            className="h-6 w-6 text-gray-700 cursor-pointer"
-            onClick={toggleMenu}
-          />
+          <XMarkIcon className="h-6 w-6" onClick={toggleMenu} />
         </div>
         <ul className="flex flex-col items-start p-8">
           <li>
@@ -70,15 +61,13 @@ export function Header() {
           </li>
           {navigation.map((navItem, index) => (
             <li key={index} className="my-4" onClick={toggleMenu}>
-              <Link
-                href={navItem.href}
-                className="text-gray-700 hover:text-gray-900"
-              >
-                {navItem.title}
-              </Link>
+              <Link href={navItem.href}>{navItem.title}</Link>
             </li>
           ))}
         </ul>
+        <li>
+          <ToggleTheme />
+        </li>
       </nav>
     </header>
   );
