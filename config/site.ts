@@ -1,5 +1,5 @@
 export const siteConfig = Object.freeze({
-  title: "nio/ui",
+  title: "nachio/ui",
   author: {
     name: "Ignacio Figueroa",
     url: "https://github.com/ignaciofigueroadev",
