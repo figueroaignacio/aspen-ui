@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# nachio/ui (UI Library) - Project in development
 
-## Getting Started
+Welcome to **nachio/ui**, your ultimate destination for innovative and customizable user interface components. Elevate your projects with a cutting-edge library packed with versatile and customizable UI elements.
 
-First, run the development server:
+## Technologies Used in this Project
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **React.js**: The foundation of our UI library, enabling the creation of dynamic and interactive components.
+- **TypeScript**: A statically typed superset of JavaScript, enhancing code reliability and developer productivity.
+- **Tailwind**: A low-level utility CSS framework for crafting custom layouts swiftly.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Key Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Extensive Component Library**: Explore a wide range of UI components, from buttons and forms to complex data visualization widgets.
+- **Copy & Paste**: Yep, just copy and pase.
+- **Customization and Theming**: Tailor the look and feel of these components to match your brand's identity with ease, thanks to our flexible theming system.
+- **Accessibility**: Our components are designed and tested to ensure compliance with WCAG standards, making them accessible to all users.
+- **Responsive Design**: These components are responsive out of the box, providing a consistent user experience across devices and screen sizes.
+- **Documentation and Examples**: Comprehensive documentation and live examples empower developers to quickly integrate and leverage our components in their projects.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Installation
 
-## Learn More
+You don't need to install a dependencie of this library, just check the docs and see what is needed to use the component you like and copy and pase the code, is yours!
 
-To learn more about Next.js, take a look at the following resources:
+## Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Have questions, suggestions, or just want to say hi? I'd love to hear from you!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Email**: [ignaciofigueroadev@gmail.com](mailto:ignaciofigueroadev@gmail.com)
+- **GitHub**: [figueroaignacio](https://github.com/figueroaignacio/)
+- **LinkedIn**: [Ignacio Figueroa](https://www.linkedin.com/in/ignacio-figueroa-0a1ba0263)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Send me your project build under nachio/ui, I'd love to check them! Cheers
