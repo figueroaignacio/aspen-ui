@@ -14,7 +14,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 // Navigation
 import { navigation } from "@/config/navigation";
 
-export function Header() {
+export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {

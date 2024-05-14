@@ -1,8 +1,8 @@
+// Components
+import { Navbar } from "@/components/Navbar";
+
 // Provider
 import { ThemeProvider } from "next-themes";
-
-// Components
-import { Header } from "@/components/Header";
 
 // Global Styles
 import "@/styles/globals.css";
@@ -17,14 +17,11 @@ export default function LobbyLayout({
       <body>
         <ThemeProvider
           attribute="class"
-          enableSystem
-          defaultTheme="dark"
+          defaultTheme="system"
           disableTransitionOnChange
         >
-          <Header />
-          <main className="px-6 lg:px-0 min-h-screen py-6 m-auto max-w-7xl">
-            {children}
-          </main>
+          <Navbar />
+          {children}
         </ThemeProvider>
       </body>
     </html>
