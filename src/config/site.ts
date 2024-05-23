@@ -1,13 +1,14 @@
 export const siteConfig = Object.freeze({
-  title: "nachio/ui",
+  title: "NeroUI",
   author: {
     name: "Ignacio Figueroa",
-    url: "https://github.com/ignaciofigueroadev",
+    url: "https://github.com/figueroaignacio/",
   },
   creator: "Ignacio Figueroa",
-  description: "lorem",
+  description:
+    "Nero UI is a UI component library specifically designed for developers using Next.js and React. Built with Tailwind CSS, NeroUI offers a modern and highly customizable solution to accelerate the development of attractive and functional user interfaces.",
   ogImage: "",
-  url: "https://ui-nio.vercel.app/",
+  url: "https://neroui.vercel.app/",
   keywords: [
     "UI",
     "UI Kit",
