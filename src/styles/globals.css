@@ -10,7 +10,7 @@
   }
 
   .dark {
-    --background: hsl(0, 0%, 4%);
+    --background: #05090d;
     --foreground: hsl(0, 0%, 97%);
     --border: hsla(0, 0%, 100%, 0.1);
   }
