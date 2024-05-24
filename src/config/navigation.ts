@@ -1,11 +1,11 @@
 export const navigation = Object.freeze([
   {
     title: "Docs",
-    href: "/docs/introduction",
+    href: "/docs",
   },
   {
     title: "Components",
-    href: "/docs/button",
+    href: "/components",
   },
   {
     title: "Templates",
@@ -13,6 +13,6 @@ export const navigation = Object.freeze([
   },
   {
     title: "GitHub",
-    href: "https://github.com/figueroaignacio/ui.nio",
+    href: "https://github.com/figueroaignacio/nero-ui/",
   },
 ]);
