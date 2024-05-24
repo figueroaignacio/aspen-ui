@@ -21,7 +21,9 @@ export default function LobbyLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          {children}
+          <section className="min-h-screen py-6 m-auto container max-w-8xl">
+            {children}
+          </section>
         </ThemeProvider>
       </body>
     </html>
