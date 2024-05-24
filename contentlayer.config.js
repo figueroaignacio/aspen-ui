@@ -1,8 +1,8 @@
 // Contentlayer
 import { defineDocumentType } from "contentlayer/source-files";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
 // Rehype
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 
