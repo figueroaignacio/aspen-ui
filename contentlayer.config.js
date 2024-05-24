@@ -1,5 +1,5 @@
 // Contentlayer
-import { defineDocumentType } from "contentlayer/source-files";
+import { defineDocumentType, makeSource } from "contentlayer/source-files";
 
 // Rehype
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
