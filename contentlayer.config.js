@@ -21,8 +21,8 @@ const computedFields = {
   },
 };
 
-export const Doc = defineDocumentType(() => ({
-  name: "Doc",
+export const Docs = defineDocumentType(() => ({
+  name: "Docs",
   filePathPattern: `docs/**/*.mdx`,
   contentType: "mdx",
   fields: {
@@ -39,6 +39,7 @@ export const Doc = defineDocumentType(() => ({
       default: true,
     },
   },
+  computedFields,
 }));
 
 export default makeSource({
