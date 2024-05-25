@@ -1,5 +1,5 @@
 // Components
-import { Navbar } from "@/components/Navbar";
+import { Navbar } from "@/components/main-navbar";
 
 // Provider
 import { ThemeProvider } from "next-themes";

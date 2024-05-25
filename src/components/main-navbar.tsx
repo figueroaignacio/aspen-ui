@@ -5,8 +5,8 @@ import { useState } from "react";
 
 // Components
 import Link from "next/link";
-import { ToggleTheme } from "./ToggleTheme";
-import { Wordmark } from "./Wordmark";
+import { Logo } from "./logo";
+import { ToggleTheme } from "./toggle-theme";
 
 // Icons
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
@@ -29,7 +29,7 @@ export function Navbar() {
       <nav className="hidden md:flex items-center">
         <ul className="flex items-center">
           <li className="mr-6">
-            <Wordmark />
+            <Logo />
           </li>
           {navigation.map((navItem, index) => (
             <li key={index} className="mr-6">
@@ -57,7 +57,7 @@ export function Navbar() {
         </div>
         <ul className="flex flex-col items-start p-8">
           <li>
-            <Wordmark />
+            <Logo />
           </li>
           {navigation.map((navItem, index) => (
             <li key={index} className="my-4" onClick={toggleMenu}>
