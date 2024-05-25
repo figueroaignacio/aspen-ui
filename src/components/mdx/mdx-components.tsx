@@ -10,6 +10,8 @@ import { cn } from "@/lib/utils";
 // Contentlayer
 import { useMDXComponent } from "next-contentlayer/hooks";
 
+import "@/styles/mdx.css";
+
 const components = {
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
@@ -148,7 +150,7 @@ const components = {
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={cn(
-        "relative rounded border px-[0.3rem] py-[0.2rem] font-mono text-sm",
+        "relative rounded bg-muted px-[2rem] py-[1rem] font-mono text-sm",
         className
       )}
       {...props}

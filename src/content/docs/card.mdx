@@ -1,0 +1,32 @@
+---
+title: Card
+description: Display a card component.
+---
+
+Hello
+
+# Code
+
+```ts
+interface CardProps {
+    children: React.ReactNode;
+}
+
+export function Card({ children }: CardProps) {
+    return <div className="bg-card text-card-foreground shadow-sm p-3">{children}<div>
+}
+```
+
+# Usage
+
+```ts
+import {Card} from "@/components/ui"
+
+export default HomePage() {
+    const title = "Click here"
+    return (
+        <Button>{title}</Button>
+    )
+}
+
+```

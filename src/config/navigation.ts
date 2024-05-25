@@ -1,11 +1,11 @@
 export const navigation = Object.freeze([
   {
     title: "Docs",
-    href: "/docs",
+    href: "/docs/introduction",
   },
   {
     title: "Components",
-    href: "/components",
+    href: "/docs/card",
   },
   {
     title: "Templates",
