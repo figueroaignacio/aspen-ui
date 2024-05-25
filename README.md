@@ -1,4 +1,4 @@
-# nachio/ui (UI Library) - Project in development
+# NeroUI (UI Library) - Project in development
 
 Welcome to **nachio/ui**, your ultimate destination for innovative and customizable user interface components. Elevate your projects with a cutting-edge library packed with versatile and customizable UI elements.
 
@@ -19,7 +19,7 @@ Welcome to **nachio/ui**, your ultimate destination for innovative and customiza
 
 ## Installation
 
-You don't need to install a dependencie of this library, just check the docs and see what is needed to use the component you like and copy and pase the code, is yours!
+You don't need to install a dependency of this library, just check the docs and see what is needed to use the component you like and copy and pase the code, is yours!
 
 ## Contact
 
