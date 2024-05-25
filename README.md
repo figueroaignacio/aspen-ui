@@ -1,6 +1,6 @@
 # NeroUI (UI Library) - Project in development
 
-Welcome to **nachio/ui**, your ultimate destination for innovative and customizable user interface components. Elevate your projects with a cutting-edge library packed with versatile and customizable UI elements.
+Welcome to **NeroUI**, your ultimate destination for innovative and customizable user interface components. Elevate your projects with a cutting-edge library packed with versatile and customizable UI elements.
 
 ## Technologies Used in this Project
 
@@ -29,4 +29,4 @@ Have questions, suggestions, or just want to say hi? I'd love to hear from you!
 - **GitHub**: [figueroaignacio](https://github.com/figueroaignacio/)
 - **LinkedIn**: [Ignacio Figueroa](https://www.linkedin.com/in/ignacio-figueroa-0a1ba0263)
 
-Send me your project build under nachio/ui, I'd love to check them! Cheers
+Send me your project build under NeroUI, I'd love to check them! Cheers
