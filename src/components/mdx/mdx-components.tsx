@@ -4,8 +4,6 @@ import Image from "next/image";
 // Contentlayer
 import { useMDXComponent } from "next-contentlayer/hooks";
 
-import "@/styles/mdx.css";
-
 const components = {
   Image,
 };

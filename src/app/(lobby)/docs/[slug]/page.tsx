@@ -7,9 +7,6 @@ import { notFound } from "next/navigation";
 // Contentlayer
 import { allDocs } from ".contentlayer/generated";
 
-// Styles
-import "@/styles/mdx.css";
-
 interface DocPageParams {
   params: {
     slug: string;
