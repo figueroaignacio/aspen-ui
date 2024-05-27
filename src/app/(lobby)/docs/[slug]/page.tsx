@@ -30,7 +30,7 @@ export default async function DocPage({ params }: DocPageParams) {
   const doc = await getDocFromParams(params.slug);
 
   return (
-    <article>
+    <article className="prose dark:prose-invert mx-auto max-w-3xl">
       <div>
         <h1>{doc.title}</h1>
         <p>{doc.description}</p>
