@@ -5,7 +5,7 @@ export const navigation = Object.freeze([
   },
   {
     title: "Components",
-    href: "/docs/card",
+    href: "/docs/components/avatar",
   },
   {
     title: "Templates",
