@@ -1,5 +1,3 @@
-// Components
-
 // Provider
 import { ThemeProvider } from "next-themes";
 
@@ -19,9 +17,7 @@ export default function LobbyLayout({
           defaultTheme="system"
           disableTransitionOnChange
         >
-          <section className="min-h-screen py-6 m-auto container max-w-8xl">
-            {children}
-          </section>
+          <section className="m-auto container py-5">{children}</section>
         </ThemeProvider>
       </body>
     </html>
