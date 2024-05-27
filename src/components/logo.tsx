@@ -1,5 +1,9 @@
 import Link from "next/link";
 
 export function Logo() {
-  return <Link href={"/"}>nio/ui</Link>;
+  return (
+    <Link href={"/"} className="text-xl font-bold">
+      NeroUI
+    </Link>
+  );
 }
