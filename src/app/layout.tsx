@@ -1,5 +1,3 @@
-// Provider
-
 // Global Styles
 import "@/styles/globals.css";
 
