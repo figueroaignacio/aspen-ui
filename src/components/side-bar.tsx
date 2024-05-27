@@ -1,1 +1,5 @@
-export function Sidebar() {}
+// Config
+
+export function Sidebar() {
+  return <aside></aside>;
+}

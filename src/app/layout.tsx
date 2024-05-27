@@ -1,3 +1,9 @@
+// Components
+import { Navbar } from "@/components/main-navbar";
+
+// Provider
+import { ThemeProvider } from "next-themes";
+
 // Global Styles
 import "@/styles/globals.css";
 
@@ -49,7 +55,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>{children}</body>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          disableTransitionOnChange
+        >
+          <Navbar />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

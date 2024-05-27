@@ -1,5 +1,4 @@
 // Components
-import { Navbar } from "@/components/main-navbar";
 
 // Provider
 import { ThemeProvider } from "next-themes";
@@ -20,7 +19,6 @@ export default function LobbyLayout({
           defaultTheme="system"
           disableTransitionOnChange
         >
-          <Navbar />
           <section className="min-h-screen py-6 m-auto container max-w-8xl">
             {children}
           </section>

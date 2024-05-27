@@ -21,15 +21,19 @@ export const docsConfig = [
     items: [
       {
         title: "Avatar",
-        href: "/docs/avatar",
+        href: "/docs/components/avatar",
       },
       {
         title: "Button",
-        href: "/docs/button",
+        href: "/docs/components/button",
       },
       {
         title: "Card",
-        href: "/docs/card",
+        href: "/docs/components/card",
+      },
+      {
+        title: "Input",
+        href: "/docs/components/input",
       },
     ],
   },
