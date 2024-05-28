@@ -23,4 +23,8 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  a {
+    @apply opacity-75 hover:opacity-100;
+  }
 }

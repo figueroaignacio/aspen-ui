@@ -13,9 +13,7 @@ export function Sidebar() {
           <ul className="flex flex-col gap-1">
             {doc.items.map((item, index) => (
               <li key={index}>
-                <Link href={item.href} className="opacity-50 hover:opacity-100">
-                  {item.title}
-                </Link>
+                <Link href={item.href}>{item.title}</Link>
               </li>
             ))}
           </ul>
