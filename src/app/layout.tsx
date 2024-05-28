@@ -7,6 +7,9 @@ import { ThemeProvider } from "next-themes";
 // Global Styles
 import "@/styles/globals.css";
 
+// Font
+import { onest } from "@/font/onest";
+
 // Config
 import { siteConfig } from "@/config/site";
 
@@ -55,11 +58,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className={`${onest.className}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           disableTransitionOnChange
+          enableSystem
         >
           <Navbar />
           {children}
