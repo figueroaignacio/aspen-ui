@@ -1,4 +1,4 @@
-export default function page() {
+export default function HomePage() {
   return (
     <section className="min-h-[70vh] flex flex-col justify-center items-center text-center gap-5">
       <div>
