@@ -7,12 +7,14 @@
     --background: hsl(0, 0%, 97%);
     --foreground: hsl(0, 0%, 4%);
     --border: hsla(0, 0%, 0%, 0.2);
+    --text-foreground: hsla(0, 0%, 0%, 0.7);
   }
 
   .dark {
     --background: #05090d;
     --foreground: hsl(0, 0%, 97%);
     --border: hsla(0, 0%, 100%, 0.1);
+    --text-foreground: hsla(0, 0%, 97%, 0.7);
   }
 }
 
@@ -26,5 +28,11 @@
 
   a {
     @apply opacity-75 hover:opacity-100;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-violet-500 via-violet-700 to-teal-500 text-transparent bg-clip-text;
   }
 }
