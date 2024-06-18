@@ -1,11 +1,11 @@
 export default function HomePage() {
   return (
-    <section className="min-h-[70vh] flex flex-col justify-center items-center text-center gap-5">
-      <div>
-        <h1 className="text-5xl font-bold gradient-text">
-          Copy and Paste componenents into your project
+    <section className="flex flex-col justify-center items-center text-center gap-5 py-56">
+      <div className="text-pretty">
+        <h1 className="text-4xl lg:text-6xl font-bold gradient-text">
+          Simple components to copy and paste
         </h1>
-        <p className="text-foreground">
+        <p className="text-foreground text-sm">
           Modern, customizable, and simple components to build your system
           design and easy-to-use
         </p>
