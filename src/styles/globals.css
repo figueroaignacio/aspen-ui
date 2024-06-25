@@ -11,7 +11,7 @@
   }
 
   .dark {
-    --background: #05090d;
+    --background: hsl(0, 0%, 2%);
     --foreground: hsl(0, 0%, 97%);
     --border: hsla(0, 0%, 100%, 0.1);
     --text-foreground: hsla(0, 0%, 97%, 0.7);
