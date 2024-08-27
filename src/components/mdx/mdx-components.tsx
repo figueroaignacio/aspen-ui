@@ -1,8 +1,12 @@
 // Components
 import Image from "next/image";
 
-// Contentlayer
-import { useMDXComponent } from "next-contentlayer/hooks";
+import * as runtime from "react/jsx-runtime";
+
+const useMDXComponents = (code: string) => {
+  const fn = new Function(code);
+  return fn({ ...runtime }).default;
+};
 
 const components = {
   Image,
@@ -12,12 +16,8 @@ interface MdxProps {
   code: string;
 }
 
-export function Mdx({ code }: MdxProps) {
-  const Component = useMDXComponent(code);
+export function MDXContent({ code }: MdxProps) {
+  const Component = useMDXComponents(code);
 
-  return (
-    <div className="mdx">
-      <Component components={components} />
-    </div>
-  );
+  return <Component components={components} />;
 }

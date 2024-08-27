@@ -13,22 +13,21 @@ const computedFields = <T extends { slug: string }>(data: T) => ({
 
 const docs = defineCollection({
   name: "Docs",
-  pattern: "docs/**/*.mdx",
+  pattern: "./docs/**/*.mdx",
   schema: s
     .object({
       slug: s.path(),
       title: s.string().max(99),
       description: s.string().max(999).optional(),
-      date: s.isodate(),
+      date: s.isodate().optional(),
       published: s.boolean().default(true),
-      categories: s.array(s.string()).optional(),
       body: s.mdx(),
     })
     .transform(computedFields),
 });
 
 export default defineConfig({
-  root: "content",
+  root: "./src/content",
   output: {
     data: ".velite",
     assets: "public/static",
