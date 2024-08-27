@@ -55,12 +55,12 @@ export function Navbar() {
         <div className="flex justify-end p-4">
           <XMarkIcon className="h-6 w-6" onClick={toggleMenu} />
         </div>
-        <ul className="flex flex-col items-start p-8">
-          <li>
+        <ul className="flex flex-col items-start gap-3 px-6">
+          <li onClick={toggleMenu}>
             <Logo />
           </li>
           {navigation.map((navItem, index) => (
-            <li key={index} className="my-4" onClick={toggleMenu}>
+            <li key={index} onClick={toggleMenu}>
               <Link href={navItem.href}>{navItem.title}</Link>
             </li>
           ))}
