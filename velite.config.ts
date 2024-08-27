@@ -11,9 +11,9 @@ const computedFields = <T extends { slug: string }>(data: T) => ({
   slugAsParams: data.slug.split("/").slice(1).join("/"),
 });
 
-const posts = defineCollection({
-  name: "Post",
-  pattern: "posts/**/*.mdx",
+const docs = defineCollection({
+  name: "Docs",
+  pattern: "docs/**/*.mdx",
   schema: s
     .object({
       slug: s.path(),
@@ -22,21 +22,6 @@ const posts = defineCollection({
       date: s.isodate(),
       published: s.boolean().default(true),
       categories: s.array(s.string()).optional(),
-      body: s.mdx(),
-    })
-    .transform(computedFields),
-});
-
-const guides = defineCollection({
-  name: "Guides",
-  pattern: "guides/**/*.mdx",
-  schema: s
-    .object({
-      slug: s.path(),
-      title: s.string().max(99),
-      description: s.string().max(999).optional(),
-      published: s.boolean().default(true),
-      date: s.isodate(),
       body: s.mdx(),
     })
     .transform(computedFields),
@@ -51,7 +36,7 @@ export default defineConfig({
     name: "[name]-[hash:6].[ext]",
     clean: true,
   },
-  collections: { posts, guides },
+  collections: { docs },
   mdx: {
     rehypePlugins: [
       rehypeSlug,
