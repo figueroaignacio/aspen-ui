@@ -63,7 +63,7 @@ export default async function DocPage({ params }: DocPageProps) {
   }
 
   return (
-    <article className="prose dark:prose-invert mt-5 max-w-3xl mx-auto py-8">
+    <article className="prose dark:prose-invert mt-5 max-w-2xl mx-auto py-8">
       <h1>{doc.title}</h1>
       <p className="m-0">{doc.description ? <p>{doc.description}</p> : null}</p>
       <MDXContent code={doc.body} />

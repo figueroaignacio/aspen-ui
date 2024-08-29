@@ -15,7 +15,7 @@ export default function LobbyLayout({
       <body className="scroll-py-[3.5rem]">
         <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
           <Navbar />
-          <main>{children}</main>
+          <main className="container mx-auto">{children}</main>
           <Footer />
         </div>
       </body>
