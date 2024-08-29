@@ -22,8 +22,7 @@ export function Logo() {
           fill="#F5F5F5"
         />
       </svg>
-
-      <p>aspen/ui</p>
+      <p>AspenUI</p>
     </Link>
   );
 }
