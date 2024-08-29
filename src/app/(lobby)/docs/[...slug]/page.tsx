@@ -7,6 +7,9 @@ import { docs } from "#site/content";
 // Utils
 import { notFound } from "next/navigation";
 
+// Metadata
+import { Metadata } from "next";
+
 interface DocPageProps {
   params: {
     slug: string[];
@@ -22,6 +25,27 @@ async function getDocFromParams(params: DocPageProps["params"]) {
   } catch (error) {
     console.error("Error getting post from params:", error);
     return null;
+  }
+}
+
+export async function generateMetadata({
+  params,
+}: DocPageProps): Promise<Metadata> {
+  const { slug, locale = "en" } = params;
+
+  try {
+    const post = await getDocFromParams({ slug, locale });
+    if (!post) return {};
+
+    const ogSearchParams = new URLSearchParams({ title: post.title });
+
+    return {
+      title: post.title,
+      description: post.description,
+    };
+  } catch (error) {
+    console.error("Error generating metadata:", error);
+    return {};
   }
 }
 
