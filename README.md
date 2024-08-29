@@ -19,7 +19,7 @@ Welcome to **aspen/ui**, the go-to library for innovative, customizable user int
 
 ## **Getting Started**
 
-No installation required. Just browse our docs, find the component you need, copy the code, and paste it into your project—simple as that.
+No installation required. Just browse our docs, find the component you need, copy the code, and paste it into your project-simple as that.
 
 ## **Get in Touch**
 
