@@ -1,4 +1,4 @@
-# **aspen/ui - UI Library in Development**
+# **aspen/ui - UI Kit in Development**
 
 Welcome to **aspen/ui**, the go-to library for innovative, customizable user interface components. Elevate your projects with a versatile, cutting-edge library packed with UI elements that adapt to your creative vision.
 
