@@ -1,0 +1,28 @@
+"use client";
+
+// Components
+import Link from "next/link";
+
+// Config
+import { docsConfig } from "@/config/docs";
+
+export function SidebarNavPanel() {
+  return (
+    <aside className="sticky top-16 h-[calc(100vh-121px)] left-0 rounded-lg mx-auto overflow-y-auto px-4 hidden lg:block">
+      <nav>
+        {docsConfig.map((section) => (
+          <div key={section.title}>
+            <h3 className=" font-bold text-lg mb-2">{section.title}</h3>
+            <ul className="ml-3 space-y-2">
+              {section.items.map((item) => (
+                <li key={item.href} className="text-sm">
+                  <Link href={item.href}>{item.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </nav>
+    </aside>
+  );
+}
