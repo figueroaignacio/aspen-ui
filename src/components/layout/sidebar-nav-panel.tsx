@@ -1,5 +1,3 @@
-"use client";
-
 // Components
 import Link from "next/link";
 
