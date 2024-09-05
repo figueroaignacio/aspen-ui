@@ -1,4 +1,5 @@
 // Components
+import { Toc } from "@/components/layout/toc";
 import { MDXContent } from "@/components/mdx/mdx-components";
 
 // Content
@@ -63,10 +64,20 @@ export default async function DocPage({ params }: DocPageProps) {
   }
 
   return (
-    <article className="prose dark:prose-invert mt-5 max-w-2xl mx-auto py-8">
-      <h1>{doc.title}</h1>
-      <p className="m-0">{doc.description ? <p>{doc.description}</p> : null}</p>
-      <MDXContent code={doc.body} />
+    <article className="mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 relative top-12">
+      <aside className="hidden lg:block lg:col-span-3">
+        <div></div>
+      </aside>
+      <div className="lg:col-span-6">
+        <div className="flex flex-col gap-2">
+          <h1 className="text-3xl font-bold mb-4">{doc.title}</h1>
+          <p className="mb-4">{doc.description}</p>
+        </div>
+        <MDXContent code={doc.body} />
+      </div>
+      <aside className="lg:col-span-3">
+        <Toc />
+      </aside>
     </article>
   );
 }
