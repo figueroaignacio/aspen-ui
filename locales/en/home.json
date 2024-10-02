@@ -1,6 +1,10 @@
 {
   "home": {
     "title": "Beautifully crafted UI components to elevate your web projects",
-    "subtitle": "Boost your workflow with pre-built components. Fully customizable and open source."
+    "subtitle": "Boost your workflow with pre-built components. Fully customizable and open source.",
+    "buttons": {
+      "getStarted": "Get Started",
+      "exploreComponents": "Explore"
+    }
   }
 }
