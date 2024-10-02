@@ -1,5 +1,10 @@
 // Provider
+import { NextIntlClientProvider } from "next-intl";
 import { ThemeProvider } from "next-themes";
+
+// Utils
+import { locales } from "@/config/config";
+import { getMessages } from "next-intl/server";
 
 // Global Styles
 import "@/styles/globals.css";
@@ -48,22 +53,34 @@ export const metadata: Metadata = {
   keywords: siteConfig.keywords,
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+interface LocaleLayoutProps {
   children: React.ReactNode;
-}>) {
+  params: { locale: string };
+}
+
+export default async function RootLayout({
+  children,
+  params: { locale },
+}: LocaleLayoutProps) {
+  const messages = await getMessages();
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${onest.className}`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          disableTransitionOnChange
-          enableSystem
-        >
-          {children}
-        </ThemeProvider>
+        <NextIntlClientProvider messages={messages}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            disableTransitionOnChange
+            enableSystem
+          >
+            {children}
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
