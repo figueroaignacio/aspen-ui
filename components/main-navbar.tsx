@@ -22,7 +22,7 @@ export function Navbar() {
   };
 
   return (
-    <header className="relative flex border-b-[.0625rem] border-border px-5 lg:px-10 py-2  bg-background justify-between">
+    <header className="relative flex border-b-[.0625rem] border-border px-5 lg:px-10 py-3 bg-background justify-between">
       <div className="md:hidden flex items-center">
         <Bars3Icon className="h-6 w-6 cursor-pointer" onClick={toggleMenu} />
       </div>
@@ -38,7 +38,14 @@ export function Navbar() {
           ))}
         </ul>
       </nav>
-      <ToggleTheme />
+      <div className="flex items-center gap-4">
+        <ToggleTheme />
+        <div className="space-x-3">
+          <Link href={"/es"}>ES</Link>
+          <span>/</span>
+          <Link href={"/en"}>EN</Link>
+        </div>
+      </div>
       {/* Backdrop */}
       {isMenuOpen && (
         <div
