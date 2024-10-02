@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 
 // Components
+import { BgBorders } from "@/components/bg-borders";
 import { Link } from "@/config/navigation";
 
 // Icons
@@ -24,9 +25,10 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
   ];
 
   return (
-    <section className="flex flex-col justify-center min-h-[80dvh] gap-6 items-center text-center">
+    <section className="flex flex-col justify-center min-h-[80dvh] gap-6 items-center text-center relative">
+      <BgBorders />
       <div className="space-y-3 max-w-4xl">
-        <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl">
+        <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl border-t border-b border-border border-dashed py-12">
           {t("title")}
         </h1>
         <p className="text-sm text-foreground lg:text-lg">{t("subtitle")}</p>
