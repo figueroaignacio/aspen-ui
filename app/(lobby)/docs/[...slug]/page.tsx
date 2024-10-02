@@ -3,7 +3,7 @@ import { Toc } from "@/components/layout/toc";
 import { MDXContent } from "@/components/mdx/mdx-components";
 
 // Content
-import { docs } from "#site/content";
+import { docs } from "@content";
 
 // Utils
 import { notFound } from "next/navigation";
