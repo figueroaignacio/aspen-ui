@@ -6,14 +6,14 @@ export const docsConfig = [
         title: "Introduction",
         href: "/docs/introduction",
       },
-      {
-        title: "Theming",
-        href: "/docs/theming",
-      },
-      {
-        title: "Dark mode",
-        href: "/docs/dark-mode",
-      },
+      // {
+      //   title: "Theming",
+      //   href: "/docs/theming",
+      // },
+      // {
+      //   title: "Dark mode",
+      //   href: "/docs/dark-mode",
+      // },
     ],
   },
   {
