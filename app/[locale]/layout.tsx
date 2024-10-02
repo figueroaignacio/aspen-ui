@@ -10,7 +10,7 @@ import { getMessages } from "next-intl/server";
 import "@/styles/globals.css";
 
 // Font
-import { onest } from "@/font/onest";
+import "@fontsource-variable/onest";
 
 // Config
 import { siteConfig } from "@/config/site";
@@ -70,7 +70,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${onest.className}`}>
+      <body>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider
             attribute="class"

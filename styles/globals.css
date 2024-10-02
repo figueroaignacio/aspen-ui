@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Onest Variable", sans-serif;
+}
+
 @layer base {
   :root {
     --background: hsl(0, 0%, 97%);

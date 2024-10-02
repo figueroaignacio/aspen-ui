@@ -1,18 +1,9 @@
-export const navigation = Object.freeze([
-  {
-    title: "Docs",
-    href: "/docs/introduction",
-  },
-  {
-    title: "Components",
-    href: "/docs/components/avatar",
-  },
-  {
-    title: "Templates",
-    href: "/templates",
-  },
-  {
-    title: "GitHub",
-    href: "https://github.com/figueroaignacio/nero-ui/",
-  },
-]);
+import { createLocalizedPathnamesNavigation } from "next-intl/navigation";
+import { localePrefix, locales, pathnames } from "./config";
+
+export const { Link, getPathname, redirect, usePathname, useRouter } =
+  createLocalizedPathnamesNavigation({
+    locales,
+    pathnames,
+    localePrefix,
+  });
