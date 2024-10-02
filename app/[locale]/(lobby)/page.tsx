@@ -4,6 +4,9 @@ import { useTranslations } from "next-intl";
 // Components
 import Link from "next/link";
 
+// Icons
+import { ArrowRightIcon, BoltIcon } from "@heroicons/react/16/solid";
+
 export default function HomePage() {
   const t = useTranslations("home");
 
@@ -22,18 +25,20 @@ export default function HomePage() {
         </h1>
         <p className="text-sm text-foreground lg:text-lg">{t("subtitle")}</p>
       </div>
-      <div className="space-x-3">
+      <div className="flex flex-col flex-wrap md:flex-row md:flex-nowrap gap-2 w-96">
         <Link
           href={"/docs/introduction"}
-          className="border-[1px] border-border py-2 px-7 rounded-full w-full text-xs lg:text-sm"
+          className="border-[1px] border-border text-center rounded-full w-full text-xs lg:text-sm flex items-center gap-2 justify-center py-2 px-7"
         >
           {t("buttons.getStarted")}
+          <ArrowRightIcon className="size-4" />
         </Link>
         <Link
           href={"/docs/components"}
-          className="border-[1px] border-border py-2 px-7 rounded-full w-full text-xs lg:text-sm"
+          className="border-[1px] border-border text-center rounded-full w-full text-xs lg:text-sm flex items-center gap-2 justify-center py-2 px-7"
         >
           {t("buttons.exploreComponents")}
+          <BoltIcon className="size-4" />
         </Link>
       </div>
       <ul className="flex gap-5 mt-6 flex-wrap justify-center">
