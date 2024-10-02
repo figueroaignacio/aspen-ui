@@ -1,6 +1,7 @@
 "use client";
 
-// React
+// Hooks
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 // Components
@@ -11,14 +12,18 @@ import { ToggleTheme } from "./toggle-theme";
 // Icons
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
-// Navigation
-import { navigation } from "@/config/navigation";
-
 export function Navbar() {
+  const t = useTranslations();
+  const navigation = t.raw("navigation");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  type NavItemTypes = {
+    href: string;
+    title: string;
   };
 
   return (
@@ -31,7 +36,7 @@ export function Navbar() {
           <li className="mr-6">
             <Logo />
           </li>
-          {navigation.map((navItem, index) => (
+          {navigation.map((navItem: NavItemTypes, index: number) => (
             <li key={index} className="mr-6 text-sm">
               <Link href={navItem.href}>{navItem.title}</Link>
             </li>
@@ -66,7 +71,7 @@ export function Navbar() {
           <li onClick={toggleMenu}>
             <Logo />
           </li>
-          {navigation.map((navItem, index) => (
+          {navigation.map((navItem: NavItemTypes, index: number) => (
             <li key={index} onClick={toggleMenu}>
               <Link href={navItem.href}>{navItem.title}</Link>
             </li>

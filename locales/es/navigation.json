@@ -1,0 +1,16 @@
+{
+  "navigation": [
+    {
+      "title": "Documentación",
+      "href": "/docs"
+    },
+    {
+      "title": "Componentes",
+      "href": "/docs/components"
+    },
+    {
+      "title": "Plantillas",
+      "href": "/templates"
+    }
+  ]
+}

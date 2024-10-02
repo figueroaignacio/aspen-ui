@@ -1,0 +1,16 @@
+{
+  "navigation": [
+    {
+      "title": "Docs",
+      "href": "/docs"
+    },
+    {
+      "title": "Components",
+      "href": "/docs/components"
+    },
+    {
+      "title": "Templates",
+      "href": "/templates"
+    }
+  ]
+}
