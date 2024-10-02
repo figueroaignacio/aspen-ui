@@ -10,7 +10,7 @@ export function SidebarNavPanel() {
       <nav>
         {docsConfig.map((section) => (
           <div key={section.title}>
-            <h4 className="font-bold text-lg mb-2">{section.title}</h4>
+            <h4 className="my-3 font-bold">{section.title}</h4>
             <ul className="ml-3 space-y-2">
               {section.items.map((item) => (
                 <li key={item.href} className="text-sm">
