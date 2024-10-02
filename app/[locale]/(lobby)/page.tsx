@@ -14,20 +14,22 @@ export default function HomePage() {
 
   return (
     <section className="flex flex-col justify-center min-h-[80dvh] gap-6 items-center text-center">
-      <div className="space-y-3">
-        <h1 className="text-3xl font-bold">{t("title")}</h1>
-        <p className="text-sm text-foreground">{t("subtitle")}</p>
+      <div className="space-y-3 max-w-4xl">
+        <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl">
+          {t("title")}
+        </h1>
+        <p className="text-sm text-foreground lg:text-lg">{t("subtitle")}</p>
       </div>
       <div className="space-x-3">
         <Link
           href={"/docs/introduction"}
-          className="border-[1px] py-2 px-5 rounded-md w-full text-xs"
+          className="border-[1px] py-2 px-5 rounded-full w-full text-xs lg:text-sm"
         >
           {t("buttons.getStarted")}
         </Link>
         <Link
           href={"/docs/components"}
-          className="border-[1px] py-2 px-5 rounded-md w-full text-xs"
+          className="border-[1px] py-2 px-5 rounded-full w-full text-xs lg:text-sm"
         >
           {t("buttons.exploreComponents")}
         </Link>
