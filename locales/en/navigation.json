@@ -2,11 +2,11 @@
   "navigation": [
     {
       "title": "Docs",
-      "href": "/docs"
+      "href": "/docs/introduction"
     },
     {
       "title": "Components",
-      "href": "/docs/components"
+      "href": "/docs/components/avatar"
     },
     {
       "title": "Templates",

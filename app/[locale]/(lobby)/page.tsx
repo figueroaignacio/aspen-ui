@@ -2,7 +2,7 @@
 import { useTranslations } from "next-intl";
 
 // Components
-import Link from "next/link";
+import { Link } from "@/config/navigation";
 
 // Icons
 import { ArrowRightIcon, BoltIcon } from "@heroicons/react/16/solid";

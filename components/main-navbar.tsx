@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 // Components
-import Link from "next/link";
+import { Link } from "@/config/navigation";
 import { Logo } from "./logo";
 import { ToggleTheme } from "./toggle-theme";
 

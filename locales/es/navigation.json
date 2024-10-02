@@ -2,11 +2,11 @@
   "navigation": [
     {
       "title": "Documentación",
-      "href": "/docs"
+      "href": "/docs/introduction"
     },
     {
       "title": "Componentes",
-      "href": "/docs/components"
+      "href": "/docs/components/avatar"
     },
     {
       "title": "Plantillas",
