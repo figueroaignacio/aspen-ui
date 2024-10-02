@@ -6,6 +6,7 @@ import { useState } from "react";
 
 // Components
 import { Link } from "@/config/navigation";
+import NextLink from "next/link";
 import { Logo } from "./logo";
 import { ToggleTheme } from "./toggle-theme";
 
@@ -46,9 +47,9 @@ export function Navbar() {
       <div className="flex items-center gap-4">
         <ToggleTheme />
         <div className="space-x-3">
-          <Link href={"/es"}>ES</Link>
+          <NextLink href={"/es"}>ES</NextLink>
           <span>/</span>
-          <Link href={"/en"}>EN</Link>
+          <NextLink href={"/en"}>EN</NextLink>
         </div>
       </div>
       {/* Backdrop */}
