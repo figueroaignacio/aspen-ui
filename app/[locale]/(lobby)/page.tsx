@@ -13,8 +13,8 @@ interface HomePageProps {
 }
 
 export default function HomePage({ params: { locale } }: HomePageProps) {
-  const t = useTranslations("home");
   unstable_setRequestLocale(locale);
+  const t = useTranslations("home");
 
   const technologies = [
     { title: "Next.js" },
