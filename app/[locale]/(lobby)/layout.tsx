@@ -1,3 +1,5 @@
+import { unstable_setRequestLocale } from "next-intl/server";
+
 // Components
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/main-navbar";
@@ -5,11 +7,23 @@ import { Navbar } from "@/components/main-navbar";
 // Global Styles
 import "@/styles/globals.css";
 
+// Config
+import { locales } from "@/config/config";
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+interface LobbyLayoutProps {
+  children: React.ReactNode;
+  params: { locale: string };
+}
+
 export default function LobbyLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+  params: { locale },
+}: LobbyLayoutProps) {
+  unstable_setRequestLocale(locale);
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="scroll-py-[3.5rem]">

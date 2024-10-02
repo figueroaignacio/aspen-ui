@@ -1,5 +1,6 @@
 // Hooks
 import { useTranslations } from "next-intl";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 // Components
 import { Link } from "@/config/navigation";
@@ -7,8 +8,13 @@ import { Link } from "@/config/navigation";
 // Icons
 import { ArrowRightIcon, BoltIcon } from "@heroicons/react/16/solid";
 
-export default function HomePage() {
+interface HomePageProps {
+  params: { locale: string };
+}
+
+export default function HomePage({ params: { locale } }: HomePageProps) {
   const t = useTranslations("home");
+  unstable_setRequestLocale(locale);
 
   const technologies = [
     { title: "Next.js" },

@@ -4,7 +4,7 @@ import { ThemeProvider } from "next-themes";
 
 // Utils
 import { locales } from "@/config/config";
-import { getMessages } from "next-intl/server";
+import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 
 // Global Styles
 import "@/styles/globals.css";
@@ -66,6 +66,7 @@ export default async function RootLayout({
   children,
   params: { locale },
 }: LocaleLayoutProps) {
+  unstable_setRequestLocale(locale);
   const messages = await getMessages();
 
   return (

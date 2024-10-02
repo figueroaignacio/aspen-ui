@@ -1,3 +1,6 @@
+// Hooks
+import { useLocale } from "next-intl";
+
 // Components
 import { Toc } from "@/components/layout/toc";
 import { MDXContent } from "@/components/mdx/mdx-components";
@@ -6,6 +9,7 @@ import { MDXContent } from "@/components/mdx/mdx-components";
 import { docs } from "@content";
 
 // Utils
+import { unstable_setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 
 // Metadata
@@ -58,6 +62,8 @@ export async function generateStaticParams(): Promise<
 }
 
 export default async function DocPage({ params }: DocPageProps) {
+  const lang = useLocale();
+  unstable_setRequestLocale(lang);
   const doc = await getDocFromParams(params);
 
   if (!doc || !doc.published) {
