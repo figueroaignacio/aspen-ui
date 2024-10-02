@@ -1,5 +1,7 @@
 // Hooks
 import { useTranslations } from "next-intl";
+
+// Components
 import Link from "next/link";
 
 export default function HomePage() {
@@ -23,13 +25,13 @@ export default function HomePage() {
       <div className="space-x-3">
         <Link
           href={"/docs/introduction"}
-          className="border-[1px] py-2 px-5 rounded-full w-full text-xs lg:text-sm"
+          className="border-[1px] border-border py-2 px-7 rounded-full w-full text-xs lg:text-sm"
         >
           {t("buttons.getStarted")}
         </Link>
         <Link
           href={"/docs/components"}
-          className="border-[1px] py-2 px-5 rounded-full w-full text-xs lg:text-sm"
+          className="border-[1px] border-border py-2 px-7 rounded-full w-full text-xs lg:text-sm"
         >
           {t("buttons.exploreComponents")}
         </Link>
