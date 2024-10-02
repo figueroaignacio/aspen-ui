@@ -36,14 +36,14 @@ export async function generateMetadata({
   const { slug, locale = "en" } = params;
 
   try {
-    const post = await getDocFromParams({ slug, locale });
-    if (!post) return {};
+    const doc = await getDocFromParams({ slug, locale });
+    if (!doc) return {};
 
-    const ogSearchParams = new URLSearchParams({ title: post.title });
+    const ogSearchParams = new URLSearchParams({ title: doc.title });
 
     return {
-      title: post.title,
-      description: post.description,
+      title: doc.title,
+      description: doc.description,
     };
   } catch (error) {
     console.error("Error generating metadata:", error);
