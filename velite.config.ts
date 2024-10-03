@@ -50,7 +50,40 @@ export default defineConfig({
   mdx: {
     rehypePlugins: [
       rehypeSlug,
-      [rehypePrettyCode, { theme: "github-dark-default" }],
+      [
+        rehypePrettyCode,
+        {
+          theme: {
+            plain: {
+              backgroundColor: "#f5f5",
+              color: "#abb2bf",
+              border: "1px solid white",
+            },
+            styles: [
+              {
+                types: ["comment"],
+                style: {
+                  color: "#5c6370",
+                  fontStyle: "italic",
+                },
+              },
+              {
+                types: ["keyword", "variable"],
+                style: {
+                  color: "#e06c75",
+                },
+              },
+              {
+                types: ["string"],
+                style: {
+                  color: "#98c379",
+                },
+              },
+              // Otros estilos...
+            ],
+          },
+        },
+      ],
       [
         rehypeAutolinkHeadings,
         {

@@ -101,7 +101,7 @@ const components = {
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={cn(
-        "px-4 py-5 my-3 text-left h-auto overflow-x-auto rounded-md",
+        "relative block px-4 py-6 my-3 h-auto overflow-x-auto rounded-md border-border border-[1px] shadow-md transition duration-200 ease-in-out hover:bg-gray-100 dark:bg-[#0a0a0c] dark:text-gray-300",
         className
       )}
       {...props}
