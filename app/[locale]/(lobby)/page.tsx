@@ -42,14 +42,14 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
       <div className="flex flex-col flex-wrap md:flex-row md:flex-nowrap gap-2 w-96">
         <Link
           href={"/docs/introduction"}
-          className="bg-background border-[1px] border-border text-center rounded-full w-full text-xs lg:text-sm flex items-center gap-2 justify-center py-2 px-7"
+          className="border-[1px] border-border text-center rounded-full w-full text-xs lg:text-sm flex items-center gap-2 justify-center py-2 px-7 bg-violet-500"
         >
           {t("buttons.getStarted")}
           <ArrowRightIcon className="size-4" />
         </Link>
         <Link
           href={"/docs/components"}
-          className="bg-background border-[1px] border-border text-center rounded-full w-full text-xs lg:text-sm flex items-center gap-2 justify-center py-2 px-7"
+          className=" border-[1px] border-border text-center rounded-full w-full text-xs lg:text-sm flex items-center gap-2 justify-center py-2 px-7"
         >
           {t("buttons.exploreComponents")}
           <BoltIcon className="size-4" />
