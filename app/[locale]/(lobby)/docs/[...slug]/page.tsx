@@ -22,7 +22,10 @@ interface DocPageProps {
 async function getDocFromParams(params: DocPageProps["params"]) {
   try {
     const slug = params?.slug.join("/");
-    const doc = docs.find((doc) => doc.slugAsParams === slug);
+    const locale = params.locale || "en";
+    const doc = docs.find(
+      (doc) => doc.slugAsParams === slug && doc.locale === locale
+    );
     return doc;
   } catch (error) {
     console.error("Error getting post from params:", error);
@@ -39,7 +42,7 @@ export async function generateMetadata({
     const doc = await getDocFromParams({ slug, locale });
     if (!doc) return {};
 
-    const ogSearchParams = new URLSearchParams({ title: doc.title });
+    // const ogSearchParams = new URLSearchParams({ title: doc.title });
 
     return {
       title: doc.title,
