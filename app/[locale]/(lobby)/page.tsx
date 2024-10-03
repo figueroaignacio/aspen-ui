@@ -7,6 +7,12 @@ import { BgBorders } from "@/components/bg-borders";
 import { Link } from "@/config/navigation";
 
 // Icons
+import {
+  NextIcon,
+  ReactIcon,
+  TailwindIcon,
+  TypescriptIcon,
+} from "@/components/icons";
 import { ArrowRightIcon, BoltIcon } from "@heroicons/react/16/solid";
 
 interface HomePageProps {
@@ -18,10 +24,10 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
   const t = useTranslations("home");
 
   const technologies = [
-    { title: "Next.js" },
-    { title: "React.js" },
-    { title: "Typescript" },
-    { title: "Tailwind" },
+    { title: "Next.js", icon: <NextIcon /> },
+    { title: "React.js", icon: <ReactIcon /> },
+    { title: "Typescript", icon: <TypescriptIcon /> },
+    { title: "Tailwind", icon: <TailwindIcon /> },
   ];
 
   return (
@@ -51,7 +57,8 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
       </div>
       <ul className="flex gap-5 mt-6 flex-wrap justify-center">
         {technologies.map((tech, index) => (
-          <li key={index} className="text-sm">
+          <li key={index} className="text-sm flex items-center gap-2">
+            {tech.icon}
             {tech.title}
           </li>
         ))}
