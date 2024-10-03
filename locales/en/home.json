@@ -1,6 +1,6 @@
 {
   "home": {
-    "title": "Beautifully crafted UI components to elevate your web projects",
+    "title": "Beautifully crafted UI <text1>components</text1> to elevate your <text2>web projects</text2>",
     "subtitle": "Boost your workflow with pre-built components. Fully customizable and open source.",
     "buttons": {
       "getStarted": "Get Started",

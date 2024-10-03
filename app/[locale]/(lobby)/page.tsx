@@ -35,7 +35,10 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
       <BgBorders />
       <div className="space-y-3 max-w-4xl">
         <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl border-t border-b border-border border-dashed py-12">
-          {t("title")}
+          {t.rich("title", {
+            text1: (chunks) => <span className="gradient-text">{chunks}</span>,
+            text2: (chunks) => <span className="gradient-text">{chunks}</span>,
+          })}
         </h1>
         <p className="text-sm text-foreground lg:text-lg">{t("subtitle")}</p>
       </div>

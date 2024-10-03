@@ -33,6 +33,6 @@ body {
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-violet-500 via-violet-700 to-teal-500 text-transparent bg-clip-text;
+    @apply bg-gradient-to-r from-violet-500 via-violet-500 to-violet-400 bg-clip-text text-transparent;
   }
 }
