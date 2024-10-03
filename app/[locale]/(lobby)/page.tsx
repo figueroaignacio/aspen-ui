@@ -42,10 +42,10 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
       <div className="flex flex-col flex-wrap md:flex-row md:flex-nowrap gap-2 w-96">
         <Link
           href={"/docs/introduction"}
-          className="border-[1px] border-border text-center text-white rounded-full w-full text-xs lg:text-sm flex items-center gap-2 justify-center py-2 px-7 bg-violet-500"
+          className="border-[1px] border-border text-center text-white rounded-full w-full text-xs lg:text-sm flex items-center gap-2 justify-center py-2 px-7 bg-violet-500 group"
         >
           {t("buttons.getStarted")}
-          <ArrowRightIcon className="size-4" />
+          <ArrowRightIcon className="size-4 transition-transform ease-in-out duration-300 transform translate-x-0 group-hover:translate-x-1" />
         </Link>
         <Link
           href={"/docs/components"}
