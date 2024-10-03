@@ -1,7 +1,29 @@
 ---
 title: Avatar
-description: Displays an Avatar component
+description: The Avatar component displays a user avatar image with customizable properties.
 locale: en
 ---
 
-How to use
+## Usage
+
+To use the Avatar component, import it and include it in your JSX as shown below:
+
+```jsx
+import Avatar from "@/components/ui/Avatar";
+
+const UserProfile = () => {
+  return (
+    <div className="flex items-center">
+      <Avatar
+        src="https://example.com/path/to/avatar.jpg"
+        alt="User Name"
+        size={100}
+        className="rounded-full border-2 border-gray-300"
+      />
+      <h2 className="ml-4 text-lg font-semibold">User Name</h2>
+    </div>
+  );
+};
+
+export default UserProfile;
+```

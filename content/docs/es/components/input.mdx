@@ -1,7 +1,31 @@
 ---
 title: Input
-description: Muestra un componente Input
+description: El componente `Input` es un elemento de formulario que permite a los usuarios ingresar datos de texto. Es altamente personalizable y se puede usar en una variedad de contextos.
 locale: es
 ---
 
-Como usar este componente
+## Cómo usar
+
+Para usar el componente `Input`, impórtalo y agrégalo en tu JSX como se muestra a continuación:
+
+```jsx
+import Input from "@/components/ui/Input";
+
+const MiFormulario = () => {
+  return (
+    <form className="flex flex-col">
+      <label htmlFor="nombre" className="mb-2 text-sm font-semibold">
+        Nombre
+      </label>
+      <Input
+        id="nombre"
+        type="text"
+        placeholder="Ingresa tu nombre"
+        className="border border-gray-300 p-2 rounded"
+      />
+    </form>
+  );
+};
+
+export default MiFormulario;
+```

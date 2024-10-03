@@ -72,7 +72,7 @@ export default async function DocPage({ params }: DocPageProps) {
       <aside className="hidden lg:block lg:col-span-3">
         <SidebarNav />
       </aside>
-      <div className="lg:col-span-6">
+      <div className="lg:col-span-6 pb-16">
         <div className="flex flex-col gap-2">
           <h1 className="text-3xl font-bold mb-4">{doc.title}</h1>
           <p className="mb-4">{doc.description}</p>

@@ -1,7 +1,27 @@
 ---
 title: Input
-description: Displays an Input component
+description: The Input component is used to gather user input in a controlled manner. It can handle various types of input fields, such as text, email, password, etc.
 locale: en
 ---
 
-How to use
+## Usage
+
+To use the `Input` component, import it and include it in your JSX as shown below:
+
+```jsx
+import Input from "@/components/ui/Input";
+
+const MyForm = () => {
+  return (
+    <form>
+      <Input
+        type="text"
+        placeholder="Enter your name"
+        className="border rounded-lg p-2"
+      />
+    </form>
+  );
+};
+
+export default MyForm;
+```

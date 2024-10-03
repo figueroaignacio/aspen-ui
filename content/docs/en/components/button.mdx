@@ -1,7 +1,27 @@
 ---
 title: Button
-description: Displays a Button component
+description: The Button component is a versatile UI element used to trigger actions in your application.
 locale: en
 ---
 
-How to use
+## Usage
+
+To use the `Button` component, import it and include it in your JSX as shown below:
+
+```jsx
+import Button from "@/components/ui/Button";
+
+const MyComponent = () => {
+  const handleClick = () => {
+    alert("Button clicked!");
+  };
+
+  return (
+    <Button onClick={handleClick} className="bg-blue-500 text-white rounded">
+      Click Me
+    </Button>
+  );
+};
+
+export default MyComponent;
+```
