@@ -28,7 +28,7 @@ export function Navbar() {
   };
 
   return (
-    <header className="relative flex border-b-[.0625rem] border-border px-5 lg:px-10 py-3 bg-background justify-between">
+    <header className="flex border-b-[.0625rem] border-border px-5 lg:px-10 py-3 justify-between sticky top-0 left-0 backdrop-blur-sm z-50">
       <div className="md:hidden flex items-center">
         <Bars3Icon className="h-6 w-6 cursor-pointer" onClick={toggleMenu} />
       </div>
