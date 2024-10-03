@@ -18,5 +18,85 @@
     "locale": "es",
     "slugAsParams": "introduction",
     "localeSlug": "es/introduction"
+  },
+  {
+    "slug": "docs/components/avatar",
+    "title": "Avatar",
+    "description": "Displays an Avatar component",
+    "published": true,
+    "body": "const{jsx:n}=arguments[0];function _createMdxContent(t){const e={p:\"p\",...t.components};return n(e.p,{children:\"How to use\"})}return{default:function(t={}){const{wrapper:e}=t.components||{};return e?n(e,{...t,children:n(_createMdxContent,{...t})}):_createMdxContent(t)}};",
+    "locale": "en",
+    "slugAsParams": "components/avatar",
+    "localeSlug": "en/components/avatar"
+  },
+  {
+    "slug": "docs/components/button",
+    "title": "Button",
+    "description": "Displays a Button component",
+    "published": true,
+    "body": "const{jsx:n}=arguments[0];function _createMdxContent(t){const e={p:\"p\",...t.components};return n(e.p,{children:\"How to use\"})}return{default:function(t={}){const{wrapper:e}=t.components||{};return e?n(e,{...t,children:n(_createMdxContent,{...t})}):_createMdxContent(t)}};",
+    "locale": "en",
+    "slugAsParams": "components/button",
+    "localeSlug": "en/components/button"
+  },
+  {
+    "slug": "docs/components/card",
+    "title": "Card",
+    "description": "Displays a Card component",
+    "published": true,
+    "body": "const{jsx:n}=arguments[0];function _createMdxContent(t){const e={p:\"p\",...t.components};return n(e.p,{children:\"How to use\"})}return{default:function(t={}){const{wrapper:e}=t.components||{};return e?n(e,{...t,children:n(_createMdxContent,{...t})}):_createMdxContent(t)}};",
+    "locale": "en",
+    "slugAsParams": "components/card",
+    "localeSlug": "en/components/card"
+  },
+  {
+    "slug": "docs/components/input",
+    "title": "Input",
+    "description": "Displays an Input component",
+    "published": true,
+    "body": "const{jsx:n}=arguments[0];function _createMdxContent(t){const e={p:\"p\",...t.components};return n(e.p,{children:\"How to use\"})}return{default:function(t={}){const{wrapper:e}=t.components||{};return e?n(e,{...t,children:n(_createMdxContent,{...t})}):_createMdxContent(t)}};",
+    "locale": "en",
+    "slugAsParams": "components/input",
+    "localeSlug": "en/components/input"
+  },
+  {
+    "slug": "docs/components/avatar",
+    "title": "Avatar",
+    "description": "Muestra un componente Avatar",
+    "published": true,
+    "body": "const{jsx:n}=arguments[0];function _createMdxContent(e){const t={p:\"p\",...e.components};return n(t.p,{children:\"Como usar este componente\"})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
+    "locale": "es",
+    "slugAsParams": "components/avatar",
+    "localeSlug": "es/components/avatar"
+  },
+  {
+    "slug": "docs/components/button",
+    "title": "Button",
+    "description": "Muestra un componente Button (Botón)",
+    "published": true,
+    "body": "const{jsx:n}=arguments[0];function _createMdxContent(e){const t={p:\"p\",...e.components};return n(t.p,{children:\"Como usar este componente\"})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
+    "locale": "es",
+    "slugAsParams": "components/button",
+    "localeSlug": "es/components/button"
+  },
+  {
+    "slug": "docs/components/card",
+    "title": "Card",
+    "description": "Muestra un componente Card (Tarjeta)",
+    "published": true,
+    "body": "const{jsx:n}=arguments[0];function _createMdxContent(e){const t={p:\"p\",...e.components};return n(t.p,{children:\"Como usar este componente\"})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
+    "locale": "es",
+    "slugAsParams": "components/card",
+    "localeSlug": "es/components/card"
+  },
+  {
+    "slug": "docs/components/input",
+    "title": "Input",
+    "description": "Muestra un componente Input",
+    "published": true,
+    "body": "const{jsx:n}=arguments[0];function _createMdxContent(e){const t={p:\"p\",...e.components};return n(t.p,{children:\"Como usar este componente\"})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
+    "locale": "es",
+    "slugAsParams": "components/input",
+    "localeSlug": "es/components/input"
   }
 ]
