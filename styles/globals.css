@@ -29,6 +29,16 @@ body {
   body {
     @apply bg-background;
   }
+  ::-webkit-scrollbar {
+    @apply w-[0.6rem];
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-400 dark:bg-gray-500 rounded-md;
+  }
 }
 
 @layer components {
