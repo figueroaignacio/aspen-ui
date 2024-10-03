@@ -22,11 +22,11 @@ export function SidebarNavPanel() {
     <aside className="sticky top-16 h-[calc(100vh-121px)] left-0 rounded-lg mx-auto overflow-y-auto hidden lg:block">
       <nav>
         {docsConfig.map((section) => (
-          <div key={section.title}>
-            <h4 className="my-3 font-bold">{section.title}</h4>
+          <div key={section.title} className="space-y-2">
+            <h4 className="font-bold">{section.title}</h4>
             <ul className="ml-3 space-y-2">
               {section.items.map((item) => (
-                <li key={item.href} className="text-sm">
+                <li key={item.href} className="text-sm mb-2">
                   <Link href={item.href}>{item.title}</Link>
                 </li>
               ))}

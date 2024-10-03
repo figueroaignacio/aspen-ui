@@ -1,4 +1,5 @@
-"use client";
+// Hooks
+import { useTranslations } from "next-intl";
 
 interface Heading {
   id: string;
@@ -12,9 +13,11 @@ interface TocPanelProps {
 }
 
 export function TocPanel({ headings, activeId }: TocPanelProps) {
+  const t = useTranslations("toc");
+
   return (
-    <nav className="sticky top-16 h-[calc(100vh-121px)] left-0 rounded-lg mx-auto overflow-y-auto px-4 hidden lg:block">
-      <p className="font-semibold text-sm">On this page</p>
+    <nav className="sticky top-16 h-[calc(100vh-121px)] left-0 rounded-lg mx-auto overflow-y-auto hidden lg:block">
+      <p className="font-bold mb-4">{t("label")}</p>
       <ul className="list-none flex flex-col gap-2">
         {headings.map((heading) => (
           <li
