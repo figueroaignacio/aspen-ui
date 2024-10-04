@@ -53,7 +53,9 @@ export default defineConfig({
       [
         rehypePrettyCode,
         {
-          theme: {},
+          theme: {
+            styles: [],
+          },
         },
       ],
       [
