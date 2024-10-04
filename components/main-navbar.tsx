@@ -6,12 +6,12 @@ import { useState } from "react";
 
 // Components
 import { Link } from "@/config/navigation";
-import NextLink from "next/link";
 import { Logo } from "./logo";
 import { ToggleTheme } from "./toggle-theme";
 
 // Icons
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { LocaleSwitcher } from "./locale-switcher";
 
 export function Navbar() {
   const t = useTranslations();
@@ -47,9 +47,7 @@ export function Navbar() {
       <div className="flex items-center gap-4">
         <ToggleTheme />
         <div className="space-x-3">
-          <NextLink href={"/es"}>ES</NextLink>
-          <span>/</span>
-          <NextLink href={"/en"}>EN</NextLink>
+          <LocaleSwitcher />
         </div>
       </div>
       {/* Backdrop */}
