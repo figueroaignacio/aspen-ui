@@ -43,7 +43,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
         </h1>
         <p className="text-sm text-foreground lg:text-lg">{t("subtitle")}</p>
       </div>
-      <div className="flex flex-col flex-wrap md:flex-row md:flex-nowrap gap-2 w-96 relative z-10">
+      <div className="flex items-center gap-2">
         <Link
           href={"/docs/introduction"}
           className="border-[1px] border-border text-center text-white rounded-full w-full text-xs lg:text-sm flex items-center gap-2 justify-center py-2 px-7 bg-violet-500 group"
