@@ -1,7 +1,7 @@
 {
   "home": {
-    "title": "<text1>Componentes</text1> de UI diseñados para elevar tus <text2>proyectos web</text2>.",
-    "subtitle": "Impulsa tu flujo de trabajo con componentes preconstruidos. Totalmente personalizables y de código abierto.",
+    "title": "<text1>Componentes de UI</text1> bien diseñados para mejorar tus <text2>proyectos web</text2>",
+    "subtitle": "Mejora tu flujo de trabajo con componentes preconstruidos, totalmente personalizables y de código abierto, listos para implementar.",
     "buttons": {
       "getStarted": "Empezar",
       "exploreComponents": "Explorar"
