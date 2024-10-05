@@ -43,17 +43,17 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
         </h1>
         <p className="text-sm text-foreground lg:text-lg">{t("subtitle")}</p>
       </div>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 z-10">
         <Link
           href={"/docs/introduction"}
-          className="border-[1px] border-border text-center text-white rounded-full w-full text-xs lg:text-sm flex items-center gap-2 justify-center py-2 px-7 bg-violet-500 group"
+          className="border-[1px] border-border text-center text-white rounded-full w-full text-xs lg:text-sm flex items-center gap-2 justify-center py-2 px-7 bg-violet-500 group text-nowrap"
         >
           {t("buttons.getStarted")}
           <ArrowRightIcon className="size-4 transition-transform ease-in-out duration-300 transform translate-x-0 group-hover:translate-x-1" />
         </Link>
         <Link
           href={"/docs/components"}
-          className="border-[1px] border-border text-center rounded-full w-full text-xs lg:text-sm flex items-center gap-2 justify-center py-2 px-7"
+          className="border-[1px] border-border text-center rounded-full w-full text-xs lg:text-sm flex items-center gap-2 justify-center py-2 px-7 "
         >
           {t("buttons.exploreComponents")}
           <BoltIcon className="size-4" />
