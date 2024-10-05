@@ -2,7 +2,7 @@ import { unstable_setRequestLocale } from "next-intl/server";
 
 // Components
 import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/main-navbar";
+import { Navbar } from "@/components/navbar";
 
 // Global Styles
 import "@/styles/globals.css";
