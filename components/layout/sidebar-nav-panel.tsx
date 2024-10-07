@@ -19,7 +19,7 @@ export function SidebarNavPanel() {
   const docsConfig: DocSection[] = t.raw("docsConfig");
 
   return (
-    <aside className="sticky top-16 h-[calc(100vh-121px)] left-0 rounded-lg mx-auto overflow-y-auto hidden lg:block">
+    <aside className="sticky top-20 h-[calc(100vh-121px)] left-0 rounded-lg mx-auto overflow-y-auto hidden lg:block">
       <nav>
         {docsConfig.map((section) => (
           <div key={section.title} className="space-y-2">
