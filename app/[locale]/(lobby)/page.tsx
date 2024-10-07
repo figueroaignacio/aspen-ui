@@ -52,7 +52,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
           <ArrowRightIcon className="size-4 transition-transform ease-in-out duration-300 transform translate-x-0 group-hover:translate-x-1" />
         </Link>
         <Link
-          href={"/docs/components"}
+          href={"/docs/components/avatar"}
           className="border-[1px] border-border text-center rounded-full w-full text-xs lg:text-sm flex items-center gap-2 justify-center py-2 px-7 "
         >
           {t("buttons.exploreComponents")}
