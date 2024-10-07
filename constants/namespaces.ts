@@ -4,4 +4,5 @@ export const namespaces: string[] = [
   "navigation",
   "docs",
   "localeSwitcher",
+  "siteConfig",
 ];

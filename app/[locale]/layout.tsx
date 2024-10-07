@@ -4,7 +4,11 @@ import { ThemeProvider } from "next-themes";
 
 // Utils
 import { locales } from "@/config/config";
-import { getMessages, unstable_setRequestLocale } from "next-intl/server";
+import {
+  getMessages,
+  getTranslations,
+  unstable_setRequestLocale,
+} from "next-intl/server";
 
 // Global Styles
 import "@/styles/globals.css";
@@ -12,46 +16,28 @@ import "@/styles/globals.css";
 // Font
 import "@fontsource-variable/onest";
 
-// Config
-import { siteConfig } from "@/config/site";
-
 // Metadata
-import type { Metadata } from "next";
+import { MetadataParams } from "@/types";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(
-    "https://icoded.vercel.app/" ?? "http://localhost:3000"
-  ),
-  title: {
-    default: siteConfig.title,
-    template: `%s - ${siteConfig.title}`,
-  },
-  authors: [
-    {
-      name: siteConfig.author.name,
-      url: siteConfig.author.url,
+export async function generateMetadata({ params: { locale } }: MetadataParams) {
+  const t = await getTranslations({ locale, namespace: "siteConfig" });
+
+  const metadataBase =
+    locale === "es"
+      ? process.env.NEXT_PUBLIC_URL_ES
+      : process.env.NEXT_PUBLIC_URL_EN;
+
+  return {
+    metadataBase: new URL(metadataBase ?? "http://localhost:3000"),
+    title: {
+      default: t("defaultTitle"),
+      template: `%s - ${t("templateTitle")}`,
     },
-  ],
-  creator: siteConfig.creator,
-  description: siteConfig.description,
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: siteConfig.url,
-    title: siteConfig.title,
-    description: siteConfig.description,
-    siteName: siteConfig.title,
-    images: [
-      {
-        url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
-        alt: siteConfig.title,
-      },
-    ],
-  },
-  keywords: siteConfig.keywords,
-};
+    description: t("description"),
+    creator: t("creator"),
+    keywords: t("keywords"),
+  };
+}
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
