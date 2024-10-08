@@ -6,6 +6,10 @@
         {
           "title": "Introducción",
           "href": "/docs/introduction"
+        },
+        {
+          "title": "Instalación",
+          "href": "/docs/installation"
         }
       ]
     },
