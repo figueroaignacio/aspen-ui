@@ -1,5 +1,6 @@
 // Components
 import { BgBlur } from "@/components/bg-blur";
+import { SidebarNav } from "@/components/layout/sidebar-nav";
 import { Toc } from "@/components/layout/toc";
 import { MDXContent } from "@/components/mdx/mdx-components";
 import { Pagination } from "@/components/pagination";
@@ -11,7 +12,6 @@ import { docs } from "@content";
 import { notFound } from "next/navigation";
 
 // Metadata
-import { SidebarNav } from "@/components/layout/sidebar-nav";
 import { Metadata } from "next";
 
 interface DocPageProps {

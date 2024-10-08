@@ -1,8 +1,9 @@
-// Hooks
-import { useTranslations } from "next-intl";
+"use client";
 
-// Components
+import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface DocItem {
   title: string;
@@ -16,18 +17,32 @@ interface DocSection {
 
 export function SidebarNavPanel() {
   const t = useTranslations();
+  const pathname = usePathname();
   const docsConfig: DocSection[] = t.raw("docsConfig");
 
   return (
-    <aside className="sticky top-20 h-[calc(100vh-121px)] left-0 rounded-lg mx-auto overflow-y-auto hidden lg:block">
+    <aside className="sticky top-20 h-[calc(100vh-5rem)] w-64 hidden lg:block">
       <nav>
-        {docsConfig.map((section) => (
-          <div key={section.title} className="space-y-2">
-            <h4 className="font-bold">{section.title}</h4>
-            <ul className="ml-3 space-y-2">
+        {docsConfig.map((section, index) => (
+          <div
+            key={section.title}
+            className={cn("pb-4", index !== 0 && "pt-4")}
+          >
+            <h2 className="mb-2 text-lg font-semibold tracking-tight">
+              {section.title}
+            </h2>
+            <ul className="space-y-1">
               {section.items.map((item) => (
-                <li key={item.href} className="text-sm mb-2">
-                  <Link href={item.href}>{item.title}</Link>
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className={cn(
+                      "block rounded-md px-3 py-2 text-sm transition-colors text-foreground hover:text-inherit",
+                      pathname === item.href ? "text-inherit" : ""
+                    )}
+                  >
+                    {item.title}
+                  </Link>
                 </li>
               ))}
             </ul>
