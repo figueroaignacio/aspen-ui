@@ -106,7 +106,9 @@ export default async function DocPage({ params }: DocPageProps) {
           <h1 className="text-3xl font-bold mb-4">{doc.title}</h1>
           {doc.description ? <p className="mb-4">{doc.description}</p> : null}
         </div>
-        <MDXContent code={doc.body} />
+        <div id="content">
+          <MDXContent code={doc.body} />
+        </div>
         <div className="my-10">
           <Pagination previousDoc={previousDoc} nextDoc={nextDoc} />
         </div>
