@@ -8,10 +8,11 @@ body {
 
 @layer base {
   :root {
-    --background: hsl(0, 0%, 97%);
+    --background: rgb(247, 247, 247);
     --foreground: hsl(0, 0%, 4%);
     --border: hsla(0, 0%, 0%, 0.1);
     --text-foreground: hsla(0, 0%, 0%, 0.9);
+    --bg-card: rgb(243, 243, 243);
   }
 
   .dark {
@@ -19,6 +20,7 @@ body {
     --foreground: hsl(0, 0%, 97%);
     --border: hsla(0, 0%, 100%, 0.05);
     --text-foreground: hsla(0, 0%, 97%, 0.8);
+    --bg-card: hsla(0, 0%, 3%, 0.2);
   }
 }
 
@@ -27,7 +29,7 @@ body {
     @apply scroll-smooth;
   }
   body {
-    @apply bg-background;
+    @apply bg-background border-border;
   }
   ::-webkit-scrollbar {
     @apply w-[0.6rem];

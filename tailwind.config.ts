@@ -4,8 +4,8 @@ const config: Config = {
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx,mdx}",
+    "./content/**/*.{ts,tsx,mdx}",
   ],
   darkMode: "class",
   theme: {
@@ -27,6 +27,7 @@ const config: Config = {
       },
       backgroundColor: {
         background: "var(--background)",
+        card: "var(--bg-card)",
       },
       colors: {
         foreground: "var(--foreground)",
