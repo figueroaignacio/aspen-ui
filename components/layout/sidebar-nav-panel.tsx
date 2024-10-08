@@ -1,9 +1,14 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+// Hooks
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
+
+// Utils
+import { cn } from "@/lib/utils";
+
+// Components
+import { Link } from "@/config/navigation";
 
 interface DocItem {
   title: string;
