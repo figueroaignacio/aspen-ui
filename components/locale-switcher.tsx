@@ -12,7 +12,7 @@ import { LanguageIcon } from "@heroicons/react/24/outline";
 // Config
 import { locales } from "../config/config";
 
-export type Locale = "es" | "en";
+import { Locale } from "@/types";
 
 type Props = {
   label?: string;
