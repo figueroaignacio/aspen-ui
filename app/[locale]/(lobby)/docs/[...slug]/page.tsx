@@ -2,6 +2,7 @@
 import { BgBlur } from "@/components/bg-blur";
 import { Toc } from "@/components/layout/toc";
 import { MDXContent } from "@/components/mdx/mdx-components";
+import { Pagination } from "@/components/pagination";
 
 // Content
 import { docs } from "@content";
@@ -29,7 +30,7 @@ async function getDocFromParams(params: DocPageProps["params"]) {
     );
     return doc;
   } catch (error) {
-    console.error("Error getting post from params:", error);
+    console.error("Error getting doc from params:", error);
     return null;
   }
 }
@@ -61,12 +62,38 @@ export async function generateStaticParams(): Promise<
   return docs.map((doc) => ({ slug: doc.slugAsParams.split("/") }));
 }
 
+async function getPreviousDoc(currentDocSlug: string, locale: string) {
+  const localePosts = docs.filter((doc) => doc.locale === locale);
+  const currentIndex = localePosts.findIndex(
+    (doc) => doc.slugAsParams === currentDocSlug
+  );
+  if (currentIndex > 0) {
+    return localePosts[currentIndex - 1];
+  }
+  return null;
+}
+
+async function getNextDoc(currentDocSlug: string, locale: string) {
+  const localePosts = docs.filter((doc) => doc.locale === locale);
+  const currentIndex = localePosts.findIndex(
+    (doc) => doc.slugAsParams === currentDocSlug
+  );
+  if (currentIndex < localePosts.length - 1) {
+    return localePosts[currentIndex + 1];
+  }
+  return null;
+}
+
 export default async function DocPage({ params }: DocPageProps) {
+  const { slug, locale = "en" } = params;
   const doc = await getDocFromParams(params);
 
   if (!doc || !doc.published) {
     notFound();
   }
+
+  const previousDoc = await getPreviousDoc(doc.slugAsParams, locale);
+  const nextDoc = await getNextDoc(doc.slugAsParams, locale);
 
   return (
     <article className="mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 relative top-12 max-w-7xl">
@@ -80,6 +107,9 @@ export default async function DocPage({ params }: DocPageProps) {
           <p className="mb-4">{doc.description}</p>
         </div>
         <MDXContent code={doc.body} />
+        <div className="my-10">
+          <Pagination previousDoc={previousDoc} nextDoc={nextDoc} />
+        </div>
       </div>
       <aside className="lg:col-span-3">
         <Toc />
