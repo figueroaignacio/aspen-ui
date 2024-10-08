@@ -69,12 +69,12 @@ export default async function DocPage({ params }: DocPageProps) {
   }
 
   return (
-    <article className="mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 relative top-12">
+    <article className="mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 relative top-12 max-w-7xl">
       <BgBlur />
-      <aside className="hidden lg:block lg:col-span-2">
+      <aside className="hidden lg:block lg:col-span-3">
         <SidebarNav />
       </aside>
-      <div className="lg:col-span-7 pb-16">
+      <div className="lg:col-span-6 pb-16">
         <div className="flex flex-col gap-2">
           <h1 className="text-3xl font-bold mb-4">{doc.title}</h1>
           <p className="mb-4">{doc.description}</p>
