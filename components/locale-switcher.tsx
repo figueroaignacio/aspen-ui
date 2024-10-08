@@ -71,8 +71,6 @@ export function LocaleSwitcher({ label }: Props) {
           </svg>
         </button>
       </div>
-
-      {/* Menú desplegable */}
       {isOpen && (
         <div
           className={clsx(
@@ -92,7 +90,6 @@ export function LocaleSwitcher({ label }: Props) {
                 )}
               >
                 {t("locales.locale", { locale: loc })}{" "}
-                {/* Traducción dinámica */}
               </div>
             ))}
           </div>
