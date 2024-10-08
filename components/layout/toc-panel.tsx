@@ -26,10 +26,8 @@ export function TocPanel({ headings, activeId }: TocPanelProps) {
           >
             <a
               href={`#${heading.id}`}
-              className={`hover:underline hover:text-foreground text-sm transition-colors duration-150 ${
-                activeId === heading.id
-                  ? "underline text-foreground"
-                  : "text-muted-foreground"
+              className={`hover:underline  text-sm transition-colors duration-150 ${
+                activeId === heading.id ? "underline" : "text-foreground"
               }`}
             >
               {heading.text}
