@@ -27,10 +27,10 @@ const config: Config = {
       },
       backgroundColor: {
         background: "var(--background)",
-        card: "var(--bg-card)",
       },
       colors: {
         foreground: "var(--foreground)",
+        card: "var(--card)",
       },
       borderColor: {
         border: "var(--border)",
