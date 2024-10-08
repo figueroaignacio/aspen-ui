@@ -26,7 +26,7 @@ export function SidebarNavPanel() {
   const docsConfig: DocSection[] = t.raw("docsConfig");
 
   return (
-    <aside className="sticky top-20 h-[calc(100vh-5rem)] w-64 hidden lg:block">
+    <aside className="sticky top-20 h-[calc(100vh-5rem)] hidden lg:block">
       <nav>
         {docsConfig.map((section, index) => (
           <div
@@ -36,13 +36,13 @@ export function SidebarNavPanel() {
             <h2 className="mb-2 text-lg font-semibold tracking-tight">
               {section.title}
             </h2>
-            <ul className="space-y-1">
+            <ul className="">
               {section.items.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
                     className={cn(
-                      "block rounded-md px-3 py-2 text-sm transition-colors text-foreground hover:text-inherit",
+                      "block rounded-md py-2 text-sm transition-colors text-foreground hover:text-inherit",
                       pathname === item.href ? "text-inherit" : ""
                     )}
                   >
