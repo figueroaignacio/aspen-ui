@@ -47,7 +47,7 @@ export function LocaleSwitcher({ label }: Props) {
         <button
           onClick={() => setIsOpen(!isOpen)}
           className={clsx(
-            "inline-flex justify-between w-full rounded-[14px] border px-4 py-2 bg-[var(--background)] text-sm font-medium",
+            "inline-flex justify-between w-full rounded-md border px-4 py-2 bg-[var(--background)] text-sm font-medium",
             "text-[var(--text-foreground)] border-[var(--border)]",
             "focus:outline-none focus:ring-2 focus:ring-violet-500",
             "dark:bg-[var(--background)] dark:text-[var(--text-foreground)] dark:border-[var(--border)]"

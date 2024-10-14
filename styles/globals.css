@@ -13,6 +13,7 @@ body {
     --border: hsla(0, 0%, 0%, 0.1);
     --text-foreground: hsla(0, 0%, 0%, 0.9);
     --card: rgb(243, 243, 243);
+    --radius: 1rem;
   }
 
   .dark {

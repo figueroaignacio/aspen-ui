@@ -20,7 +20,7 @@ export function Pagination({ previousDoc, nextDoc }: PostPagePaginationProps) {
       {previousDoc ? (
         <Link
           href={`/docs/${previousDoc.slugAsParams}`}
-          className="group flex items-center justify-start gap-2 border border-border py-2 px-6 rounded-full group"
+          className="group flex items-center justify-start gap-2 border border-border py-2 px-6 rounded-md group"
         >
           <ArrowLeftIcon className="size-3 transition-transform ease-in-out duration-300 transform translate-x-0 group-hover:-translate-x-1" />
           <div className="text-left">
@@ -35,7 +35,7 @@ export function Pagination({ previousDoc, nextDoc }: PostPagePaginationProps) {
       {nextDoc ? (
         <Link
           href={`/docs/${nextDoc.slugAsParams}`}
-          className="group flex items-center justify-end gap-2 border border-border py-2 px-6 rounded-full group"
+          className="group flex items-center justify-end gap-2 border border-border py-2 px-6 rounded-md group"
         >
           <div className="text-right">
             <span className="block font-bold text-sm sm:text-md">
