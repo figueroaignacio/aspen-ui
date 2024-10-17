@@ -67,7 +67,7 @@ export function SiteMobileNavbar({ navigation }: SiteMobileNavbarProps) {
           </div>
         </div>
         <div className="border-[1px] border-border mb-5" />
-        <div className="space-y-12 px-8 py-2 overflow-y-scroll">
+        <div className="space-y-6 px-8 py-2 overflow-y-scroll">
           <ul className="flex flex-col items-start gap-3">
             {navigation.map((navItem: NavigationProps, index: number) => (
               <li key={index} onClick={toggleMenu}>
@@ -79,7 +79,7 @@ export function SiteMobileNavbar({ navigation }: SiteMobileNavbarProps) {
             {docsConfig.map((section, index) => (
               <div
                 key={section.title}
-                className={cn("pb-4", index !== 0 && "pt-4")}
+                className={cn("pb-2", index !== 0 && "pt-2")}
               >
                 <h2 className="mb-2 text-lg font-semibold tracking-tight">
                   {section.title}
