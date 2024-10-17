@@ -19,7 +19,7 @@ body {
   .dark {
     --background: hsl(220, 10%, 3%);
     --foreground: hsl(220, 10%, 98%);
-    --border: hsla(220, 10%, 15%, 1);
+    --border: hsl(220, 10%, 8%);
     --text-foreground: hsla(220, 10%, 90%, 0.9);
     --card: hsl(220, 10%, 4%);
   }

@@ -58,16 +58,15 @@ export function SiteMobileNavbar({ navigation }: SiteMobileNavbarProps) {
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between">
-          <div onClick={toggleMenu} className="flex justify-start p-4">
+        <div className="flex items-center justify-between border-b-[1px] border-border">
+          <div onClick={toggleMenu} className="flex justify-start p-3.5">
             <Logo />
           </div>
-          <div className="flex justify-end p-4">
+          <div className="flex justify-end p-3.5">
             <XMarkIcon className="size-8 cursor-pointer" onClick={toggleMenu} />
           </div>
         </div>
-        <div className="border-[1px] border-border mb-5" />
-        <div className="space-y-6 px-8 py-2 overflow-y-scroll">
+        <div className="space-y-6 px-8 py-4 overflow-y-scroll">
           <ul className="flex flex-col items-start gap-3">
             {navigation.map((navItem: NavigationProps, index: number) => (
               <li key={index} onClick={toggleMenu}>
