@@ -25,14 +25,10 @@ export default function LobbyLayout({
   unstable_setRequestLocale(locale);
 
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className="scroll-py-[3.5rem]">
-        <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
-          <Navbar />
-          <main className="container mx-auto">{children}</main>
-          <Footer />
-        </div>
-      </body>
-    </html>
+    <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
+      <Navbar />
+      <main className="container mx-auto">{children}</main>
+      <Footer />
+    </div>
   );
 }
