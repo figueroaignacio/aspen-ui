@@ -30,7 +30,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
   ];
 
   return (
-    <section className="flex flex-col justify-center min-h-[80dvh] gap-6 items-center text-center relative overflow-hidden">
+    <section className="flex flex-col justify-center min-h-[90dvh] gap-6 items-center text-center relative overflow-hidden">
       <div className="hidden dark:block fixed top-1/2 left-1/2 size-6/12 bg-gradient-to-br from-purple-500 via-violet-500 to-transparent opacity-10 blur-3xl transform -skew-y-6 translate-x-[-50%] translate-y-[-50%]" />
 
       <div className="max-w-4xl space-y-6">
