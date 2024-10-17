@@ -8,20 +8,20 @@ body {
 
 @layer base {
   :root {
-    --background: rgb(247, 247, 247);
-    --foreground: hsl(0, 0%, 4%);
-    --border: hsla(0, 0%, 0%, 0.1);
-    --text-foreground: hsla(0, 0%, 0%, 0.9);
-    --card: rgb(243, 243, 243);
+    --background: hsl(220, 20%, 97%);
+    --foreground: hsl(220, 10%, 10%);
+    --border: hsla(220, 13%, 91%, 1);
+    --text-foreground: hsla(220, 10%, 20%, 0.95);
+    --card: hsl(220, 16%, 96%);
     --radius: 1rem;
   }
 
   .dark {
-    --background: hsl(0, 0%, 2%);
-    --foreground: hsl(0, 0%, 97%);
-    --border: hsla(0, 0%, 100%, 0.05);
-    --text-foreground: hsla(0, 0%, 97%, 0.8);
-    --card: hsl(0, 0%, 2.8%);
+    --background: hsl(220, 10%, 3%);
+    --foreground: hsl(220, 10%, 98%);
+    --border: hsla(220, 10%, 15%, 1);
+    --text-foreground: hsla(220, 10%, 90%, 0.9);
+    --card: hsl(220, 10%, 4%);
   }
 }
 
