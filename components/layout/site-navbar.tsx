@@ -21,7 +21,7 @@ export function SiteNavbar({ navigation }: SiteNavbarProps) {
           <Logo />
         </li>
         {navigation.map((navItem: NavigationProps, index: number) => (
-          <li key={index} className="mr-6 text-sm">
+          <li key={index} className="mr-6 text-sm text-foreground">
             <Link href={navItem.href}>{navItem.title}</Link>
           </li>
         ))}
