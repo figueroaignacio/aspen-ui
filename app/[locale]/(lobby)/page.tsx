@@ -47,9 +47,9 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
   ];
 
   return (
-    <section className="flex flex-col gap-6 border-border border-[1px]">
+    <section className="flex flex-col gap-6 border-border border-b-[1px]">
       <div className="py-12 max-w-3xl space-y-8 px-5 md:px-10 lg:px-20">
-        <div>
+        <div className="space-y-2">
           <h1 className="text-3xl font-bold">
             {t.rich("title", {
               text1: (chunks) => <span className="">{chunks}</span>,
@@ -68,9 +68,9 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
         </div>
         <div className="space-y-3">
           <h3 className="text-muted-foreground text-sm">
-            Especificamente para proyectos construidos con:
+            {t("technologiesDescription")}
           </h3>
-          <ul className="flex flex-wrap gap-4 border-[1px] border-border px-4 py-5 rounded-md justify-start md:justify-around">
+          <ul className="flex flex-wrap gap-1 border-[1px] border-border px-2 py-5 rounded-md justify-start md:justify-around">
             {technologies.map((tech, index) => (
               <li key={index} className="text-sm flex items-center gap-2">
                 {tech.icon}
