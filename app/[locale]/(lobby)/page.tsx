@@ -2,15 +2,18 @@
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 
+// Components
+import { Link } from "@/config/navigation";
+
 // Icons
 import {
+  Github,
   NextIcon,
   ReactIcon,
   TailwindIcon,
   TypescriptIcon,
 } from "@/components/icons";
-import { Link } from "@/config/navigation";
-import { ArrowRightIcon, BoltIcon } from "@heroicons/react/16/solid";
+import { ArrowRightIcon } from "@heroicons/react/16/solid";
 
 interface HomePageProps {
   params: { locale: string };
@@ -35,14 +38,14 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
         <ArrowRightIcon className="size-4 transition-transform ease-in-out duration-300 transform translate-x-0 group-hover:translate-x-1" />
       ),
       className:
-        "border-[1px] border-border text-center text-foreground rounded-md w-full text-xs flex items-center gap-2 justify-center py-2 bg-primary hover:bg-primary-foreground group text-nowrap",
+        "border-[1px] border-border text-center text-foreground rounded-md text-xs flex items-center gap-2 justify-center py-2 px-5 bg-primary hover:bg-primary-foreground group text-nowrap",
     },
     {
-      label: t("buttons.exploreComponents"),
+      label: "GitHub",
       href: "/docs/components/avatar",
-      icon: <BoltIcon className="size-4" />,
+      icon: <Github />,
       className:
-        "text-center text-foreground rounded-md w-full text-xs flex items-center gap-2 justify-center py-2 hover:bg-primary-foreground",
+        "text-center text-foreground rounded-md text-xs flex items-center gap-2 justify-center py-2 px-5 hover:bg-primary-foreground",
     },
   ];
 
@@ -58,7 +61,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
           </h1>
           <h2 className="text-sm text-muted-foreground">{t("subtitle")}</h2>
         </div>
-        <div className="flex gap-4 max-w-80">
+        <div className="flex gap-1 max-w-52">
           {links.map((item, index: number) => (
             <Link href={item.href} className={item.className} key={index}>
               {item.label}

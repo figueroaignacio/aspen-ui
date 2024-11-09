@@ -3,8 +3,7 @@
     "title": "<text1>UI Components</text1> crafted to elevate your <text2>web projects</text2>",
     "subtitle": "Enhance your workflow with a suite of customizable, open-source components, seamlessly ready to integrate into any development environment.",
     "buttons": {
-      "getStarted": "Get Started",
-      "exploreComponents": "Explore"
+      "getStarted": "Get Started"
     },
     "technologiesDescription": "Specifically for projects built with 👇"
   }

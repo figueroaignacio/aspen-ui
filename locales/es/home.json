@@ -3,8 +3,7 @@
     "title": "<text1>Componentes de UI</text1> creados para elevar tus <text2>proyectos web</text2>",
     "subtitle": "Impulsa tu flujo de trabajo con una colección de componentes personalizables, de código abierto y listos para integrarse sin esfuerzo en cualquier entorno de desarrollo.",
     "buttons": {
-      "getStarted": "Comenzar",
-      "exploreComponents": "Explorar"
+      "getStarted": "Comenzar"
     },
     "technologiesDescription": "Especificamente para proyectos construidos con 👇"
   }
