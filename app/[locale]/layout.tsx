@@ -1,6 +1,5 @@
 // Provider
 import { NextIntlClientProvider } from "next-intl";
-import { ThemeProvider } from "next-themes";
 
 // Utils
 import { locales } from "@/config/config";
@@ -59,14 +58,7 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            disableTransitionOnChange
-            enableSystem
-          >
-            {children}
-          </ThemeProvider>
+          {children}
         </NextIntlClientProvider>
       </body>
     </html>

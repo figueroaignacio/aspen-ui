@@ -1,25 +1,51 @@
-"use client";
-
-// Hooks
-import { useTheme } from "next-themes";
-
-// Icons
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
+import { useEffect, useState } from "react";
 
-export const ToggleTheme = () => {
-  const { theme, setTheme } = useTheme();
+export function ToggleTheme() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
+    if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+      setIsDarkMode(true);
+      document.documentElement.classList.add("dark");
+    }
+  }, []);
 
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
+    if (!document.startViewTransition) {
+      setIsDarkMode(!isDarkMode);
+      updateTheme(!isDarkMode);
+      return;
+    }
+
+    document.startViewTransition(() => {
+      setIsDarkMode(!isDarkMode);
+      updateTheme(!isDarkMode);
+    });
+  };
+
+  const updateTheme = (dark: boolean) => {
+    if (dark) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
   };
 
   return (
-    <button onClick={toggleTheme}>
-      {theme === "light" ? (
-        <MoonIcon className="h-6 w-6" />
+    <button onClick={toggleTheme} aria-label={isDarkMode ? "Light" : "Dark"}>
+      {isDarkMode ? (
+        <SunIcon className="size-5" />
       ) : (
-        <SunIcon className="h-6 w-6" />
+        <MoonIcon className="size-5" />
       )}
     </button>
   );
-};
+}
