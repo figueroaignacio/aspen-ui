@@ -41,10 +41,11 @@ export function SidebarNavPanel() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={cn(
-                      "block rounded-md py-2 text-sm transition-colors text-foreground hover:text-inherit",
-                      pathname === item.href ? "text-inherit" : ""
-                    )}
+                    className={`block rounded-md py-2 text-sm ${
+                      pathname === `/${item.href}`
+                        ? "text-muted"
+                        : "text-muted-foreground hover:text-muted"
+                    }`}
                   >
                     {item.title}
                   </Link>

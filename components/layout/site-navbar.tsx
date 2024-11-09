@@ -1,3 +1,8 @@
+"use client";
+
+// Hooks
+import { usePathname } from "next/navigation";
+
 // Components
 import { Link } from "@/config/navigation";
 import { LocaleSwitcher } from "../locale-switcher";
@@ -14,6 +19,8 @@ interface SiteNavbarProps {
 }
 
 export function SiteNavbar({ navigation }: SiteNavbarProps) {
+  const pathname = usePathname();
+
   return (
     <nav className="hidden md:flex items-center justify-between w-full">
       <ul className="flex items-center">
@@ -21,8 +28,17 @@ export function SiteNavbar({ navigation }: SiteNavbarProps) {
           <Logo />
         </li>
         {navigation.map((navItem: NavigationProps, index: number) => (
-          <li key={index} className="mr-6 text-sm text-foreground">
-            <Link href={navItem.href}>{navItem.title}</Link>
+          <li key={index}>
+            <Link
+              href={navItem.href}
+              className={`mr-6 text-sm ${
+                pathname === `/${navItem.href}`
+                  ? "text-muted"
+                  : "text-muted-foreground hover:text-muted"
+              }`}
+            >
+              {navItem.title}
+            </Link>
           </li>
         ))}
       </ul>

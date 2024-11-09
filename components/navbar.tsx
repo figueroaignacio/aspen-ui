@@ -1,5 +1,3 @@
-"use client";
-
 import { useTranslations } from "next-intl";
 import { SiteMobileNavbar } from "./layout/site-mobile-navbar";
 import { SiteNavbar } from "./layout/site-navbar";

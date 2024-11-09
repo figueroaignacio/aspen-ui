@@ -1,3 +1,5 @@
+"use client";
+
 // Hooks
 import { useTheme } from "next-themes";
 

@@ -1,6 +1,7 @@
 "use client";
 
 // Hooks
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 // Components
@@ -35,6 +36,9 @@ interface DocSection {
 
 export function SiteMobileNavbar({ navigation }: SiteMobileNavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const pathname = usePathname();
+
   const t = useTranslations();
   const docsConfig: DocSection[] = t.raw("docsConfig");
 
@@ -66,10 +70,18 @@ export function SiteMobileNavbar({ navigation }: SiteMobileNavbarProps) {
             <XMarkIcon className="size-8 cursor-pointer" onClick={toggleMenu} />
           </div>
         </div>
-        <div className="space-y-6 px-8 py-4 overflow-y-scroll">
+        <div className="space-y-6 px-5 py-4 overflow-y-scroll">
           <ul className="flex flex-col items-start gap-3">
             {navigation.map((navItem: NavigationProps, index: number) => (
-              <li key={index} onClick={toggleMenu}>
+              <li
+                key={index}
+                onClick={toggleMenu}
+                className={`mr-6 text-sm ${
+                  pathname === navItem.href
+                    ? "text-muted"
+                    : "text-muted-foreground hover:text-muted"
+                }`}
+              >
                 <Link href={navItem.href}>{navItem.title}</Link>
               </li>
             ))}
@@ -85,13 +97,16 @@ export function SiteMobileNavbar({ navigation }: SiteMobileNavbarProps) {
                 </h2>
                 <ul>
                   {section.items.map((item) => (
-                    <li key={item.href} onClick={toggleMenu}>
-                      <Link
-                        href={item.href}
-                        className={
-                          "block rounded-md py-2 text-sm transition-colors text-foreground hover:text-inherit"
-                        }
-                      >
+                    <li
+                      key={item.href}
+                      onClick={toggleMenu}
+                      className={`mr-6 text-sm ${
+                        pathname === item.href
+                          ? "text-muted"
+                          : "text-muted-foreground hover:text-muted"
+                      }`}
+                    >
+                      <Link href={item.href} className={"block py-2 text-sm "}>
                         {item.title}
                       </Link>
                     </li>
