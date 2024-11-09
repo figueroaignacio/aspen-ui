@@ -2,56 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: "Onest Variable", sans-serif;
-}
-
 @layer base {
   :root {
-    --background: hsl(220, 20%, 97%);
-    --foreground: hsl(0, 0%, 18%);
-    --border: hsla(220, 13%, 91%, 1);
-    --text-foreground: hsla(220, 10%, 20%, 0.95);
-    --card: hsl(220, 16%, 96%);
+    --background: hsl(0, 0%, 98%);
+    --foreground: hsl(220, 20%, 20%);
+    --card: hsl(210, 25%, 96%);
+    --primary: hsl(0, 0%, 100%);
+    --primary-foreground: hsl(212, 24%, 89%);
+    --secondary: hsl(200, 60%, 50%);
+    --secondary-foreground: hsl(210, 30%, 98%);
+    --accent: hsl(340, 70%, 60%);
+    --accent-foreground: hsl(200, 27%, 98%);
+    --muted: hsl(240 3.8% 25.1%);
+    --muted-foreground: hsl(240 3.8% 50.1%);
+    --border: hsl(210, 20%, 85%);
     --radius: 1rem;
   }
 
   .dark {
-    --background: hsl(220, 10%, 5%);
-    --foreground: hsl(220, 0%, 90%);
-    --border: hsl(220, 10%, 8%);
-    --text-foreground: hsla(220, 10%, 90%, 0.9);
-    --card: hsl(220, 10%, 4%);
+    --background: hsl(223, 14%, 10%);
+    --foreground: hsl(210, 20%, 98%);
+    --card: hsl(220, 15%, 15%);
+    --primary: hsl(220, 15%, 14%);
+    --primary-foreground: hsl(220, 15%, 20%);
+    --secondary: hsl(200, 60%, 60%);
+    --secondary-foreground: hsl(220, 15%, 10%);
+    --accent: hsl(340, 70%, 70%);
+    --accent-foreground: hsl(240 5% 64.9%);
+    --muted: hsl(240 4.8% 95.9%);
+    --muted-foreground: hsl(240 3.8% 70%);
+    --border: hsl(220, 15%, 20%);
   }
 }
 
 @layer base {
-  * {
-    @apply scroll-smooth;
-  }
-  body {
-    @apply bg-background border-border;
-  }
-
-  h1,
-  h2 {
-    @apply text-foreground;
-  }
-
   ::-webkit-scrollbar {
-    @apply w-[0.3rem];
+    @apply w-[0.5rem];
   }
 
   ::-webkit-scrollbar-track {
     @apply bg-transparent;
   }
+
   ::-webkit-scrollbar-thumb {
     @apply bg-slate-400 dark:bg-gray-500 rounded-md;
   }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Onest Variable", sans-serif;
+  }
 }
 
-@layer components {
+@layer utilities {
   .gradient-text {
-    @apply bg-gradient-to-r from-purple-500 to-violet-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-transparent bg-clip-text;
+  }
+
+  .highlighted-text {
+    @apply bg-purple-400 px-2 py-0.5 rounded-md text-white;
+  }
+
+  .grid-main-container {
+    @apply grid grid-rows-[auto_1fr_auto];
   }
 }
