@@ -42,7 +42,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
     },
     {
       label: "GitHub",
-      href: "/docs/components/avatar",
+      href: "https://github.com/figueroaignacio/aspen-ui",
       icon: <Github />,
       className:
         "text-center text-foreground rounded-md text-xs flex items-center gap-2 justify-center py-2 px-5 hover:bg-primary-foreground",
