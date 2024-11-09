@@ -1,5 +1,4 @@
 // Components
-import { BgBlur } from "@/components/bg-blur";
 import { SidebarNav } from "@/components/layout/sidebar-nav";
 import { Toc } from "@/components/layout/toc";
 import { MDXContent } from "@/components/mdx/mdx-components";
@@ -97,7 +96,6 @@ export default async function DocPage({ params }: DocPageProps) {
 
   return (
     <article className="mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 relative top-12 max-w-7xl">
-      <BgBlur />
       <aside className="hidden lg:block lg:col-span-3">
         <SidebarNav />
       </aside>

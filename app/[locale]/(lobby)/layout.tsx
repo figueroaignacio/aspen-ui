@@ -27,7 +27,7 @@ export default function LobbyLayout({
   return (
     <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
       <Navbar />
-      <main className="container mx-auto">{children}</main>
+      <main>{children}</main>
       <Footer />
     </div>
   );
