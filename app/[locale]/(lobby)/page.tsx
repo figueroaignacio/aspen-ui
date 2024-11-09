@@ -70,9 +70,12 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
           <h3 className="text-muted-foreground text-sm">
             {t("technologiesDescription")}
           </h3>
-          <ul className="flex flex-wrap gap-1 border-[1px] border-border px-2 py-5 rounded-md justify-start md:justify-around">
+          <ul className="flex flex-wrap gap-3 border-border border-[1px] rounded-lg p-4">
             {technologies.map((tech, index) => (
-              <li key={index} className="text-sm flex items-center gap-2">
+              <li
+                key={index}
+                className="flex items-center gap-2 border-border border-[1px] rounded-md py-2 px-4 text-xs"
+              >
                 {tech.icon}
                 {tech.title}
               </li>
