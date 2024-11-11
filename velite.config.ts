@@ -33,6 +33,7 @@ const docs = defineCollection({
       published: s.boolean().default(true),
       body: s.mdx(),
       locale: s.string(),
+      order: s.number().optional(),
     })
     .transform(computedFields),
 });

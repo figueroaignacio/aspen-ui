@@ -62,25 +62,37 @@ export async function generateStaticParams(): Promise<
 }
 
 async function getPreviousDoc(currentDocSlug: string, locale: string) {
-  const localePosts = docs.filter((doc) => doc.locale === locale);
+  // Filtra los documentos por idioma y ordénalos dinámicamente por el campo `order`
+  const localePosts = docs
+    .filter((doc) => doc.locale === locale)
+    .sort((a, b) => (a.order || 0) - (b.order || 0)); // Ordena por `order`
+
+  // Encuentra el índice del documento actual
   const currentIndex = localePosts.findIndex(
     (doc) => doc.slugAsParams === currentDocSlug
   );
+
   if (currentIndex > 0) {
-    return localePosts[currentIndex - 1];
+    return localePosts[currentIndex - 1]; // Devuelve el documento anterior
   }
-  return null;
+  return null; // Si no hay documento anterior, devuelve null
 }
 
 async function getNextDoc(currentDocSlug: string, locale: string) {
-  const localePosts = docs.filter((doc) => doc.locale === locale);
+  // Filtra los documentos por idioma y ordénalos dinámicamente por el campo `order`
+  const localePosts = docs
+    .filter((doc) => doc.locale === locale)
+    .sort((a, b) => (a.order || 0) - (b.order || 0)); // Ordena por `order`
+
+  // Encuentra el índice del documento actual
   const currentIndex = localePosts.findIndex(
     (doc) => doc.slugAsParams === currentDocSlug
   );
+
   if (currentIndex < localePosts.length - 1) {
-    return localePosts[currentIndex + 1];
+    return localePosts[currentIndex + 1]; // Devuelve el documento siguiente
   }
-  return null;
+  return null; // Si no hay documento siguiente, devuelve null
 }
 
 export default async function DocPage({ params }: DocPageProps) {
