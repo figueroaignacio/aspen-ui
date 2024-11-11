@@ -5,11 +5,11 @@
       "items": [
         {
           "title": "Introduction",
-          "href": "/docs/getting-started/introduction"
+          "href": "/docs/introduction"
         },
         {
           "title": "Installation",
-          "href": "/docs/getting-started/installation"
+          "href": "/docs/installation"
         }
       ]
     },
