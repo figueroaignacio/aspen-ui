@@ -1,4 +1,7 @@
+// Hooks
 import { useTranslations } from "next-intl";
+
+// Components
 import { SiteMobileNavbar } from "./layout/site-mobile-navbar";
 import { SiteNavbar } from "./layout/site-navbar";
 
