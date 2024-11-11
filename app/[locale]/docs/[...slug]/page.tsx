@@ -95,7 +95,7 @@ export default async function DocPage({ params }: DocPageProps) {
   const nextDoc = await getNextDoc(doc.slugAsParams, locale);
 
   return (
-    <article className="space-y-5 px-5 md:px-10 lg:px-20 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-7xl">
+    <article className="space-y-5 px-5 md:px-10 lg:px-20 mx-auto grid grid-cols-1 lg:grid-cols-12 ">
       <aside className="hidden lg:block lg:col-span-3">
         <SidebarNav />
       </aside>
