@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 
 // Components
-import { Link } from "@/config/navigation";
+import { Link } from "@/lib/i18n/routing";
 
 interface PostPagePaginationProps {
   previousDoc: { slugAsParams: string; title: string } | null;

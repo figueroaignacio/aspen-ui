@@ -4,7 +4,7 @@
 import { usePathname } from "next/navigation";
 
 // Components
-import { Link } from "@/config/navigation";
+import { Link } from "@/lib/i18n/routing";
 import { LocaleSwitcher } from "../locale-switcher";
 import { Logo } from "../logo";
 import { ToggleTheme } from "../toggle-theme";

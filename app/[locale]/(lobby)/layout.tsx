@@ -1,4 +1,4 @@
-import { unstable_setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 
 // Components
 import { Footer } from "@/components/footer";
@@ -8,7 +8,7 @@ import { Navbar } from "@/components/navbar";
 import "@/styles/globals.css";
 
 // Config
-import { locales } from "@/config/config";
+import { locales } from "@/lib/i18n/routing";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -22,7 +22,7 @@ export default function LobbyLayout({
   children,
   params: { locale },
 }: LobbyLayoutProps) {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   return (
     <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">

@@ -2,11 +2,11 @@
 import { NextIntlClientProvider } from "next-intl";
 
 // Utils
-import { locales } from "@/config/config";
+import { locales } from "@/lib/i18n/routing";
 import {
   getMessages,
   getTranslations,
-  unstable_setRequestLocale,
+  setRequestLocale,
 } from "next-intl/server";
 
 // Global Styles
@@ -51,7 +51,7 @@ export default async function RootLayout({
   children,
   params: { locale },
 }: LocaleLayoutProps) {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
   const messages = await getMessages();
 
   return (

@@ -1,4 +1,4 @@
-import { unstable_setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 
 // Hooks
 import { useTranslations } from "next-intl";
@@ -15,7 +15,7 @@ interface TemplatesPageProps {
 }
 
 export default function BlocksPage({ params: { locale } }: TemplatesPageProps) {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
   const t = useTranslations("blocks");
   return (
     <section className="relative flex min-h-[80dvh] items-center justify-center p-4">

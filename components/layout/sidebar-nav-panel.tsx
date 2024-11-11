@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 // Components
-import { Link } from "@/config/navigation";
+import { Link } from "@/lib/i18n/routing";
 
 interface DocItem {
   title: string;

@@ -1,16 +1,16 @@
 "use client";
 
 // Hooks
+import { usePathname, useRouter } from "@/lib/i18n/routing";
 import clsx from "clsx";
 import { useLocale, useTranslations } from "next-intl";
 import { useState, useTransition } from "react";
-import { usePathname, useRouter } from "../config/navigation";
 
 // Icons
 import { LanguageIcon } from "@heroicons/react/24/outline";
 
 // Config
-import { locales } from "../config/config";
+import { locales } from "@/lib/i18n/routing";
 
 import { Locale } from "@/types";
 

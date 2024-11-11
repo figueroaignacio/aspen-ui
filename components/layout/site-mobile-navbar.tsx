@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 // Components
-import { Link } from "@/config/navigation";
+import { Link } from "@/lib/i18n/routing";
 import { Logo } from "../logo";
 
 // Icons

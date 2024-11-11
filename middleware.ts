@@ -1,10 +1,10 @@
-import createMiddleware from "next-intl/middleware";
 import {
   defaultLocale,
   localePrefix,
   locales,
   pathnames,
-} from "./config/config";
+} from "@/lib/i18n/routing";
+import createMiddleware from "next-intl/middleware";
 
 export default createMiddleware({
   defaultLocale,

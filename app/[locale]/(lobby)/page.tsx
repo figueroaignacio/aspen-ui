@@ -1,9 +1,9 @@
 // Hooks
 import { useTranslations } from "next-intl";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 
 // Components
-import { Link } from "@/config/navigation";
+import { Link } from "@/lib/i18n/routing";
 
 // Icons
 import {
@@ -20,7 +20,7 @@ interface HomePageProps {
 }
 
 export default function HomePage({ params: { locale } }: HomePageProps) {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
   const t = useTranslations("home");
 
   const technologies = [
