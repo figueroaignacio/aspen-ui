@@ -1,6 +1,10 @@
 // Provider
 import { NextIntlClientProvider } from "next-intl";
 
+// Components
+import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
+
 // Utils
 import { locales } from "@/lib/i18n/routing";
 import {
@@ -58,7 +62,11 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <body>
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+          </div>
         </NextIntlClientProvider>
       </body>
     </html>
