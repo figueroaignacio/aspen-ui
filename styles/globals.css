@@ -36,6 +36,10 @@
 }
 
 @layer base {
+  * {
+    @apply border-border;
+  }
+
   ::-webkit-scrollbar {
     @apply w-[0.5rem];
   }

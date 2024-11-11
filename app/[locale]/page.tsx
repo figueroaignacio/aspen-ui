@@ -1,6 +1,5 @@
 // Hooks
 import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
 
 // Components
 import { Link } from "@/lib/i18n/routing";
@@ -14,6 +13,10 @@ import {
   TypescriptIcon,
 } from "@/components/icons";
 import { ArrowRightIcon } from "@heroicons/react/16/solid";
+
+// Utils
+import { buttonVariants } from "@/components/ui/button";
+import { setRequestLocale } from "next-intl/server";
 
 interface HomePageProps {
   params: { locale: string };
@@ -37,20 +40,18 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
       icon: (
         <ArrowRightIcon className="size-4 transition-transform ease-in-out duration-300 transform translate-x-0 group-hover:translate-x-1" />
       ),
-      className:
-        "border-[1px] border-border text-center text-foreground rounded-md text-xs flex items-center gap-2 justify-center py-2 px-5 bg-primary hover:bg-primary-foreground group text-nowrap",
+      variant: "default" as const,
     },
     {
       label: "GitHub",
       href: "https://github.com/figueroaignacio/aspen-ui",
       icon: <Github />,
-      className:
-        "text-center text-foreground rounded-md text-xs flex items-center gap-2 justify-center py-2 px-5 hover:bg-primary-foreground",
+      variant: "ghost" as const,
     },
   ];
 
   return (
-    <section className="flex flex-col gap-6 border-border border-b-[1px]">
+    <section className="flex flex-col gap-6 border">
       <div className="py-12 max-w-3xl space-y-8 px-5 md:px-10 lg:px-20">
         <div className="space-y-2">
           <h1 className="text-3xl font-bold">
@@ -61,9 +62,13 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
           </h1>
           <h2 className="text-sm text-muted-foreground">{t("subtitle")}</h2>
         </div>
-        <div className="flex gap-1 max-w-52">
+        <div className="flex gap-2 max-w-52">
           {links.map((item, index: number) => (
-            <Link href={item.href} className={item.className} key={index}>
+            <Link
+              href={item.href}
+              key={index}
+              className={`${buttonVariants(item.variant, "sm")} group`}
+            >
               {item.label}
               {item.icon}
             </Link>
@@ -73,11 +78,11 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
           <h3 className="text-muted-foreground text-sm">
             {t("technologiesDescription")}
           </h3>
-          <ul className="flex flex-wrap gap-3 border-border border-[1px] rounded-lg p-4">
+          <ul className="flex flex-wrap gap-3 border rounded-lg p-4">
             {technologies.map((tech, index) => (
               <li
                 key={index}
-                className="flex items-center gap-2 border-border border-[1px] rounded-md py-2 px-4 text-xs"
+                className="flex items-center gap-2 border rounded-md py-2 px-4 text-xs"
               >
                 {tech.icon}
                 {tech.title}
