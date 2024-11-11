@@ -95,13 +95,13 @@ export default async function DocPage({ params }: DocPageProps) {
   const nextDoc = await getNextDoc(doc.slugAsParams, locale);
 
   return (
-    <article className="mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 relative top-12 max-w-7xl">
+    <article className="space-y-5 px-5 md:px-10 lg:px-20 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-7xl">
       <aside className="hidden lg:block lg:col-span-3">
         <SidebarNav />
       </aside>
       <div className="lg:col-span-6 pb-16">
         <div className="flex flex-col gap-2">
-          <h1 className="text-3xl font-bold mb-4">{doc.title}</h1>
+          <h1 className="text-3xl font-bold">{doc.title}</h1>
           {doc.description ? <p className="mb-4">{doc.description}</p> : null}
         </div>
         <div id="content">
