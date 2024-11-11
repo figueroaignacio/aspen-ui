@@ -2,7 +2,7 @@
   "navigation": [
     {
       "title": "Documentación",
-      "href": "/docs/introduction"
+      "href": "/docs/getting-started/introduction"
     },
     {
       "title": "Componentes",
