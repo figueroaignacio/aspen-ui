@@ -4,7 +4,7 @@ export function Footer() {
   const t = useTranslations("footer");
 
   return (
-    <footer className="border-t border-border text-center py-4 text-sm text-foreground px-5">
+    <footer className="border-t  text-center py-4 text-sm text-foreground px-5">
       {t.rich("text", {
         link1: (chunks) => (
           <a
