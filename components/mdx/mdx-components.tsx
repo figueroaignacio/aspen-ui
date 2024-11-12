@@ -10,6 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
+import { Anchor } from "./anchor";
 
 // Utils
 import { cn } from "@/lib/utils";
@@ -27,6 +28,7 @@ const components = {
   CardFooter,
   CardHeader,
   CardContent,
+  Anchor,
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1 className={cn("mt-2 scroll-m-20 font-bold", className)} {...props} />
   ),
@@ -49,7 +51,7 @@ const components = {
     />
   ),
   a: ({ className, ...props }: React.HTMLAttributes<HTMLAnchorElement>) => (
-    <a className={cn("font-medium underline-offset-4", className)} {...props} />
+    <a className={cn("underline-offset-4", className)} {...props} />
   ),
   p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
     <p
