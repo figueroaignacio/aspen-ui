@@ -1,7 +1,18 @@
-// Components
-import { cn } from "@/lib/utils";
-import Image from "next/image";
 import * as runtime from "react/jsx-runtime";
+
+// Components
+import Image from "next/image";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "../ui/card";
+
+// Utils
+import { cn } from "@/lib/utils";
 
 const useMDXComponents = (code: string) => {
   const fn = new Function(code);
@@ -10,13 +21,19 @@ const useMDXComponents = (code: string) => {
 
 const components = {
   Image,
+  Card,
+  CardTitle,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardContent,
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1 className={cn("mt-2 scroll-m-20 font-bold", className)} {...props} />
   ),
   h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2
       className={cn(
-        "mt-12 scroll-m-20 pb-2 text-3xl font-bold tracking-tight cursor-text first:mt-0",
+        "mt-12 scroll-m-20 pb-2 text-2xl font-bold tracking-tight cursor-text first:mt-0",
         className
       )}
       {...props}
@@ -25,22 +42,19 @@ const components = {
   h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h3
       className={cn(
-        "mt-8 scroll-m-20 text-xl font-semibold pb-2 tracking-tight cursor-text",
+        "mt-8 scroll-m-20 font-semibold pb-2 tracking-tight cursor-text text-xl",
         className
       )}
       {...props}
     />
   ),
   a: ({ className, ...props }: React.HTMLAttributes<HTMLAnchorElement>) => (
-    <a
-      className={cn("font-medium  underline-offset-4", className)}
-      {...props}
-    />
+    <a className={cn("font-medium underline-offset-4", className)} {...props} />
   ),
   p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
     <p
       className={cn(
-        "leading-7 [&:not(:first-child)]:my-2 text-foreground",
+        "leading-7 [&:not(:first-child)]:my-2 text-muted-foreground",
         className
       )}
       {...props}

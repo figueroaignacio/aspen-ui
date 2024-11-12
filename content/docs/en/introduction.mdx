@@ -1,53 +1,76 @@
 ---
 title: Introduction
-description: Welcone to Aspen UI documentation.
+description: Welcome to the official documentation of Aspen UI, a kit designed to optimize your React and related projects, enhancing the aesthetics and functionality of your interfaces.
 locale: en
 order: 1
 ---
 
-<div className="flex justify-center items-center p-4 rounded-lg border-[1px] border-border bg-card">
-  <article className="relative p-8 flex flex-col gap-4 justify-center items-center ">
-    <svg
-      width="64"
-      height="64"
-      viewBox="0 0 34 34"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-      className="drop-shadow-md"
+<Card className="relative overflow-hidden min-h-96 py-12 px-8 shadow-md">
+  <CardHeader>
+    <CardTitle
+      className="text-4xl font-bold tracking-wide z-10 relative mb-8"
+      as="h1"
     >
-      <rect width="34" height="34" rx="7" fill="#000" />
-      <path
-        d="M25 16.7576C25 20.7742 18.7778 21 17 25C15.2222 21 9 20.7742 9 16.7576C9 13 13.4444 11.5 17 9C20.5 11.5 25 13 25 16.7576Z"
-        fill="#ffffff"
-      />
-    </svg>
-    <h1 className="text-3xl font-bold">Aspen UI</h1>
-    <p className="text-center ">
-      Elegant and intuitive user interface components for modern web
-      applications.
-    </p>
-  </article>
-</div>
+      AspenUI 
+    </CardTitle>
+    <CardDescription className="max-w-sm">
+      Transform your design with Aspen UI, a tool that enhances the quality and
+      functionality of your web interfaces. 🚀
+    </CardDescription>
 
-## What is Aspen UI?
+  </CardHeader>
+  <CardContent>
+    <div className="absolute inset-x-0 bottom-0 h-32">
+      <svg
+        className="w-full h-full"
+        viewBox="0 0 1440 320"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <defs>
+          <linearGradient id="wave-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#3B82F6" />
+            <stop offset="50%" stopColor="#8B5CF6" />
+            <stop offset="100%" stopColor="#EC4899" />
+          </linearGradient>
+        </defs>
+        <path
+          fill="url(#wave-gradient)"
+          fillOpacity="0.8"
+          d="M0,160L48,165.3C96,171,192,181,288,181.3C384,181,480,171,576,149.3C672,128,768,96,864,90.7C960,85,1056,107,1152,128C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+        <path
+          fill="url(#wave-gradient)"
+          fillOpacity="0.6"
+          d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,213.3C672,224,768,224,864,213.3C960,203,1056,181,1152,181.3C1248,181,1344,203,1392,213.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </div>
+  </CardContent>
+</Card>
 
-Aspen UI is a kit of custom components created with React, TypeScript, and Tailwind CSS. It is designed to facilitate the building of fast and elegant interfaces, providing efficient and aesthetic solutions for modern web projects.
+## What is this project about?
 
-## FAQ
+AspenUI was born out of the need to create a custom design system that reflects my skills in frontend design and layout. Inspired by tools like RadixUI, shadcn/ui, and Aceternity, I decided to build a collection of reusable and accessible components to facilitate the creation of modern and elegant interfaces. The goal of this project is to provide flexible, optimized, and easy-to-integrate solutions for your web development projects.
 
-### What technologies are used in Aspen UI?
+## FAQ 👇
 
-Aspen UI uses React for building interfaces, TypeScript to ensure type safety and code security, and Tailwind CSS for a sleek and responsive design.
+### How to use Aspen UI?
 
-### Is it easy to integrate Aspen UI into my projects?
+Technically, you don't need to install any specific dependencies for AspenUI, as it’s not a library, but rather a design kit. You only need to ensure that you have the necessary dependencies to use the components properly.
 
-Yes, Aspen UI is designed for easy integration. You can copy and paste the code for the components you need directly into your project and start using them instantly.
+### What technologies does Aspen UI use?
 
-### Can I customize the components of Aspen UI?
+This kit is designed for React and related technologies, making full use of TypeScript for greater robustness and code safety. Styles are managed with Tailwind CSS, allowing for quick and efficient customization.
 
-Yes, the components of Aspen UI are highly customizable. You can modify the styles and properties according to your project's needs, in addition to copying and pasting code that fits your design.
+### What are the benefits of using Aspen UI in your projects?
 
-### Is Aspen UI compatible with other frameworks?
+- **Built-in Accessibility**: The components follow best accessibility practices, creating inclusive interfaces that meet universal design standards.
 
-Aspen UI is optimized for React. However, styles based on Tailwind CSS can be used in other frameworks with appropriate adjustments.
+- **Simplified Maintenance**: The scalable and organized structure makes updating and managing components easy, ideal for long-term projects.
+
+- **Quick and Efficient Customization**: Thanks to Tailwind CSS, you can tweak every visual detail to achieve a unique style without compromising performance.
+
+- **Organized Development**: Designed to promote best frontend practices, ensuring consistency and clarity in your code.
+
+- **Optimized Performance**: The components are optimized for fast loading, improving user experience and application efficiency.

@@ -1,52 +1,75 @@
 ---
 title: Introducción
-description: Bienvenidos a la documentación de Aspen UI.
+description: Bienvenido a la documentación oficial de Aspen UI, un kit diseñado para optimizar tus proyectos de React o afines, elevando la estética y funcionalidad de tus interfaces.
 locale: es
 order: 1
 ---
 
-<div className="flex justify-center items-center p-4 rounded-lg border-[1px] border-border bg-card z-50">
-  <article className="relative p-8 flex flex-col gap-4 justify-center items-center">
-    <svg
-      width="64"
-      height="64"
-      viewBox="0 0 34 34"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
+<Card className="relative overflow-hidden min-h-96 py-12 px-8 shadow-md">
+  <CardHeader>
+    <CardTitle
+      className="text-4xl font-bold tracking-wide z-10 relative mb-8"
+      as="h1"
     >
-      <rect width="34" height="34" rx="7" fill="#000" />
-      <path
-        d="M25 16.7576C25 20.7742 18.7778 21 17 25C15.2222 21 9 20.7742 9 16.7576C9 13 13.4444 11.5 17 9C20.5 11.5 25 13 25 16.7576Z"
-        fill="#ffffff"
-      />
-    </svg>
-    <h1 className="text-3xl font-bold">Aspen UI</h1>
-    <p className="text-center ">
-      Componentes de interfaz de usuario elegantes y intuitivos para
-      aplicaciones web modernas.
-    </p>
-  </article>
-</div>
+      AspenUI
+    </CardTitle>
+    <CardDescription className="max-w-sm">
+      Transforma tu diseño con Aspen UI, una herramienta que eleva la calidad y
+      funcionalidad de tus interfaces web. 🚀
+    </CardDescription>
+  </CardHeader>
+  <CardContent>
+    <div className="absolute inset-x-0 bottom-0 h-32">
+      <svg
+        className="w-full h-full"
+        viewBox="0 0 1440 320"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <defs>
+          <linearGradient id="wave-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#3B82F6" />
+            <stop offset="50%" stopColor="#8B5CF6" />
+            <stop offset="100%" stopColor="#EC4899" />
+          </linearGradient>
+        </defs>
+        <path
+          fill="url(#wave-gradient)"
+          fillOpacity="0.8"
+          d="M0,160L48,165.3C96,171,192,181,288,181.3C384,181,480,171,576,149.3C672,128,768,96,864,90.7C960,85,1056,107,1152,128C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+        <path
+          fill="url(#wave-gradient)"
+          fillOpacity="0.6"
+          d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,213.3C672,224,768,224,864,213.3C960,203,1056,181,1152,181.3C1248,181,1344,203,1392,213.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </div>
+  </CardContent>
+</Card>
 
-## ¿Que es Aspen UI?
+## ¿De qué va este proyecto?
 
-Aspen UI es un kit de componentes personalizados creado con React, TypeScript y Tailwind CSS. Está diseñado para facilitar la construcción de interfaces rápidas y elegantes, ofreciendo soluciones eficientes y estéticas para proyectos web modernos.
+AspenUI nace de la necesidad de crear un sistema de diseño propio que refleje mis habilidades en diseño y maquetado frontend. Inspirado por herramientas como RadixUI, shadcn/ui y Aceternity, decidí construir una colección de componentes reutilizables y accesibles para facilitar la creación de interfaces modernas y elegantes. Este proyecto tiene como objetivo proporcionar soluciones flexibles, optimizadas y fáciles de integrar en tus proyectos de desarrollo web.
 
-## FAQ
+## Preguntas Frecuentes 👇
 
-### ¿Cuáles son las tecnologías utilizadas en Aspen UI?
+### ¿Cómo usar Aspen UI?
 
-Aspen UI utiliza React para la construcción de interfaces, TypeScript para garantizar la tipificación y la seguridad del código, y Tailwind CSS para un diseño estilizado y responsivo.
+Técnicamente, no necesitas instalar ninguna dependencia específica de AspenUI, ya que no se trata de una biblioteca, sino de un kit de diseño. Solo debes asegurarte de tener las dependencias necesarias para poder utilizar los componentes de manera adecuada.
 
-### ¿Es fácil integrar Aspen UI en mis proyectos?
+### ¿Qué tecnologías utiliza Aspen UI?
 
-Sí, Aspen UI está diseñado para una integración sencilla. Puedes copiar y pegar el código de los componentes que necesites directamente en tu proyecto y comenzar a usarlos al instante.
+Este kit está diseñado para proyectos en React y tecnologías afines, aprovechando al máximo TypeScript para una mayor robustez y seguridad en el código. Los estilos se gestionan con Tailwind CSS, lo que permite una personalización rápida y eficiente.
 
-### ¿Puedo personalizar los componentes de Aspen UI?
+### ¿Cuáles son los beneficios de usar Aspen UI en tus proyectos?
 
-Sí, los componentes de Aspen UI son altamente personalizables. Puedes modificar los estilos y propiedades según las necesidades de tu proyecto, además de copiar y pegar el código que se adapte a tu diseño.
+- Accesibilidad Incorporada: Los componentes siguen buenas prácticas de accesibilidad, creando interfaces inclusivas que cumplen con los estándares de diseño universal.
 
-### ¿Aspen UI es compatible con otros frameworks?
+- Mantenimiento Simplificado: La estructura escalable y organizada facilita la actualización y gestión de componentes, ideal para proyectos a largo plazo.
 
-Aspen UI está optimizado para React. Sin embargo, los estilos basados en Tailwind CSS pueden ser utilizados en otros frameworks con ajustes adecuados.
+- Personalización Rápida y Eficiente: Gracias a Tailwind CSS, puedes ajustar cada detalle visual para lograr un estilo único sin afectar el rendimiento.
+
+- Desarrollo Ordenado: Diseñado para fomentar las mejores prácticas de frontend, garantizando consistencia y claridad en el código.
+
+- Rendimiento Optimizado: Los componentes están preparados para carga rápida, mejorando la experiencia del usuario y la eficiencia de las aplicaciones.

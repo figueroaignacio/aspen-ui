@@ -62,37 +62,33 @@ export async function generateStaticParams(): Promise<
 }
 
 async function getPreviousDoc(currentDocSlug: string, locale: string) {
-  // Filtra los documentos por idioma y ordénalos dinámicamente por el campo `order`
   const localePosts = docs
     .filter((doc) => doc.locale === locale)
-    .sort((a, b) => (a.order || 0) - (b.order || 0)); // Ordena por `order`
+    .sort((a, b) => (a.order || 0) - (b.order || 0));
 
-  // Encuentra el índice del documento actual
   const currentIndex = localePosts.findIndex(
     (doc) => doc.slugAsParams === currentDocSlug
   );
 
   if (currentIndex > 0) {
-    return localePosts[currentIndex - 1]; // Devuelve el documento anterior
+    return localePosts[currentIndex - 1];
   }
-  return null; // Si no hay documento anterior, devuelve null
+  return null;
 }
 
 async function getNextDoc(currentDocSlug: string, locale: string) {
-  // Filtra los documentos por idioma y ordénalos dinámicamente por el campo `order`
   const localePosts = docs
     .filter((doc) => doc.locale === locale)
-    .sort((a, b) => (a.order || 0) - (b.order || 0)); // Ordena por `order`
+    .sort((a, b) => (a.order || 0) - (b.order || 0));
 
-  // Encuentra el índice del documento actual
   const currentIndex = localePosts.findIndex(
     (doc) => doc.slugAsParams === currentDocSlug
   );
 
   if (currentIndex < localePosts.length - 1) {
-    return localePosts[currentIndex + 1]; // Devuelve el documento siguiente
+    return localePosts[currentIndex + 1];
   }
-  return null; // Si no hay documento siguiente, devuelve null
+  return null;
 }
 
 export default async function DocPage({ params }: DocPageProps) {
@@ -112,9 +108,11 @@ export default async function DocPage({ params }: DocPageProps) {
         <SidebarNav />
       </aside>
       <div className="lg:col-span-6 pb-16">
-        <div className="flex flex-col gap-2">
-          <h1 className="text-3xl font-bold">{doc.title}</h1>
-          {doc.description ? <p className="mb-4">{doc.description}</p> : null}
+        <div className="flex flex-col border-b mb-12">
+          <h1 className="text-3xl font-bold mb-7">{doc.title}</h1>
+          {doc.description ? (
+            <p className="mb-4 text-muted-foreground">{doc.description}</p>
+          ) : null}
         </div>
         <div id="content">
           <MDXContent code={doc.body} />
