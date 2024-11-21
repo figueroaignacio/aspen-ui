@@ -1,11 +1,16 @@
 "use client";
 
+// Hooks
+import { useState } from "react";
+
+// Components
+import { Button } from "./ui/button";
+
+// Icons
 import {
   CheckCircleIcon,
   ClipboardDocumentIcon,
 } from "@heroicons/react/24/solid";
-import { useState } from "react";
-import { Button } from "./ui/button";
 
 interface CopyButtonProps {
   content: string;

@@ -30,7 +30,6 @@ export function SourceCodeComponent({ code }: SourceCodeComponentProps) {
         <code>{highlightCode(code)}</code>
       </pre>
 
-      {/* Botón expandir/colapsar ajustado para móviles */}
       <Button onClick={toggleExpand} className="mt-2 w-full  text-center">
         {isExpanded ? "Colapsar" : "Expandir"}
       </Button>
