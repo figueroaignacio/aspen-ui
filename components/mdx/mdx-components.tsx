@@ -10,10 +10,19 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
+import { Snippet } from "../ui/snippet";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import { Anchor } from "./anchor";
+import { ComponentPreview } from "./component-preview";
+import { Step, Steps } from "./steps";
 
 // Utils
 import { cn } from "@/lib/utils";
+import React from "react";
+
+// Examples
+import { ButtonSourceCode } from "@/lib/examples/button/source-code";
+import { ButtonPreview } from "@/lib/examples/button/usage";
 
 const useMDXComponents = (code: string) => {
   const fn = new Function(code);
@@ -28,7 +37,15 @@ const components = {
   CardFooter,
   CardHeader,
   CardContent,
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
   Anchor,
+  Snippet,
+  Steps,
+  Step,
+  ComponentPreview,
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1 className={cn("mt-2 scroll-m-20 font-bold", className)} {...props} />
   ),
@@ -118,14 +135,19 @@ const components = {
     />
   ),
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
-    <code
+    <code className={cn("", className)} {...props} />
+  ),
+  pre: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
+    <pre
       className={cn(
-        "relative block px-6 py-3 my-3 h-auto overflow-x-auto rounded-md border-border border-[1px] transition duration-200 ease-in-out bg-card",
+        "rounded-sm bg-primary-foreground overflow-x-auto pb-6 px-4",
         className
       )}
       {...props}
-    />
+    ></pre>
   ),
+  ButtonPreview,
+  ButtonSourceCode,
 };
 
 interface MdxProps {

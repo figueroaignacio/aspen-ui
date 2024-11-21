@@ -5,24 +5,44 @@ locale: en
 order: 3
 ---
 
-## Usage
+<ButtonPreview />
 
-To use the `Button` component, import it and include it in your JSX as shown below:
+## Installation
 
-```jsx
-import Button from "@/components/ui/Button";
-
-const MyComponent = () => {
-  const handleClick = () => {
-    alert("Button clicked!");
-  };
-
-  return (
-    <Button onClick={handleClick} className="bg-blue-500 text-white rounded">
-      Click Me
-    </Button>
-  );
-};
-
-export default MyComponent;
-```
+<Steps>
+  <Steps>
+    <Step stepNumber={1}>
+      <h3 className="scroll-m-20 font-semibold pb-2 tracking-tight cursor-text">
+        Install the following dependency
+      </h3>
+      <Tabs defaultValue="pnpm">
+        <TabsList>
+          <TabsTrigger value="pnpm">pnpm</TabsTrigger>
+          <TabsTrigger value="npm">npm</TabsTrigger>
+          <TabsTrigger value="yarn">yarn</TabsTrigger>
+        </TabsList>
+        <TabsContent value="pnpm">
+          <Snippet>pnpm i clsx</Snippet>
+        </TabsContent>
+        <TabsContent value="npm">
+          <Snippet>npm i clsx</Snippet>
+        </TabsContent>
+        <TabsContent value="yarn">
+          <Snippet>yarn add clsx</Snippet>
+        </TabsContent>
+      </Tabs>
+    </Step>
+  </Steps>
+  <Step stepNumber={2}>
+    <h3 className="scroll-m-20 font-semibold pb-2 tracking-tight cursor-text">
+      Create the component in a file called `button.tsx` inside your
+      `components/ui` folder.
+    </h3>
+  </Step>
+  <Step stepNumber={3}>
+    <h3 className="scroll-m-20 font-semibold pb-2 tracking-tight cursor-text">
+      Copy and paste the following code
+    </h3>
+    <ButtonSourceCode />
+  </Step>
+</Steps>

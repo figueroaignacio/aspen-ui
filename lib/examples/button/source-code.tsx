@@ -1,3 +1,6 @@
+import { SourceCodeComponent } from "@/components/mdx/source-code-component";
+
+const code = `
 import { cn } from "@/lib/utils";
 import * as React from "react";
 
@@ -63,3 +66,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = "Button";
 
 export { Button, buttonVariants };
+
+`;
+
+export const ButtonSourceCode = () => <SourceCodeComponent code={code} />;
