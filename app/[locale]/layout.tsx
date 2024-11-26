@@ -1,4 +1,5 @@
 // Provider
+import { ThemeProvider } from "@/hooks/contexts/theme-context";
 import { NextIntlClientProvider } from "next-intl";
 
 // Components
@@ -62,11 +63,13 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
-            <Navbar />
-            <main>{children}</main>
-            <Footer />
-          </div>
+          <ThemeProvider>
+            <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
+              <Navbar />
+              <main>{children}</main>
+              <Footer />
+            </div>
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>
