@@ -13,14 +13,15 @@ type ButtonSize = "default" | "sm" | "lg" | "icon";
 
 const buttonStyles: Record<ButtonVariant, string> = {
   default:
-    "border text-center text-foreground rounded-md text-sm flex items-center gap-2 justify-center py-2 px-5 bg-primary hover:bg-primary-foreground text-nowrap",
+    "border text-center text-foreground rounded-md text-sm flex items-center gap-2 justify-center py-2 px-5 bg-primary hover:bg-primary-foreground text-nowrap active:scale-95 transition-all duration-200",
   destructive:
     "bg-red-800 hover:bg-red-800/90 text-center text-foreground rounded-md text-xs flex items-center gap-2 justify-center py-2 px-5",
-  outline: "hover:bg-primary-foreground border",
+  outline:
+    "hover:bg-primary-foreground border active:scale-95 transition-all duration-200",
   secondary:
-    "flex items-center gap-2 text-xs text-center bg-secondary text-secondary-foreground hover:bg-secondary/80",
+    "flex items-center gap-2 text-xs text-center bg-secondary text-secondary-foreground hover:bg-secondary/80 active:scale-95 transition-all duration-200",
   ghost:
-    "text-center text-foreground rounded-md text-xs flex items-center gap-2 justify-center text-center py-2 px-5 hover:bg-primary-foreground text-nowrap",
+    "text-center text-foreground rounded-md text-xs flex items-center gap-2 justify-center text-center py-2 px-5 hover:bg-primary-foreground text-nowrap active:scale-95 transition-all duration-200",
   link: "text-foreground underline-offset-4 hover:underline",
 };
 
