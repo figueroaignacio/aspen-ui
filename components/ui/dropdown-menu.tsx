@@ -68,7 +68,7 @@ function DropdownMenuTrigger({
       aria-expanded={false}
       aria-controls="dropdown-menu-content"
       className={cn(
-        "inline-flex justify-between w-full rounded-md border px-4 py-2 bg-primary hover:bg-primary-foreground text-sm font-medium text-foreground",
+        "inline-flex justify-between w-full rounded-md border px-4 py-2 bg-primary hover:bg-primary-foreground text-sm font-medium text-foregroundz active:scale-95 transition-all duration-200",
         className
       )}
     >
