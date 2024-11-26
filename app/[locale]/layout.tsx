@@ -62,15 +62,15 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body>
-        <NextIntlClientProvider messages={messages}>
-          <ThemeProvider>
+        <ThemeProvider>
+          <NextIntlClientProvider messages={messages}>
             <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
               <Navbar />
               <main>{children}</main>
               <Footer />
             </div>
-          </ThemeProvider>
-        </NextIntlClientProvider>
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
