@@ -1,5 +1,7 @@
-"use client";
+// Hooks
+import { useTranslations } from "next-intl";
 
+// Components
 import {
   Github,
   NextIcon,
@@ -7,9 +9,8 @@ import {
   TailwindIcon,
   TypescriptIcon,
 } from "@/components/icons";
+import { Link } from "@/lib/i18n/routing";
 import { ArrowRightIcon } from "@heroicons/react/16/solid";
-import { useTranslations } from "next-intl";
-import Link from "next/link";
 
 interface HomePageProps {
   params: { locale: string };
