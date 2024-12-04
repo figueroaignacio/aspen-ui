@@ -139,10 +139,7 @@ const components = {
   ),
   pre: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <pre
-      className={cn(
-        "rounded-sm bg-primary-foreground overflow-x-auto pb-6 px-4",
-        className
-      )}
+      className={cn("rounded-sm bg-card overflow-x-auto pb-6 px-4", className)}
       {...props}
     ></pre>
   ),

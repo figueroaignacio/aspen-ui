@@ -104,17 +104,17 @@ export default async function DocPage({ params }: DocPageProps) {
 
   return (
     <article className="px-5 md:px-10 lg:px-20 mx-auto grid grid-cols-1 lg:grid-cols-12 relative top-6">
-      <aside className="hidden lg:block lg:col-span-3">
+      <aside className="hidden lg:block lg:col-span-2">
         <SidebarNav />
       </aside>
-      <div className="lg:col-span-6 pb-16">
+      <div className="lg:col-span-7 pb-16">
         <div className="flex flex-col border-b mb-12">
           <h1 className="text-3xl font-bold mb-7">{doc.title}</h1>
           {doc.description ? (
             <p className="mb-4 text-muted-foreground">{doc.description}</p>
           ) : null}
         </div>
-        <div id="content">
+        <div id="content" className="max-w-full overflow-x-clip">
           <MDXContent code={doc.body} />
         </div>
         <div className="my-10">

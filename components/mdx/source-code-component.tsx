@@ -22,14 +22,12 @@ export function SourceCodeComponent({ code }: SourceCodeComponentProps) {
   return (
     <div className="relative">
       <CopyButton content={code} />
-
       <pre
-        className="rounded-sm border overflow-x-auto pb-6 px-4 max-w-full"
+        className="bg-primary-foreground overflow-x-auto overflow-y-auto pb-6 px-6 max-w-full"
         style={{ maxHeight: isExpanded ? "none" : "380px", overflowY: "auto" }}
       >
         <code>{highlightCode(code)}</code>
       </pre>
-
       <Button onClick={toggleExpand} className="mt-2 w-full  text-center">
         {isExpanded ? "Colapsar" : "Expandir"}
       </Button>

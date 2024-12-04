@@ -30,7 +30,7 @@ export function ComponentPreview({
       </TabsContent>
       <TabsContent value="code" className="relative">
         <CopyButton content={code} />
-        <pre className="rounded-sm border overflow-x-auto pb-6 px-4">
+        <pre className="bg-primary-foreground rounded-sm border overflow-x-auto pb-6 px-4">
           <code>{highlightCode(code)}</code>
         </pre>
       </TabsContent>
