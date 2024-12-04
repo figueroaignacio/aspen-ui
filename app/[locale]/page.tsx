@@ -8,7 +8,6 @@ import {
   TypescriptIcon,
 } from "@/components/icons";
 import { ArrowRightIcon } from "@heroicons/react/16/solid";
-import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
@@ -73,14 +72,7 @@ export default function ModernHero({ params: { locale } }: HomePageProps) {
                   }`}
                 >
                   {item.label}
-                  <motion.span
-                    className="ml-2 inline-block"
-                    initial={{ x: 0 }}
-                    whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                  >
-                    {item.icon}
-                  </motion.span>
+                  <span className="ml-2 inline-block">{item.icon}</span>
                 </Link>
               ))}
             </div>
