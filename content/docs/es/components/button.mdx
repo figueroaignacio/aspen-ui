@@ -12,9 +12,9 @@ order: 3
 <Steps>
   <Steps>
     <Step stepNumber={1}>
-      <h3 className="scroll-m-20 font-semibold pb-2 tracking-tight cursor-text">
+      <h6 className="scroll-m-20 font-semibold pb-2 tracking-tight cursor-text">
         Instala la siguiente dependencia
-      </h3>
+      </h6>
       <Tabs defaultValue="pnpm">
         <TabsList>
           <TabsTrigger value="pnpm">pnpm</TabsTrigger>
@@ -34,15 +34,27 @@ order: 3
     </Step>
   </Steps>
   <Step stepNumber={2}>
-    <h3 className="scroll-m-20 font-semibold pb-2 tracking-tight cursor-text">
+    <h6 className="scroll-m-20 font-semibold pb-2 tracking-tight cursor-text">
       Crea el componente en un archivo llamado `button.tsx` dentro de tu carpeta
       `components/ui`.
-    </h3>
+    </h6>
   </Step>
   <Step stepNumber={3}>
-    <h3 className="scroll-m-20 font-semibold pb-2 tracking-tight cursor-text">
+    <h6 className="scroll-m-20 font-semibold pb-2 tracking-tight cursor-text">
       Copia y pega el siguiente código
-    </h3>
+    </h6>
     <ButtonSourceCode />
   </Step>
 </Steps>
+
+## Uso
+
+```tsx
+import { Button } from "@/components/ui/button";
+```
+
+```tsx
+<Button variant="outline">Button</Button>
+```
+
+## Ejemplos
