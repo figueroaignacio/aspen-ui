@@ -1,9 +1,12 @@
 "use client";
 
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+
 // Hooks
 import { usePathname } from "next/navigation";
 
-// Utils
+import { docsNavigation } from "@/lib/config/navigation";
 
 // Components
 interface DocItem {
@@ -22,7 +25,7 @@ export function SidebarNavPanel() {
   return (
     <aside className="sticky top-16 h-[calc(100vh-5rem)] hidden lg:block">
       <nav>
-        {/* {docsConfig.map((section, index) => (
+        {docsNavigation.map((section, index) => (
           <div
             key={section.title}
             className={cn("pb-4", index !== 0 && "pt-4")}
@@ -47,7 +50,7 @@ export function SidebarNavPanel() {
               ))}
             </ul>
           </div>
-        ))} */}
+        ))}
       </nav>
     </aside>
   );
