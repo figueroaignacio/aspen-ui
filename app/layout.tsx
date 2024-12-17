@@ -12,24 +12,25 @@ import "@/styles/globals.css";
 import "@fontsource-variable/onest";
 
 // Metadata
+import { siteConfig } from "@/lib/config/siteConfig";
 
-// export async function generateMetadata({ params: { locale } }: MetadataParams) {
-//   const metadataBase =
-//     locale === "es"
-//       ? process.env.NEXT_PUBLIC_URL_ES
-//       : process.env.NEXT_PUBLIC_URL_EN;
+export async function generateMetadata() {
+  // const metadataBase =
+  //   locale === "es"
+  //     ? process.env.NEXT_PUBLIC_URL_ES
+  //     : process.env.NEXT_PUBLIC_URL_EN;
 
-//   return {
-//     metadataBase: new URL(metadataBase ?? "http://localhost:3000"),
-//     title: {
-//       default: t("defaultTitle"),
-//       template: `%s - ${t("templateTitle")}`,
-//     },
-//     description: t("description"),
-//     creator: t("creator"),
-//     keywords: t("keywords"),
-//   };
-// }
+  return {
+    // metadataBase: new URL(metadataBase ?? "http://localhost:3000"),
+    title: {
+      default: siteConfig.title.default,
+      template: `%s - ${siteConfig.title.template}`,
+    },
+    description: siteConfig.description,
+    creator: siteConfig.creator,
+    keywords: siteConfig.keywords,
+  };
+}
 
 interface LocaleLayoutProps {
   children: React.ReactNode;

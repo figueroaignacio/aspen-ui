@@ -43,15 +43,14 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">
-                UI Components crafted to elevate your{" "}
+                UI Components for your{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
                   web projects
                 </span>
               </h1>
               <h2 className="text-xl text-gray-600 dark:text-gray-300">
-                Enhance your workflow with a suite of customizable, open-source
-                components, seamlessly ready to integrate into any development
-                environment.
+                A collection of customizable, open-source components that work
+                seamlessly with your workflow.
               </h2>
             </div>
             <div className="flex flex-wrap gap-4">
@@ -72,7 +71,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
             </div>
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300">
-                Specifically for projects built with 👇
+                Perfect for projects built with 👇
               </h3>
               <ul className="flex flex-wrap gap-4">
                 {technologies.map((tech, index) => (
