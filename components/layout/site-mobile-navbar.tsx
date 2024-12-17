@@ -1,27 +1,11 @@
 "use client";
 
-// Hooks
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { ToggleTheme } from "../toggle-theme";
-
-// Components
-import Link from "next/link";
 import { Logo } from "../logo";
-
-// Utils
-
-// Icons
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-
-interface NavigationProps {
-  href: string;
-  title: string;
-}
-
-interface SiteMobileNavbarProps {
-  navigation: NavigationProps[];
-}
+import { ToggleTheme } from "../toggle-theme";
 
 interface DocItem {
   title: string;
@@ -33,9 +17,12 @@ interface DocSection {
   items: DocItem[];
 }
 
+interface SiteMobileNavbarProps {
+  navigation: DocSection[];
+}
+
 export function SiteMobileNavbar({ navigation }: SiteMobileNavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const pathname = usePathname();
 
   const toggleMenu = () => {
@@ -67,50 +54,30 @@ export function SiteMobileNavbar({ navigation }: SiteMobileNavbarProps) {
           </div>
         </div>
         <div className="space-y-6 px-5 py-4 overflow-y-scroll">
-          <ul className="flex flex-col items-start gap-3">
-            {navigation.map((navItem: NavigationProps, index: number) => (
-              <li
-                key={index}
-                onClick={toggleMenu}
-                className={`mr-6 text-sm ${
-                  pathname === navItem.href
-                    ? "text-muted"
-                    : "text-muted-foreground hover:text-muted"
-                }`}
-              >
-                <Link href={navItem.href}>{navItem.title}</Link>
-              </li>
-            ))}
-          </ul>
-          <div>
-            {/* {docsConfig.map((section, index) => (
-              <div
-                key={section.title}
-                className={cn("pb-2", index !== 0 && "pt-2")}
-              >
-                <h2 className="mb-2 text-lg font-semibold tracking-tight">
-                  {section.title}
-                </h2>
-                <ul>
-                  {section.items.map((item) => (
-                    <li
-                      key={item.href}
-                      onClick={toggleMenu}
-                      className={`mr-6 text-sm ${
-                        pathname === item.href
-                          ? "text-muted"
-                          : "text-muted-foreground hover:text-muted"
-                      }`}
-                    >
-                      <Link href={item.href} className={"block py-2 text-sm "}>
-                        {item.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))} */}
-          </div>
+          {navigation.map((section, index) => (
+            <div key={section.title} className={index !== 0 ? "pt-2" : ""}>
+              <h2 className="mb-2 text-lg font-semibold tracking-tight">
+                {section.title}
+              </h2>
+              <ul>
+                {section.items.map((item) => (
+                  <li
+                    key={item.href}
+                    onClick={toggleMenu}
+                    className={`mr-6 text-sm ${
+                      pathname === item.href
+                        ? "text-muted"
+                        : "text-muted-foreground hover:text-muted"
+                    }`}
+                  >
+                    <Link href={item.href} className="block py-2 text-sm">
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </nav>
       <div className="flex items-center gap-4">
