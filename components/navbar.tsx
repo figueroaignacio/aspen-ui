@@ -2,7 +2,7 @@
 import { SiteMobileNavbar } from "./layout/site-mobile-navbar";
 import { SiteNavbar } from "./layout/site-navbar";
 
-import { docsNavigation, navigation } from "@/constants/navigation";
+import { docsNavigation, navigation } from "@/lib/config/navigation";
 
 export function Navbar() {
   return (
