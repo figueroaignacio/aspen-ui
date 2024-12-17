@@ -3,17 +3,16 @@
 // Hooks
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { ToggleTheme } from "../toggle-theme";
 
 // Components
-import { Link } from "@/lib/i18n/routing";
+import Link from "next/link";
 import { Logo } from "../logo";
 
+// Utils
+
 // Icons
-import { cn } from "@/lib/utils";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import { useTranslations } from "next-intl";
-import { LocaleSwitcher } from "../locale-switcher";
-import { ToggleTheme } from "../toggle-theme";
 
 interface NavigationProps {
   href: string;
@@ -38,9 +37,6 @@ export function SiteMobileNavbar({ navigation }: SiteMobileNavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const pathname = usePathname();
-
-  const t = useTranslations();
-  const docsConfig: DocSection[] = t.raw("docsConfig");
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -87,7 +83,7 @@ export function SiteMobileNavbar({ navigation }: SiteMobileNavbarProps) {
             ))}
           </ul>
           <div>
-            {docsConfig.map((section, index) => (
+            {/* {docsConfig.map((section, index) => (
               <div
                 key={section.title}
                 className={cn("pb-2", index !== 0 && "pt-2")}
@@ -113,13 +109,12 @@ export function SiteMobileNavbar({ navigation }: SiteMobileNavbarProps) {
                   ))}
                 </ul>
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
       </nav>
       <div className="flex items-center gap-4">
         <ToggleTheme />
-        <LocaleSwitcher />
       </div>
     </div>
   );

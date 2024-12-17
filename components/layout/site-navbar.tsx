@@ -4,11 +4,9 @@
 import { usePathname } from "next/navigation";
 
 // Components
-import { Link } from "@/lib/i18n/routing";
-import { LocaleSwitcher } from "../locale-switcher";
+import Link from "next/link";
 import { Logo } from "../logo";
 import { ToggleTheme } from "../toggle-theme";
-
 interface NavigationProps {
   href: string;
   title: string;
@@ -44,7 +42,6 @@ export function SiteNavbar({ navigation }: SiteNavbarProps) {
       </ul>
       <div className="flex items-center gap-4">
         <ToggleTheme />
-        <LocaleSwitcher />
       </div>
     </nav>
   );

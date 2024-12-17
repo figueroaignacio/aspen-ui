@@ -1,8 +1,3 @@
-import { setRequestLocale } from "next-intl/server";
-
-// Hooks
-import { useTranslations } from "next-intl";
-
 // Components
 import { BgBlur } from "@/components/bg-blur";
 
@@ -10,13 +5,7 @@ import { BgBlur } from "@/components/bg-blur";
 import { CommandLineIcon } from "@heroicons/react/24/outline";
 import { CodeBracketIcon } from "@heroicons/react/24/solid";
 
-interface TemplatesPageProps {
-  params: { locale: string };
-}
-
-export default function BlocksPage({ params: { locale } }: TemplatesPageProps) {
-  setRequestLocale(locale);
-  const t = useTranslations("blocks");
+export default function TemplatesPage() {
   return (
     <section className="relative flex min-h-[80dvh] items-center justify-center p-4">
       <BgBlur />
@@ -28,14 +17,14 @@ export default function BlocksPage({ params: { locale } }: TemplatesPageProps) {
             </div>
           </div>
           <h1 className="mb-4 text-center text-2xl font-bold text-foreground">
-            {t("title")}
+            {/* {t("title")} */}
           </h1>
           <div className="rounded-lg border-[1px] border-dashed border-border p-6">
             <div className="mb-4 flex justify-center">
               <CommandLineIcon className="h-10 w-10 text-muted-foreground" />
             </div>
             <p className="text-center text-sm text-foreground">
-              {t("description")}
+              {/* {t("description")} */}
             </p>
           </div>
         </div>

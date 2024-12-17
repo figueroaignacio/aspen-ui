@@ -1,5 +1,4 @@
-import { Link } from "@/lib/i18n/routing";
-
+import Link from "next/link";
 export function Logo() {
   return (
     <Link

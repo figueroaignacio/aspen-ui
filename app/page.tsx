@@ -1,6 +1,3 @@
-// Hooks
-import { useTranslations } from "next-intl";
-
 // Components
 import {
   Github,
@@ -9,16 +6,14 @@ import {
   TailwindIcon,
   TypescriptIcon,
 } from "@/components/icons";
-import { Link } from "@/lib/i18n/routing";
 import { ArrowRightIcon } from "@heroicons/react/16/solid";
+import Link from "next/link";
 
 interface HomePageProps {
   params: { locale: string };
 }
 
-export default function ModernHero({ params: { locale } }: HomePageProps) {
-  const t = useTranslations("home");
-
+export default function HomePage({ params: { locale } }: HomePageProps) {
   const technologies = [
     { title: "Typescript", icon: <TypescriptIcon /> },
     { title: "React.js", icon: <ReactIcon /> },
@@ -28,7 +23,7 @@ export default function ModernHero({ params: { locale } }: HomePageProps) {
 
   const links = [
     {
-      label: t("buttons.getStarted"),
+      label: "Get Started",
       href: "/docs/introduction",
       icon: <ArrowRightIcon className="w-5 h-5" />,
       variant: "primary",
@@ -48,17 +43,15 @@ export default function ModernHero({ params: { locale } }: HomePageProps) {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">
-                {t.rich("title", {
-                  text1: (chunks) => <span>{chunks}</span>,
-                  text2: (chunks) => (
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
-                      {chunks}
-                    </span>
-                  ),
-                })}
+                UI Components crafted to elevate your{" "}
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
+                  web projects
+                </span>
               </h1>
               <h2 className="text-xl text-gray-600 dark:text-gray-300">
-                {t("subtitle")}
+                Enhance your workflow with a suite of customizable, open-source
+                components, seamlessly ready to integrate into any development
+                environment.
               </h2>
             </div>
             <div className="flex flex-wrap gap-4">
@@ -79,7 +72,7 @@ export default function ModernHero({ params: { locale } }: HomePageProps) {
             </div>
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300">
-                {t("technologiesDescription")}
+                Specifically for projects built with 👇
               </h3>
               <ul className="flex flex-wrap gap-4">
                 {technologies.map((tech, index) => (
