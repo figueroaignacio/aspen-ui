@@ -34,13 +34,20 @@ export async function generateMetadata() {
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
-export default async function RootLayout({
-  children,
-  params: { locale },
-}: LocaleLayoutProps) {
+export default async function RootLayout(props: LocaleLayoutProps) {
+  const params = await props.params;
+
+  const {
+    locale
+  } = params;
+
+  const {
+    children
+  } = props;
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <body>

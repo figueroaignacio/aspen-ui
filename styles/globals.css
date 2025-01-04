@@ -20,7 +20,7 @@
   }
 
   :root.dark {
-    --background: hsl(240, 14%, 7%);
+    --background: hsl(0, 0%, 0%);
     --foreground: hsl(210, 20%, 98%);
     --card: hsl(240, 14%, 12%);
     --primary: hsl(220, 15%, 14%);

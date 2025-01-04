@@ -1,7 +1,7 @@
 export const navigation = [
   {
     title: "Documentation",
-    href: "/docs/introduction",
+    href: "/docs",
   },
   {
     title: "Components",
@@ -23,15 +23,7 @@ export const docsNavigation = [
     items: [
       {
         title: "Introduction",
-        href: "/docs/introduction",
-      },
-      {
-        title: "Installation",
-        href: "/docs/installation",
-      },
-      {
-        title: "Theming",
-        href: "/docs/theming",
+        href: "/docs",
       },
     ],
   },
@@ -39,8 +31,8 @@ export const docsNavigation = [
     title: "Components",
     items: [
       {
-        title: "Button",
-        href: "/docs/components/button",
+        title: "",
+        href: "",
       },
     ],
   },
