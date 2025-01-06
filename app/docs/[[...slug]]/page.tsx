@@ -1,3 +1,4 @@
+// Components
 import { SidebarNav } from "@/components/layout/sidebar-nav";
 import { MDXContentRenderer } from "@/components/mdx/mdx-content-renderer";
 import { Toc } from "@/components/mdx/toc";
@@ -8,12 +9,19 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { siteConfig } from "@/lib/config/siteConfig";
-import { absoluteUrl, cn } from "@/lib/utils";
-import { docs } from "@content";
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import Balancer from "react-wrap-balancer";
+
+// Content
+import { docs } from "@content";
+
+// Config
+
+// Utils
+import { cn } from "@/lib/utils";
+import { notFound } from "next/navigation";
+
+// Metadata
+import type { Metadata } from "next";
 
 type DocPageProps = {
   slug: string[];
@@ -43,29 +51,8 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${doc.title} - ${siteConfig.title}`,
+    title: doc.title,
     description: doc.description,
-    openGraph: {
-      title: doc.title,
-      description: doc.description,
-      type: "article",
-      url: absoluteUrl(doc.slug),
-      // images: [
-      //   {
-      //     url: siteConfig.og,
-      //     width: 2880,
-      //     height: 1800,
-      //     alt: siteConfig.name,
-      //   },
-      // ],
-    },
-    // twitter: {
-    //   card: "summary_large_image",
-    //   title: doc.title,
-    //   description: doc.description,
-    //   images: [siteConfig.og],
-    //   creator: "@rds_agi",
-    // },
   };
 }
 
