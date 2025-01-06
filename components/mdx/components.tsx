@@ -1,3 +1,4 @@
+// Components
 import { ComponentSource } from "@/components/mdx/component-source";
 import { Button } from "@/components/ui/button";
 import {
@@ -9,14 +10,18 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { cn } from "@/lib/utils";
-import { BellAlertIcon } from "@heroicons/react/24/outline";
 import Image, { type ImageProps } from "next/image";
 import Link from "next/link";
 import { Callout, CalloutDescription, CalloutTitle } from "./callout";
 import { CodeBlockWrapper } from "./code-block-wrapper";
 import { CodeBlock } from "./codeblock";
 import { ComponentPreview } from "./component-preview";
+
+// Icons
+import { BellAlertIcon } from "@heroicons/react/24/outline";
+
+// Utils
+import { cn } from "@/lib/utils";
 
 export const mdxComponents = {
   ComponentPreview,

@@ -2,7 +2,10 @@
 
 import * as React from "react";
 
+// Hooks
 import { useMounted } from "@/hooks/use-mounted";
+
+// Utils
 import { cn } from "@/lib/utils";
 
 interface TocEntry {

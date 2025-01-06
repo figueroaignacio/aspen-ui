@@ -1,10 +1,13 @@
 "use client";
 
+// Hooks
+import React, { useState } from "react";
+
+// Components
 import {
   ClipboardDocumentCheckIcon,
   ClipboardDocumentIcon,
 } from "@heroicons/react/24/outline";
-import React, { useState } from "react";
 import { Button } from "../ui/button";
 
 export const CopyButton = ({ children }: { children: React.ReactNode }) => {

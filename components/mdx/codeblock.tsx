@@ -1,5 +1,8 @@
-import { cn } from "@/lib/utils";
+// Components
 import { CopyButton } from "./copy-button";
+
+// Utils
+import { cn } from "@/lib/utils";
 
 export const CodeBlock = ({
   children,
