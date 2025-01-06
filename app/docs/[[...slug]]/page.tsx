@@ -14,8 +14,6 @@ import Balancer from "react-wrap-balancer";
 // Content
 import { docs } from "@content";
 
-// Config
-
 // Utils
 import { cn } from "@/lib/utils";
 import { notFound } from "next/navigation";
