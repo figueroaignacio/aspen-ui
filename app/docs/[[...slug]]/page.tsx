@@ -87,9 +87,9 @@ export default async function DocPage({
   }
 
   return (
-    <main className="relative px-5 md:px-10 lg:px-20 xl:grid xl:grid-cols-[200px_1fr_200px] xl:gap-10 max-w-[1580px] mx-auto mt-6">
+    <main className="relative xl:grid xl:grid-cols-[200px_1fr_200px] xl:gap-10 max-w-[1580px] mx-auto mt-6">
       <div className="hidden xl:block">
-        <div className="sticky top-16 -mt-5 h-[calc(100vh-3.5rem)] pt-4">
+        <div className="sticky top-0 left-0">
           <SidebarNav />
         </div>
       </div>
@@ -135,7 +135,7 @@ export default async function DocPage({
         </div>
       </div>
       <div className="hidden xl:block">
-        <div className="sticky top-16 -mt-5 h-[calc(100vh-3.5rem)] pt-4">
+        <div className="sticky top-0 left-0">
           {doc.toc.visible && (
             <DashboardTableOfContents toc={doc.toc.content} />
           )}

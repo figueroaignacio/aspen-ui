@@ -40,13 +40,9 @@ interface LocaleLayoutProps {
 export default async function RootLayout(props: LocaleLayoutProps) {
   const params = await props.params;
 
-  const {
-    locale
-  } = params;
+  const { locale } = params;
 
-  const {
-    children
-  } = props;
+  const { children } = props;
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -54,7 +50,9 @@ export default async function RootLayout(props: LocaleLayoutProps) {
         <ThemeProvider>
           <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
             <Navbar />
-            <main>{children}</main>
+            <main className="w-full max-w-full py-2 px-5 md:px-10 lg:px-20 mx-auto overflow-x-hidden">
+              {children}
+            </main>
             <Footer />
           </div>
         </ThemeProvider>
