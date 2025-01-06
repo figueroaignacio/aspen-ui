@@ -5,6 +5,7 @@ import {
   ClipboardDocumentIcon,
 } from "@heroicons/react/24/outline";
 import React, { useState } from "react";
+import { Button } from "../ui/button";
 
 export const CopyButton = ({ children }: { children: React.ReactNode }) => {
   const [isCopied, setIsCopied] = useState(false);
@@ -39,16 +40,18 @@ export const CopyButton = ({ children }: { children: React.ReactNode }) => {
   };
 
   return (
-    <button
+    <Button
       disabled={isCopied}
       onClick={copy}
       className="text-muted-foreground"
+      size="icon"
+      variant="ghost"
     >
       {isCopied ? (
         <ClipboardDocumentCheckIcon strokeWidth={1.5} className="size-5" />
       ) : (
         <ClipboardDocumentIcon strokeWidth={1.5} className="size-5" />
       )}
-    </button>
+    </Button>
   );
 };
