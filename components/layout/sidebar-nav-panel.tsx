@@ -1,23 +1,16 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import Link from "next/link";
-
 // Hooks
 import { usePathname } from "next/navigation";
 
-import { docsNavigation } from "@/lib/config/navigation";
-
 // Components
-interface DocItem {
-  title: string;
-  href: string;
-}
+import Link from "next/link";
 
-interface DocSection {
-  title: string;
-  items: DocItem[];
-}
+// Utils
+import { cn } from "@/lib/utils";
+
+// Config
+import { docsNavigation } from "@/lib/config/navigation";
 
 export function SidebarNavPanel() {
   const pathname = usePathname();
@@ -33,14 +26,14 @@ export function SidebarNavPanel() {
             <h2 className="mb-2 text-lg font-semibold tracking-tight">
               {section.title}
             </h2>
-            <ul className="">
+            <ul className="space-y-2">
               {section.items.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={`block rounded-md py-2 text-sm ${
-                      pathname === `/${item.href}`
-                        ? "text-muted"
+                    className={`block rounded-md py-2 text-sm hover:bg-primary-foreground px-3 ${
+                      pathname === `${item.href}`
+                        ? "bg-primary-foreground"
                         : "text-muted-foreground hover:text-muted"
                     }`}
                   >

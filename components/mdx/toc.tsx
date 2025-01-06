@@ -18,7 +18,7 @@ interface TocProps {
   toc: TocEntry[];
 }
 
-export function DashboardTableOfContents({ toc }: TocProps) {
+export function Toc({ toc }: TocProps) {
   const itemIds = React.useMemo(
     () =>
       toc
@@ -99,7 +99,7 @@ function Tree({ tree, level = 1, activeItem }: TreeProps) {
             <a
               href={item.url}
               className={cn(
-                "inline-block no-underline px-1 py-0.5",
+                "inline-block no-underline hover:underline px-1 py-0.5",
                 item.url === `#${activeItem}`
                   ? "font-medium underline"
                   : "text-muted-foreground"

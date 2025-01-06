@@ -1,6 +1,6 @@
 import { SidebarNav } from "@/components/layout/sidebar-nav";
 import { MDXContentRenderer } from "@/components/mdx/mdx-content-renderer";
-import { DashboardTableOfContents } from "@/components/mdx/toc";
+import { Toc } from "@/components/mdx/toc";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -136,9 +136,7 @@ export default async function DocPage({
       </div>
       <div className="hidden xl:block">
         <div className="sticky top-24 left-0">
-          {doc.toc.visible && (
-            <DashboardTableOfContents toc={doc.toc.content} />
-          )}
+          {doc.toc.visible && <Toc toc={doc.toc.content} />}
         </div>
       </div>
     </main>
