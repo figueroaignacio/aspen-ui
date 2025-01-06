@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/hooks/use-theme";
-import { cn } from "@/lib/utils";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
 
@@ -47,11 +46,7 @@ export function ToggleTheme({ className }: { className?: string }) {
   };
 
   return (
-    <Button
-      onClick={toggleTheme}
-      variant="ghost"
-      className={cn("rounded-full", className)}
-    >
+    <Button onClick={toggleTheme} variant="ghost">
       <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
       <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
       <span className="sr-only">Toggle theme</span>

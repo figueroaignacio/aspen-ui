@@ -45,9 +45,9 @@ export const CopyButton = ({ children }: { children: React.ReactNode }) => {
       className="text-muted-foreground"
     >
       {isCopied ? (
-        <ClipboardDocumentCheckIcon strokeWidth={1.5} />
+        <ClipboardDocumentCheckIcon strokeWidth={1.5} className="size-5" />
       ) : (
-        <ClipboardDocumentIcon strokeWidth={1.5} />
+        <ClipboardDocumentIcon strokeWidth={1.5} className="size-5" />
       )}
     </button>
   );

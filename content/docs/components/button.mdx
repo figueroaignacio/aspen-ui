@@ -1,0 +1,244 @@
+---
+title: Button
+description: Displays a button or a component that looks like a button.
+published: true
+toc:
+  visible: true
+date: 2024-03-14
+---
+
+<Tabs defaultValue="preview">
+  <TabsList>
+    <TabsTrigger value="preview">Preview</TabsTrigger>
+    <TabsTrigger value="code">Code</TabsTrigger>
+  </TabsList>
+  <TabsContent value="preview">
+    <ComponentPreview>
+      <Button>Button</Button>
+    </ComponentPreview>
+  </TabsContent>
+  <TabsContent value="code">
+    ```tsx
+    import { Button } from "@/components/ui/button"
+
+    export function ButtonDemo() {
+      return <Button>Button</Button>
+    }
+    ```
+
+  </TabsContent>
+</Tabs>
+
+## Installation
+
+```bash
+pnpm add clsx
+```
+
+**Copy and paste the following code into your project.**
+
+<CodeBlockWrapper>
+
+```tsx
+import { cn } from "@/lib/utils";
+import * as React from "react";
+
+type ButtonVariant =
+  | "default"
+  | "destructive"
+  | "outline"
+  | "secondary"
+  | "ghost"
+  | "link";
+
+type ButtonSize = "default" | "sm" | "lg" | "icon";
+
+const buttonStyles: Record<ButtonVariant, string> = {
+  default:
+    "border text-center text-foreground rounded-md text-sm flex items-center gap-2 justify-center py-2 px-5 bg-primary hover:bg-primary-foreground text-nowrap active:scale-95 transition-all duration-200",
+  destructive:
+    "bg-red-800 hover:bg-red-800/90 text-center text-foreground rounded-md text-xs flex items-center gap-2 justify-center py-2 px-5",
+  outline:
+    "hover:bg-primary-foreground border active:scale-95 transition-all duration-200",
+  secondary:
+    "flex items-center gap-2 text-xs text-center bg-secondary text-secondary-foreground hover:bg-secondary/80 active:scale-95 transition-all duration-200",
+  ghost:
+    "text-center text-foreground rounded-md text-xs flex items-center gap-2 justify-center text-center py-2 px-5 hover:bg-primary-foreground text-nowrap active:scale-95 transition-all duration-200",
+  link: "text-foreground underline-offset-4 hover:underline",
+};
+
+const buttonSizes: Record<ButtonSize, string> = {
+  default: "h-10 px-4 py-2",
+  sm: "h-9 rounded-md px-3",
+  lg: "h-11 rounded-md px-8",
+  icon: "h-10 w-10",
+};
+
+function buttonVariants(
+  variant: ButtonVariant = "default",
+  size: ButtonSize = "default"
+) {
+  return cn(buttonStyles[variant], buttonSizes[size]);
+}
+
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+}
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant = "default", size = "default", ...props }, ref) => {
+    return (
+      <button
+        className={cn(
+          "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 active:scale-95 transition-all duration-200",
+          buttonVariants(variant, size),
+          className
+        )}
+        ref={ref}
+        {...props}
+      />
+    );
+  }
+);
+
+Button.displayName = "Button";
+
+export { Button, buttonVariants };
+```
+
+</CodeBlockWrapper>
+
+## Usage
+
+```tsx
+import { Button } from "@/components/ui/button";
+```
+
+<br />
+```tsx
+<Button variant="outline">Button</Button>
+```
+
+## Examples
+
+### Default
+
+<Tabs defaultValue="preview">
+  <TabsList>
+    <TabsTrigger value="preview">Preview</TabsTrigger>
+    <TabsTrigger value="code">Code</TabsTrigger>
+  </TabsList>
+  <TabsContent value="preview">
+    <ComponentPreview>
+      <Button variant="default">Default</Button>
+    </ComponentPreview>
+  </TabsContent>
+  <TabsContent value="code">
+    ```tsx
+    import { Button } from "@/components/ui/button"
+
+    export function DefaultButtonDemo() {
+      return <Button>Button</Button>
+    }
+    ```
+
+  </TabsContent>
+</Tabs>
+
+### Secondary
+
+<Tabs defaultValue="preview">
+  <TabsList>
+    <TabsTrigger value="preview">Preview</TabsTrigger>
+    <TabsTrigger value="code">Code</TabsTrigger>
+  </TabsList>
+  <TabsContent value="preview">
+    <ComponentPreview>
+      <Button variant="secondary">Secondary</Button>
+    </ComponentPreview>
+  </TabsContent>
+  <TabsContent value="code">
+    ```tsx
+    import { Button } from "@/components/ui/button"
+
+    export function SecondaryButtonDemo() {
+      return <Button variant="secondary">Secondary</Button>
+    }
+    ```
+
+  </TabsContent>
+</Tabs>
+
+### Outline
+
+<Tabs defaultValue="preview">
+  <TabsList>
+    <TabsTrigger value="preview">Preview</TabsTrigger>
+    <TabsTrigger value="code">Code</TabsTrigger>
+  </TabsList>
+  <TabsContent value="preview">
+    <ComponentPreview>
+      <Button variant="outline">Outline</Button>
+    </ComponentPreview>
+  </TabsContent>
+  <TabsContent value="code">
+    ```tsx
+    import { Button } from "@/components/ui/button"
+
+    export function OutlineButtonDemo() {
+      return <Button variant="outline">Outline</Button>
+    }
+    ```
+
+  </TabsContent>
+</Tabs>
+
+### Ghost
+
+<Tabs defaultValue="preview">
+  <TabsList>
+    <TabsTrigger value="preview">Preview</TabsTrigger>
+    <TabsTrigger value="code">Code</TabsTrigger>
+  </TabsList>
+  <TabsContent value="preview">
+    <ComponentPreview>
+      <Button variant="ghost">Ghost</Button>
+    </ComponentPreview>
+  </TabsContent>
+  <TabsContent value="code">
+    ```tsx
+    import { Button } from "@/components/ui/button"
+
+    export function GhostButtonDemo() {
+      return <Button variant="ghost">Ghost</Button>
+    }
+    ```
+
+  </TabsContent>
+</Tabs>
+
+### Link
+
+<Tabs defaultValue="preview">
+  <TabsList>
+    <TabsTrigger value="preview">Preview</TabsTrigger>
+    <TabsTrigger value="code">Code</TabsTrigger>
+  </TabsList>
+  <TabsContent value="preview">
+    <ComponentPreview>
+      <Button variant="link">Link</Button>
+    </ComponentPreview>
+  </TabsContent>
+  <TabsContent value="code">
+    ```tsx
+    import { Button } from "@/components/ui/button"
+
+    export function LinkButtonDemo() {
+      return <Button variant="link">Link</Button>
+    }
+    ```
+
+  </TabsContent>
+</Tabs>

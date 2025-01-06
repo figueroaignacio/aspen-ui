@@ -93,7 +93,7 @@ export default async function DocPage({
           <SidebarNav />
         </div>
       </div>
-      <div className="w-full mx-auto min-w-0">
+      <div className="w-full mx-auto min-w-0 lg:px-24">
         <Breadcrumb className="mb-4">
           <BreadcrumbList>
             {doc.slug.split("/").map((slug, index) => (
@@ -120,7 +120,7 @@ export default async function DocPage({
             ))}
           </BreadcrumbList>
         </Breadcrumb>
-        <div className="space-y-2">
+        <div className="space-y-2 border-b pb-6">
           <h1 className={cn("scroll-m-20 text-3xl font-bold tracking-tight")}>
             {doc.title}
           </h1>
@@ -130,7 +130,7 @@ export default async function DocPage({
             </p>
           )}
         </div>
-        <div className="pb-12">
+        <div className="pb-12 pt-6">
           <MDXContentRenderer code={doc.body} />
         </div>
       </div>

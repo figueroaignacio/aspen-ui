@@ -22,7 +22,7 @@
   :root.dark {
     --background: hsl(0, 0%, 0%);
     --foreground: hsl(210, 20%, 98%);
-    --card: hsl(240, 14%, 12%);
+    --card: hsl(0, 0%, 3%);
     --primary: hsl(220, 15%, 14%);
     --primary-foreground: hsl(220, 15%, 20%);
     --secondary: hsl(200, 60%, 60%);
@@ -31,7 +31,7 @@
     --accent-foreground: hsl(240 5% 64.9%);
     --muted: hsl(240 4.8% 95.9%);
     --muted-foreground: hsl(240 3.8% 70%);
-    --border: hsl(220, 15%, 13%);
+    --border: hsl(220, 15%, 5%);
   }
 }
 
@@ -41,15 +41,18 @@
   }
 
   ::-webkit-scrollbar {
-    @apply w-[0.5rem];
+    width: 5px;
   }
-
   ::-webkit-scrollbar-track {
-    @apply bg-transparent;
+    background: transparent;
   }
-
   ::-webkit-scrollbar-thumb {
-    @apply bg-slate-400 dark:bg-gray-500 rounded-md;
+    background: var(--border);
+    border-radius: 5px;
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
   }
 
   body {

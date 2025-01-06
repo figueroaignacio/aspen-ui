@@ -49,7 +49,7 @@ export default defineConfig({
       [
         rehypePrettyCode,
         {
-          theme: "houston",
+          theme: "tokyo-night",
           onVisitLine(node: LineElement) {
             if (node.children.length === 0) {
               node.children = [{ type: "text", value: " " }];

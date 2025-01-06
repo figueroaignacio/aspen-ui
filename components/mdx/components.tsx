@@ -1,3 +1,4 @@
+import { ComponentSource } from "@/components/mdx/component-source";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -7,7 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import { BellAlertIcon } from "@heroicons/react/24/outline";
 import Image, { type ImageProps } from "next/image";
@@ -15,9 +16,10 @@ import Link from "next/link";
 import { Callout, CalloutDescription, CalloutTitle } from "./callout";
 import { CodeBlockWrapper } from "./code-block-wrapper";
 import { CodeBlock } from "./codeblock";
-import { ComponentSource } from "./component-source";
+import { ComponentPreview } from "./component-preview";
 
 export const mdxComponents = {
+  ComponentPreview,
   Card,
   CardContent,
   CardDescription,
@@ -39,7 +41,7 @@ export const mdxComponents = {
   h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2
       className={cn(
-        "mt-10 scroll-m-20 pb-1 text-3xl font-semibold tracking-tight first:mt-0 mdx-heading",
+        "mt-10 scroll-m-20 pb-1 text-2xl font-semibold tracking-tight first:mt-0 mdx-heading",
         className
       )}
       {...props}
@@ -48,7 +50,7 @@ export const mdxComponents = {
   h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h3
       className={cn(
-        "mt-8 scroll-m-20 text-2xl font-semibold tracking-tight mdx-heading",
+        "mt-8 scroll-m-20 text-xl font-semibold tracking-tight mdx-heading",
         className
       )}
       {...props}
@@ -167,7 +169,7 @@ export const mdxComponents = {
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={cn(
-        "relative rounded border px-[0.3rem] py-[0.2rem] font-mono text-sm",
+        "relative rounded px-5 py-[0.2rem] font-mono text-sm",
         className
       )}
       {...props}
@@ -189,9 +191,9 @@ export const mdxComponents = {
       {...props}
     />
   ),
-  // Tabs: ({ className, ...props }: React.ComponentProps<typeof Tabs>) => (
-  //   <Tabs className={cn("relative mt-6 w-full", className)} {...props} />
-  // ),
+  Tabs: ({ className, ...props }: React.ComponentProps<typeof Tabs>) => (
+    <Tabs className={cn("relative mt-6 w-full", className)} {...props} />
+  ),
   TabsList: ({
     className,
     ...props

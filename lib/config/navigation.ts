@@ -25,14 +25,22 @@ export const docsNavigation = [
         title: "Introduction",
         href: "/docs",
       },
+      {
+        title: "Installation",
+        href: "/docs/installation",
+      },
+      {
+        title: "Dark Mode",
+        href: "/docs/dark-mode",
+      },
     ],
   },
   {
     title: "Components",
     items: [
       {
-        title: "",
-        href: "",
+        title: "Button",
+        href: "/docs/components/button",
       },
     ],
   },
