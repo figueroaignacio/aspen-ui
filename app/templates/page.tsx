@@ -1,5 +1,3 @@
-// Components
-
 // Icons
 import { CodeIcon } from "@radix-ui/react-icons";
 
