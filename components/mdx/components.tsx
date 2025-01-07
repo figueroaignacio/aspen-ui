@@ -18,7 +18,7 @@ import { CodeBlock } from "./codeblock";
 import { ComponentPreview } from "./component-preview";
 
 // Icons
-import { BellAlertIcon } from "@heroicons/react/24/outline";
+import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
 
 // Utils
 import { cn } from "@/lib/utils";
@@ -121,7 +121,7 @@ export const mdxComponents = {
       {...props}
     >
       <div className="flex-shrink-0 mt-1">
-        <BellAlertIcon className="fill-blue-500 stroke-zinc-100 dark:stroke-zinc-800" />
+        <ExclamationTriangleIcon className="fill-blue-500 stroke-zinc-100 dark:stroke-zinc-800" />
       </div>
       <div>{props.children}</div>
     </blockquote>

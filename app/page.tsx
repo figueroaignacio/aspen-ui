@@ -7,8 +7,10 @@ import {
   TypescriptIcon,
 } from "@/components/icons";
 import { Button } from "@/components/ui/button";
-import { ArrowRightIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
+
+// Icons
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
@@ -31,7 +33,7 @@ export default async function HomePage(props: HomePageProps) {
       label: "Get Started",
       href: "/docs",
       icon: <ArrowRightIcon className="w-5 h-5" />,
-      variant: "outline" as const,
+      variant: "default" as const,
     },
     {
       label: "GitHub",

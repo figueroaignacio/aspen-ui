@@ -1,6 +1,6 @@
 "use client";
 
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -31,7 +31,10 @@ export function SiteMobileHeader({ navigation }: SiteMobileNavbarProps) {
 
   return (
     <div className="md:hidden flex items-center relative justify-between w-full">
-      <Bars3Icon className="h-6 w-6 cursor-pointer" onClick={toggleMenu} />
+      <HamburgerMenuIcon
+        className="h-6 w-6 cursor-pointer"
+        onClick={toggleMenu}
+      />
       <div
         className={`fixed inset-0 w-full h-[100vh] backdrop-blur-sm bg-black/40 z-10 transition-opacity duration-300 ease-in-out ${
           isMenuOpen
@@ -50,7 +53,10 @@ export function SiteMobileHeader({ navigation }: SiteMobileNavbarProps) {
             <Logo />
           </div>
           <div className="flex justify-end p-3.5">
-            <XMarkIcon className="size-8 cursor-pointer" onClick={toggleMenu} />
+            <Cross1Icon
+              className="size-8 cursor-pointer"
+              onClick={toggleMenu}
+            />
           </div>
         </div>
         <div className="space-y-6 px-5 py-4 overflow-y-scroll">

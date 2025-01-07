@@ -4,11 +4,10 @@
 import React, { useState } from "react";
 
 // Components
-import {
-  ClipboardDocumentCheckIcon,
-  ClipboardDocumentIcon,
-} from "@heroicons/react/24/outline";
 import { Button } from "../ui/button";
+
+// Icons
+import { CheckIcon, ClipboardCopyIcon } from "@radix-ui/react-icons";
 
 export const CopyButton = ({ children }: { children: React.ReactNode }) => {
   const [isCopied, setIsCopied] = useState(false);
@@ -51,9 +50,9 @@ export const CopyButton = ({ children }: { children: React.ReactNode }) => {
       variant="ghost"
     >
       {isCopied ? (
-        <ClipboardDocumentCheckIcon strokeWidth={1.5} className="size-5" />
+        <CheckIcon strokeWidth={1.5} className="size-5" />
       ) : (
-        <ClipboardDocumentIcon strokeWidth={1.5} className="size-5" />
+        <ClipboardCopyIcon strokeWidth={1.5} className="size-5" />
       )}
     </Button>
   );

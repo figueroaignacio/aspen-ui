@@ -1,9 +1,14 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+// Hooks
 import { useTheme } from "@/hooks/use-theme";
-import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
+
+// Components
+import { Button } from "@/components/ui/button";
+
+// Icons
+import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 
 export function ToggleTheme({ className }: { className?: string }) {
   const { theme, setTheme } = useTheme();

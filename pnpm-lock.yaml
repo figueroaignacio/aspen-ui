@@ -15,9 +15,6 @@ importers:
       '@fontsource-variable/onest':
         specifier: ^5.1.1
         version: 5.1.1
-      '@heroicons/react':
-        specifier: ^2.2.0
-        version: 2.2.0(react@19.0.0)
       '@radix-ui/react-collapsible':
         specifier: ^1.1.2
         version: 1.1.2(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -293,11 +290,6 @@ packages:
 
   '@fontsource-variable/onest@5.1.1':
     resolution: {integrity: sha512-Lb1hWJL7z7VZ9oDiHp5/O4tq/tzSQ0md1Luv+RPRnw3WalFoRBdjE9Xw9ibgteEeVlv8fYQ3UTR6ALDwdWxgzQ==}
-
-  '@heroicons/react@2.2.0':
-    resolution: {integrity: sha512-LMcepvRaS9LYHJGsF0zzmgKCUim/X3N/DQKc4jepAXJ7l8QxJ1PmxJzqplF2Z3FE4PqBAIGyJAQ/w4B5dsqbtQ==}
-    peerDependencies:
-      react: '>= 16 || ^19.0.0-rc'
 
   '@humanwhocodes/config-array@0.13.0':
     resolution: {integrity: sha512-DZLEEqFWQFiyK6h5YIeynKx7JlvCYWL0cImfSRXZ9l4Sg2efkFGTuFf6vzXjK1cq6IYkU+Eg/JizXw+TD2vRNw==}
@@ -2879,10 +2871,6 @@ snapshots:
   '@eslint/js@8.57.1': {}
 
   '@fontsource-variable/onest@5.1.1': {}
-
-  '@heroicons/react@2.2.0(react@19.0.0)':
-    dependencies:
-      react: 19.0.0
 
   '@humanwhocodes/config-array@0.13.0':
     dependencies:
