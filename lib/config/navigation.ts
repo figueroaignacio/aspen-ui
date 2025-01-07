@@ -8,12 +8,12 @@ export const navigation = [
     href: "/docs/components/button",
   },
   {
-    title: "Templates",
-    href: "/templates",
-  },
-  {
     title: "Blocks",
     href: "/blocks",
+  },
+  {
+    title: "Templates",
+    href: "/templates",
   },
 ];
 
