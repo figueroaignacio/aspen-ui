@@ -1,17 +1,31 @@
 import { ImageResponse } from "next/og";
 
+// Image metadata
 export const size = {
   width: 32,
   height: 32,
 };
-
 export const contentType = "image/png";
 
+// Image generation
 export default function Icon() {
   return new ImageResponse(
     (
-      <div tw="font-extrabold px-3 py-1 text-foreground bg-background text-foreground rounded-md">
-        A
+      // ImageResponse JSX element
+      <div
+        style={{
+          fontSize: 24,
+          background: "black",
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "white",
+          borderRadius: "7px",
+        }}
+      >
+        a.
       </div>
     ),
     {
