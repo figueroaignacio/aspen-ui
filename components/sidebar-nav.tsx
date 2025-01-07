@@ -10,7 +10,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 // Config
-import { docsNavigation } from "@/lib/config/navigation";
+import { docsNavigation } from "@/config/navigation";
 
 export function SidebarNav() {
   const pathname = usePathname();

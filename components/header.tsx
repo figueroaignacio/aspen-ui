@@ -2,7 +2,7 @@
 import { SiteHeader } from "./site-header";
 import { SiteMobileHeader } from "./site-mobile-header";
 
-import { docsNavigation, navigation } from "@/lib/config/navigation";
+import { docsNavigation, navigation } from "@/config/navigation";
 
 export function Navbar() {
   return (

@@ -12,7 +12,7 @@ import "@/styles/globals.css";
 import "@fontsource-variable/onest";
 
 // Metadata
-import { siteConfig } from "@/lib/config/siteConfig";
+import { siteConfig } from "@/config/siteConfig";
 
 export async function generateMetadata() {
   // const metadataBase =
