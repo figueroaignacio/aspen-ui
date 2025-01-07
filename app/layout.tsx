@@ -3,7 +3,7 @@ import { ThemeProvider } from "@/hooks/contexts/theme-context";
 
 // Components
 import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
+import { Navbar } from "@/components/header";
 
 // Global Styles
 import "@/styles/globals.css";

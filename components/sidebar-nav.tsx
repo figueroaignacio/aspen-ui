@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 // Config
 import { docsNavigation } from "@/lib/config/navigation";
 
-export function SidebarNavPanel() {
+export function SidebarNav() {
   const pathname = usePathname();
 
   return (

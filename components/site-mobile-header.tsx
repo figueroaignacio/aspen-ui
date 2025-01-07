@@ -4,8 +4,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Logo } from "../logo";
-import { ToggleTheme } from "../toggle-theme";
+import { Logo } from "./logo";
+import { ToggleTheme } from "./toggle-theme";
 
 interface DocItem {
   title: string;
@@ -21,7 +21,7 @@ interface SiteMobileNavbarProps {
   navigation: DocSection[];
 }
 
-export function SiteMobileNavbar({ navigation }: SiteMobileNavbarProps) {
+export function SiteMobileHeader({ navigation }: SiteMobileNavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 

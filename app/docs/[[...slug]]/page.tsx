@@ -1,7 +1,7 @@
 // Components
-import { SidebarNav } from "@/components/layout/sidebar-nav";
 import { MDXContentRenderer } from "@/components/mdx/mdx-content-renderer";
 import { Toc } from "@/components/mdx/toc";
+import { SidebarNav } from "@/components/sidebar-nav";
 import {
   Breadcrumb,
   BreadcrumbItem,

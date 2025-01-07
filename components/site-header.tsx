@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 
 // Components
 import Link from "next/link";
-import { Logo } from "../logo";
-import { ToggleTheme } from "../toggle-theme";
+import { Logo } from "./logo";
+import { ToggleTheme } from "./toggle-theme";
 interface NavigationProps {
   href: string;
   title: string;
@@ -16,7 +16,7 @@ interface SiteNavbarProps {
   navigation: NavigationProps[];
 }
 
-export function SiteNavbar({ navigation }: SiteNavbarProps) {
+export function SiteHeader({ navigation }: SiteNavbarProps) {
   const pathname = usePathname();
 
   return (
