@@ -1,6 +1,6 @@
 export const navigation = [
   {
-    title: "Documentation",
+    title: "Docs",
     href: "/docs",
   },
   {
