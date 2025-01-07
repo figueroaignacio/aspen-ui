@@ -61,7 +61,7 @@ export default async function HomePage(props: HomePageProps) {
               <Button key={index} variant={item.variant}>
                 <Link
                   href={item.href}
-                  className={`inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium text-sm transition-colors duration-200`}
+                  className={`inline-flex items-center justify-center`}
                 >
                   {item.label}
                   <span className="ml-2 inline-block">{item.icon}</span>
