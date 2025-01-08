@@ -1,36 +1,10 @@
-import {
-  Github,
-  NextIcon,
-  ReactIcon,
-  TailwindIcon,
-  TypescriptIcon,
-} from "@/components/icons";
+// Components
 import { Button } from "@/components/ui/button";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
-export function Hero() {
-  const technologies = [
-    { title: "Typescript", icon: <TypescriptIcon /> },
-    { title: "React.js", icon: <ReactIcon /> },
-    { title: "Next.js", icon: <NextIcon /> },
-    { title: "Tailwind", icon: <TailwindIcon /> },
-  ];
+import { heroLinks, technologies } from "@/lib/constants";
 
-  const links = [
-    {
-      label: "Get Started",
-      href: "/docs",
-      icon: <ArrowRightIcon className="w-5 h-5" />,
-      variant: "default" as const,
-    },
-    {
-      label: "GitHub",
-      href: "https://github.com/figueroaignacio/aspen-ui",
-      icon: <Github />,
-      variant: "ghost" as const,
-    },
-  ];
+export function Hero() {
   return (
     <section className="relative overflow-hidden py-20 md:py-32">
       <div className="grid gap-12 md:grid-cols-2 items-center">
@@ -45,7 +19,7 @@ export function Hero() {
             </h2>
           </div>
           <div className="flex flex-wrap gap-4">
-            {links.map((item, index) => (
+            {heroLinks.map((item, index) => (
               <Button key={index} variant={item.variant}>
                 <Link
                   href={item.href}
