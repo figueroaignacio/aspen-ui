@@ -4,6 +4,7 @@ const config: Config = {
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
+    "./sections/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx,mdx}",
     "./content/**/*.{ts,tsx,mdx}",
   ],

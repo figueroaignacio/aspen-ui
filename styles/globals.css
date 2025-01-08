@@ -6,7 +6,8 @@
   :root {
     --background: hsl(0, 0%, 98%);
     --foreground: hsl(220, 20%, 20%);
-    --card: hsl(210, 25%, 96%);
+    /* --card: hsl(210, 25%, 96%); */
+    --card: #ebf0f4;
     --primary: hsl(0, 0%, 100%);
     --primary-foreground: hsl(212, 24%, 89%);
     --secondary: hsl(200, 60%, 50%);
