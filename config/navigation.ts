@@ -5,7 +5,7 @@ export const navigation = [
   },
   {
     title: "Components",
-    href: "/docs/components/button",
+    href: "/docs/components/tailwind/button",
   },
   {
     title: "Blocks",
@@ -36,11 +36,20 @@ export const docsNavigation = [
     ],
   },
   {
-    title: "Components",
+    title: "Tailwind Components",
     items: [
       {
         title: "Button",
-        href: "/docs/components/button",
+        href: "/docs/components/tailwind/button",
+      },
+    ],
+  },
+  {
+    title: "CSS Components",
+    items: [
+      {
+        title: "Button",
+        href: "/docs/components/css-modules/button",
       },
     ],
   },

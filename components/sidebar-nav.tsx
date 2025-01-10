@@ -23,7 +23,7 @@ export function SidebarNav() {
             key={section.title}
             className={cn("pb-4", index !== 0 && "pt-4")}
           >
-            <h2 className="mb-2 text-lg font-semibold tracking-tight">
+            <h2 className="mb-2 text-sm font-semibold tracking-tight">
               {section.title}
             </h2>
             <ul className="space-y-2">

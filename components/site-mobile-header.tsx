@@ -1,11 +1,16 @@
 "use client";
 
-import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
-import Link from "next/link";
+// Hooks
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+
+// Components
+import Link from "next/link";
 import { Logo } from "./logo";
 import { ToggleTheme } from "./toggle-theme";
+
+// Icons
+import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 interface DocItem {
   title: string;
@@ -62,7 +67,7 @@ export function SiteMobileHeader({ navigation }: SiteMobileNavbarProps) {
         <div className="space-y-6 px-5 py-4 overflow-y-scroll">
           {navigation.map((section, index) => (
             <div key={section.title} className={index !== 0 ? "pt-2" : ""}>
-              <h2 className="mb-2 text-lg font-semibold tracking-tight">
+              <h2 className="mb-2 text-sm font-semibold tracking-tight">
                 {section.title}
               </h2>
               <ul>
