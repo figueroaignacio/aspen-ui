@@ -6,9 +6,8 @@
   :root {
     --background: hsl(0, 0%, 98%);
     --foreground: hsl(220, 20%, 20%);
-    /* --card: hsl(210, 25%, 96%); */
-    --card: #ebf0f4;
-    --primary: hsl(0, 0%, 100%);
+    --card: hsl(207, 29%, 94%);
+    --primary: hsl(212, 24%, 89%);
     --primary-foreground: hsl(212, 24%, 89%);
     --secondary: hsl(200, 60%, 50%);
     --secondary-foreground: hsl(210, 30%, 98%);
@@ -24,7 +23,7 @@
     --background: hsl(0, 0%, 0%);
     --foreground: hsl(210, 20%, 98%);
     --card: hsl(0, 0%, 3%);
-    --primary: hsl(220, 15%, 14%);
+    --primary: hsl(220, 15%, 20%);
     --primary-foreground: hsl(220, 15%, 20%);
     --secondary: hsl(200, 60%, 60%);
     --secondary-foreground: hsl(220, 15%, 10%);

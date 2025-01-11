@@ -26,7 +26,7 @@ export function CodeBlockWrapper({
   const [isOpened, setIsOpened] = React.useState(false);
 
   return (
-    <Collapsible open={isOpened} onOpenChange={setIsOpened}>
+    <Collapsible open={isOpened} onOpenChange={setIsOpened} className="mb-8">
       <div className={cn("relative overflow-hidden", className)} {...props}>
         <CollapsibleContent
           forceMount
@@ -50,9 +50,7 @@ export function CodeBlockWrapper({
           )}
         >
           <CollapsibleTrigger asChild>
-            <Button variant="ghost" className="h-8 text-xs">
-              {isOpened ? "Collapse" : expandButtonTitle}
-            </Button>
+            <Button>{isOpened ? "Collapse" : expandButtonTitle}</Button>
           </CollapsibleTrigger>
         </div>
       </div>

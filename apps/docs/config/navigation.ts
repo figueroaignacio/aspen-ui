@@ -36,20 +36,11 @@ export const docsNavigation = [
     ],
   },
   {
-    title: "Tailwind Components",
+    title: "Components",
     items: [
       {
         title: "Button",
-        href: "/docs/components/tailwind/button",
-      },
-    ],
-  },
-  {
-    title: "CSS Components",
-    items: [
-      {
-        title: "Button",
-        href: "/docs/components/css-modules/button",
+        href: "/docs/components/button",
       },
     ],
   },

@@ -33,87 +33,225 @@ date: 2024-03-14
 
 <Steps>
   <Step>
-      Install the follow dependencies
-      ```bash
-      pnpm add clsx
-      ```
+    Copy and paste the following code into your project.
+
+    <Tabs defaultValue="preview">
+      <TabsList>
+        <TabsTrigger value="css-modules">CSS Modules</TabsTrigger>
+        <TabsTrigger value="tailwind">Tailwind</TabsTrigger>
+      </TabsList>
+      <TabsContent value="css-modules">
+      <CodeBlockWrapper>
+
+        ```tsx
+        import { cva, type VariantProps } from "class-variance-authority";
+        import React from "react";
+        import { cn } from "../../lib/utils";
+        import styles from "./button.module.css";
+
+        const buttonVariants = cva(styles.baseButton, {
+          variants: {
+            variant: {
+              primary: styles.primary,
+              destructive: styles.destructive,
+              outline: styles.outline,
+              secondary: styles.secondary,
+              ghost: styles.ghost,
+              link: styles.link,
+            },
+            size: {
+              default: styles.defaultSize,
+              sm: styles.sm,
+              lg: styles.lg,
+              icon: styles.icon,
+            },
+          },
+          defaultVariants: {
+            variant: "primary",
+            size: "default",
+          },
+        });
+
+        export interface ButtonProps
+          extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+            VariantProps<typeof buttonVariants> {}
+
+        const Button = (
+          { className, variant = "primary", size = "default", ...props }: ButtonProps,
+          ref?: React.Ref<HTMLButtonElement>
+        ) => {
+          return (
+            <button
+              className={cn(buttonVariants({ variant, size, className }))}
+              ref={ref}
+              {...props}
+            />
+          );
+        };
+
+        Button.displayName = "Button";
+
+        export { Button, buttonVariants };
+        ```
+      </CodeBlockWrapper> 
+      <CodeBlockWrapper>
+        ```css
+        .baseButton {
+          font-size: 0.875rem;
+          font-weight: 500;
+          line-height: 1.25;
+          text-align: center;
+          transition: transform 0.2s, background-color 0.2s;
+          border: none;
+          padding: 0.5rem 1rem;
+          border-radius: var(--radius);
+          cursor: pointer;
+        
+          &:active {
+            transform: scale(0.95);
+          }
+        }
+        
+        .primary {
+          background-color: var(--primary);
+          color: var(--primary-foreground);
+          border: 1px solid var(--border);
+        
+          &:hover {
+            filter: brightness(1.3);
+          }
+        }
+        
+        .destructive {
+          background-color: var(--destructive);
+          color: white;
+        
+          &:hover {
+            filter: brightness(1.1);
+          }
+        }
+        
+        .outline {
+          border: 1px solid var(--border);
+          background-color: transparent;
+          color: var(--color-foreground);
+        
+          &:hover {
+            background-color: var(--primary-foreground);
+          }
+        }
+        
+        .secondary {
+          background-color: var(--secondary);
+          color: var(--secondary-foreground);
+        
+          &:hover {
+            filter: brightness(1.1);
+          }
+        }
+        
+        .ghost {
+          background-color: transparent;
+          color: var(--foreground);
+        
+          &:hover {
+            background-color: var(--primary-foreground);
+          }
+        }
+        
+        .link {
+          background-color: transparent;
+          color: var(--color-foreground);
+          text-decoration: underline;
+        
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        
+        .defaultSize {
+          height: 2.5rem;
+          padding: 0 1rem;
+        }
+        .sm {
+          height: 2.25rem;
+          padding: 0 0.75rem;
+        }
+        .lg {
+          height: 2.75rem;
+          padding: 0 2rem;
+        }
+        .icon {
+          height: 2.5rem;
+          width: 2.5rem;
+        }
+        ```
+      </CodeBlockWrapper>
+      </TabsContent>
+      <TabsContent value="tailwind">
+        ```tsx
+        import { cn } from "@/lib/utils";
+        import { cva, type VariantProps } from "class-variance-authority";
+        import React from "react";
+        
+        const buttonVariants = cva(
+          "inline-flex items-center justify-center gap-2 text-sm font-medium transition-transform duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none rounded-md",
+          {
+            variants: {
+              variant: {
+                primary:
+                  "bg-primary text-foreground active:scale-95 ring-primary ring-offset-background",
+                destructive:
+                  "bg-red-600 text-white hover:brightness-110 active:scale-95",
+                outline:
+                  "border border-border text-foreground hover:bg-primary-foreground active:scale-95",
+                secondary:
+                  "bg-secondary text-secondary-foreground hover:brightness-110 active:scale-95",
+                ghost:
+                  "bg-transparent text-foreground hover:bg-primary-foreground active:scale-95",
+                link: "text-foreground underline-offset-4 hover:underline",
+              },
+              size: {
+                default: "h-10 px-4 py-2",
+                sm: "h-9 px-3 rounded-md",
+                lg: "h-11 px-8 rounded-md",
+                icon: "h-10 w-10",
+              },
+            },
+            defaultVariants: {
+              variant: "primary",
+              size: "default",
+            },
+          }
+        );
+        
+        export interface ButtonProps
+          extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+            VariantProps<typeof buttonVariants> {}
+        
+        const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+          ({ className, variant, size, ...props }, ref) => {
+            return (
+              <button
+                className={cn(buttonVariants({ variant, size }), className)}
+                ref={ref}
+                {...props}
+              />
+            );
+          }
+        );
+        
+        Button.displayName = "Button";
+        
+        export { Button, buttonVariants };
+
+        ```
+      </TabsContent>
+    </Tabs>
+
   </Step>
   <Step>
-    Copy and paste the following code into your project.  
-<CodeBlockWrapper>
-```tsx
-import { cn } from "@/lib/utils";
-import * as React from "react";
-
-type ButtonVariant =
-  | "default"
-  | "destructive"
-  | "outline"
-  | "secondary"
-  | "ghost"
-  | "link";
-
-type ButtonSize = "default" | "sm" | "lg" | "icon";
-
-const buttonStyles: Record<ButtonVariant, string> = {
-  default:
-    "border text-center text-foreground rounded-md text-sm flex items-center gap-2 justify-center py-2 px-5 bg-primary hover:bg-primary-foreground text-nowrap active:scale-95 transition-all duration-200",
-  destructive:
-    "bg-red-800 hover:bg-red-800/90 text-center text-foreground rounded-md text-xs flex items-center gap-2 justify-center py-2 px-5",
-  outline:
-    "hover:bg-primary-foreground border active:scale-95 transition-all duration-200",
-  secondary:
-    "flex items-center gap-2 text-xs text-center bg-secondary text-secondary-foreground hover:bg-secondary/80 active:scale-95 transition-all duration-200",
-  ghost:
-    "text-center text-foreground rounded-md text-xs flex items-center gap-2 justify-center text-center py-2 px-5 hover:bg-primary-foreground text-nowrap active:scale-95 transition-all duration-200",
-  link: "text-foreground underline-offset-4 hover:underline",
-};
-
-const buttonSizes: Record<ButtonSize, string> = {
-  default: "h-10 px-4 py-2",
-  sm: "h-9 rounded-md px-3",
-  lg: "h-11 rounded-md px-8",
-  icon: "h-10 w-10",
-};
-
-function buttonVariants(
-  variant: ButtonVariant = "default",
-  size: ButtonSize = "default"
-) {
-  return cn(buttonStyles[variant], buttonSizes[size]);
-}
-
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: ButtonVariant;
-  size?: ButtonSize;
-}
-
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant = "default", size = "default", ...props }, ref) => {
-    return (
-      <button
-        className={cn(
-          "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 active:scale-95 transition-all duration-200",
-          buttonVariants(variant, size),
-          className
-        )}
-        ref={ref}
-        {...props}
-      />
-    );
-  }
-);
-
-Button.displayName = "Button";
-
-export { Button, buttonVariants };
-
-````
-</CodeBlockWrapper>
-  </Step>
-  <Step>
-Update the import paths to match your project setup.
+    Update the import paths to match your project setup.
   </Step>
 </Steps>
 
@@ -121,16 +259,13 @@ Update the import paths to match your project setup.
 
 ```tsx
 import { Button } from "@/components/ui/button";
-````
 
-<br />
-```tsx
-<Button variant="outline">Button</Button>
+<Button variant="outline">Button</Button>;
 ```
 
 ## Examples
 
-### Default
+### Primary
 
 <Tabs defaultValue="preview">
   <TabsList>
@@ -139,15 +274,15 @@ import { Button } from "@/components/ui/button";
   </TabsList>
   <TabsContent value="preview">
     <ComponentPreview>
-      <Button variant="default">Default</Button>
+      <Button variant="primary">Primary</Button>
     </ComponentPreview>
   </TabsContent>
   <TabsContent value="code">
     ```tsx
-    import { Button } from "@/components/ui/button"
+    import { Button } from "@/components/ui/button";
 
-    export function DefaultButtonDemo() {
-      return <Button>Button</Button>
+    export function PrimaryButtonDemo() {
+      return <Button variant="primary">Primary</Button>;
     }
     ```
 
@@ -168,10 +303,10 @@ import { Button } from "@/components/ui/button";
   </TabsContent>
   <TabsContent value="code">
     ```tsx
-    import { Button } from "@/components/ui/button"
+    import { Button } from "@/components/ui/button";
 
     export function SecondaryButtonDemo() {
-      return <Button variant="secondary">Secondary</Button>
+      return <Button variant="secondary">Secondary</Button>;
     }
     ```
 

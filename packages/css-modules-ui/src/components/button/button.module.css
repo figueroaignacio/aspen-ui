@@ -1,5 +1,3 @@
-/* Base */
-
 .baseButton {
   font-size: 0.875rem;
   font-weight: 500;
@@ -15,8 +13,6 @@
     transform: scale(0.95);
   }
 }
-
-/* Variants */
 
 .primary {
   background-color: var(--primary);
@@ -74,8 +70,6 @@
     text-decoration: underline;
   }
 }
-
-/* Sizes */
 
 .defaultSize {
   height: 2.5rem;
