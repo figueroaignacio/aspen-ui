@@ -15,26 +15,31 @@ import { cn } from "@/lib/utils";
 
 interface CodeBlockProps extends React.HTMLAttributes<HTMLDivElement> {
   expandButtonTitle?: string;
+  fileLocation?: string;
 }
 
 export function CodeBlockWrapper({
   expandButtonTitle = "View Code",
   className,
   children,
+  fileLocation,
   ...props
 }: CodeBlockProps) {
   const [isOpened, setIsOpened] = React.useState(false);
 
   return (
-    <Collapsible open={isOpened} onOpenChange={setIsOpened} className="mb-8">
+    <Collapsible open={isOpened} onOpenChange={setIsOpened}>
+      {fileLocation ? (
+        <div className="px-3 py-1 text-xs">{fileLocation}</div>
+      ) : null}
       <div className={cn("relative overflow-hidden", className)} {...props}>
         <CollapsibleContent
           forceMount
-          className={cn("overflow-hidden", !isOpened && "max-h-32")}
+          className={cn("overflow-hidden", !isOpened && "max-h-48")}
         >
           <div
             className={cn(
-              "[&_[data-rehype-pretty-code-figure]]:my-0 [&_pre]:max-h-[650px] [&_pre]:pb-[100px]",
+              "[&_[data-rehype-pretty-code-figure]]:my-0 [&_pre]:max-h-[450px] [&_pre]:pb-[100px] rounded-lg",
               !isOpened ? "[&_pre]:overflow-hidden" : "[&_pre]:overflow-auto]"
             )}
           >
@@ -43,10 +48,8 @@ export function CodeBlockWrapper({
         </CollapsibleContent>
         <div
           className={cn(
-            "absolute flex items-center justify-center bg-gradient-to-b from-zinc-700/30 to-[hsl(0,0%,7%)] p-2",
-            isOpened
-              ? "inset-x-0 bottom-0 h-12 from-[#17191E] mx-[2px]"
-              : "inset-0"
+            "absolute flex items-center justify-center backdrop-blur-sm p-2",
+            isOpened ? "inset-x-0 bottom-0 h-12 mx-[2px]" : "inset-0"
           )}
         >
           <CollapsibleTrigger asChild>

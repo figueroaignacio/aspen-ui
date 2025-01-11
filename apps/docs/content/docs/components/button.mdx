@@ -41,8 +41,8 @@ date: 2024-03-14
         <TabsTrigger value="tailwind">Tailwind</TabsTrigger>
       </TabsList>
       <TabsContent value="css-modules">
-      <CodeBlockWrapper>
-
+      <CodeBlockWrapper fileLocation="button.tsx">
+      
         ```tsx
         import { cva, type VariantProps } from "class-variance-authority";
         import React from "react";
@@ -94,7 +94,9 @@ date: 2024-03-14
         export { Button, buttonVariants };
         ```
       </CodeBlockWrapper>
-      <CodeBlockWrapper>
+      <br />
+      <br />
+      <CodeBlockWrapper fileLocation="styles.module.css">
         ```css
         .baseButton {
           font-size: 0.875rem;
@@ -229,22 +231,22 @@ date: 2024-03-14
           extends React.ButtonHTMLAttributes<HTMLButtonElement>,
             VariantProps<typeof buttonVariants> {}
 
-        const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-          ({ className, variant, size, ...props }, ref) => {
-            return (
-              <button
-                className={cn(buttonVariants({ variant, size }), className)}
-                ref={ref}
-                {...props}
-              />
-            );
-          }
-        );
+        const Button = (
+          { className, variant = "primary", size = "default", ...props }: ButtonProps,
+          ref?: React.Ref<HTMLButtonElement>
+        ) => {
+          return (
+            <button
+              className={cn(buttonVariants({ variant, size, className }))}
+              ref={ref}
+              {...props}
+            />
+          );
+        };
 
         Button.displayName = "Button";
 
         export { Button, buttonVariants };
-
         ```
       </TabsContent>
     </Tabs>
