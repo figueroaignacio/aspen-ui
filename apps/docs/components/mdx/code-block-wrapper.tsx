@@ -39,7 +39,7 @@ export function CodeBlockWrapper({
         >
           <div
             className={cn(
-              "[&_[data-rehype-pretty-code-figure]]:my-0 [&_pre]:max-h-[450px] [&_pre]:pb-[100px] rounded-lg",
+              "[&_[data-rehype-pretty-code-figure]]:my-0 [&_pre]:max-h-[750px] [&_pre]:pb-[100px] rounded-lg",
               !isOpened ? "[&_pre]:overflow-hidden" : "[&_pre]:overflow-auto]"
             )}
           >
@@ -48,7 +48,7 @@ export function CodeBlockWrapper({
         </CollapsibleContent>
         <div
           className={cn(
-            "absolute flex items-center justify-center backdrop-blur-sm p-2",
+            "absolute flex items-center justify-center backdrop-blur-lg p-2",
             isOpened ? "inset-x-0 bottom-0 h-12 mx-[2px]" : "inset-0"
           )}
         >

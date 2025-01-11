@@ -7,7 +7,7 @@ import React, { useState } from "react";
 import { Button } from "../ui/button";
 
 // Icons
-import { CheckIcon, ClipboardCopyIcon } from "@radix-ui/react-icons";
+import { CheckIcon, ClipboardIcon } from "@radix-ui/react-icons";
 
 export const CopyButton = ({ children }: { children: React.ReactNode }) => {
   const [isCopied, setIsCopied] = useState(false);
@@ -19,7 +19,7 @@ export const CopyButton = ({ children }: { children: React.ReactNode }) => {
 
     setTimeout(() => {
       setIsCopied(false);
-    }, 10000);
+    }, 2000);
   };
 
   const extractSourceCode = (node: React.ReactNode): string => {
@@ -45,14 +45,13 @@ export const CopyButton = ({ children }: { children: React.ReactNode }) => {
     <Button
       disabled={isCopied}
       onClick={copy}
-      className="text-muted-foreground"
+      className="bg-transparent text-primary-foreground"
       size="icon"
-      variant="ghost"
     >
       {isCopied ? (
-        <CheckIcon strokeWidth={1.5} className="size-5" />
+        <CheckIcon className="size-5" />
       ) : (
-        <ClipboardCopyIcon strokeWidth={1.5} className="size-5" />
+        <ClipboardIcon className="size-5" />
       )}
     </Button>
   );

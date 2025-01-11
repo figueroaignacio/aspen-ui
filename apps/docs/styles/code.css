@@ -7,7 +7,7 @@ html.dark[data-theme="light"] {
 }
 
 [data-rehype-pretty-code-figure] {
-  @apply bg-zinc-800 rounded-md my-3;
+  @apply rounded-md my-3;
 }
 
 [data-rehype-pretty-code-figure] code {
@@ -52,12 +52,4 @@ html.dark[data-theme="light"] {
 
 [data-rehype-pretty-code-title] + pre {
   @apply mt-0;
-}
-
-.mdx > .steps:first-child > h3:first-child {
-  @apply mt-0;
-}
-
-.steps > h3 {
-  @apply mt-8 mb-4 text-base font-semibold;
 }
