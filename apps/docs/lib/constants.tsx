@@ -30,7 +30,7 @@ export const features = [
   {
     icon: <CodeIcon className="size-5" />,
     title: "Developer Experience",
-    description: "Intuitive API and detailed documentation.",
+    description: "Intuitive and detailed documentation.",
   },
   {
     icon: <MoonIcon className="size-5" />,
@@ -45,13 +45,14 @@ export const features = [
   {
     icon: <TailwindIcon />,
     title: "Tailwind CSS",
-    description: "Rapidly build designs with utility classes.",
+    description: "Tailwind CSS components supported for quick styling.",
   },
   {
     icon: <CssIcon />,
     title: "CSS Modules",
-    description: "Scoped, reusable styles without conflicts.",
+    description: "CSS Modules components supported for scoped styles.",
   },
+
   {
     icon: <ColorWheelIcon className="size-5" />,
     title: "Theming",
