@@ -8,7 +8,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-primary text-primary-foreground hover:brightness-110 active:scale-95 ring-primary ring-offset-background",
+          "bg-primary text-foreground hover:brightness-110 active:scale-95 ring-primary ring-offset-background",
         destructive:
           "bg-red-600 text-white hover:brightness-110 active:scale-95",
         outline:

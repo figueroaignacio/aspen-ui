@@ -76,7 +76,7 @@ export const heroLinks = [
     label: "Get Started",
     href: "/docs",
     icon: <ArrowRightIcon className="w-5 h-5" />,
-    variant: "default" as const,
+    variant: "primary" as const,
   },
   {
     label: "GitHub",
