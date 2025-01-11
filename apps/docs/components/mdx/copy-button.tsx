@@ -45,7 +45,7 @@ export const CopyButton = ({ children }: { children: React.ReactNode }) => {
     <Button
       disabled={isCopied}
       onClick={copy}
-      className="bg-transparent text-primary-foreground"
+      className="bg-transparent text-white"
       size="icon"
     >
       {isCopied ? (
