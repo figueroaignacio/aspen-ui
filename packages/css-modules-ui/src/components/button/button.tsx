@@ -1,60 +1,47 @@
+import { cva, type VariantProps } from "class-variance-authority";
 import React from "react";
-import { cn } from "../../lib/utils";
-import styles from "./Button.module.css";
+import styles from "./button.module.css";
 
-export type ButtonVariant =
-  | "default"
-  | "destructive"
-  | "outline"
-  | "secondary"
-  | "ghost"
-  | "link";
-
-export type ButtonSize = "default" | "sm" | "lg" | "icon";
-
-const buttonStyles: Record<ButtonVariant, string> = {
-  default: styles.default,
-  destructive: styles.destructive,
-  outline: styles.outline,
-  secondary: styles.secondary,
-  ghost: styles.ghost,
-  link: styles.link,
-};
-
-const buttonSizes: Record<ButtonSize, string> = {
-  default: styles.defaultSize,
-  sm: styles.sm,
-  lg: styles.lg,
-  icon: styles.icon,
-};
-
-function buttonVariants(
-  variant: ButtonVariant = "default",
-  size: ButtonSize = "default"
-) {
-  return cn(buttonStyles[variant], buttonSizes[size]);
-}
+const buttonVariants = cva(styles.baseButton, {
+  variants: {
+    variant: {
+      primary: styles.primary,
+      destructive: styles.destructive,
+      outline: styles.outline,
+      secondary: styles.secondary,
+      ghost: styles.ghost,
+      link: styles.link,
+    },
+    size: {
+      default: styles.defaultSize,
+      sm: styles.sm,
+      lg: styles.lg,
+      icon: styles.icon,
+    },
+  },
+  defaultVariants: {
+    variant: "primary",
+    size: "default",
+  },
+});
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: ButtonVariant;
-  size?: ButtonSize;
-}
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {}
 
-export const Button = (
-  { className, variant = "default", size = "default" }: ButtonProps,
+const Button = (
+  { className, variant = "primary", size = "default", ...props }: ButtonProps,
   ref?: React.Ref<HTMLButtonElement>
 ) => {
   return (
     <button
-      className={cn(
-        styles.baseButton,
-        buttonVariants(variant, size),
-        className
-      )}
+      className={buttonVariants({ variant, size, className })}
       ref={ref}
+      {...props}
     />
   );
 };
 
 Button.displayName = "Button";
+
+export { Button, buttonVariants };
