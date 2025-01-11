@@ -39,7 +39,7 @@ export function Hero() {
               {technologies.map((tech, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-2 bg-card bg-opacity-50 dark:bg-opacity-50 backdrop-blur-sm rounded-md py-2 px-4 text-sm"
+                  className="flex items-center gap-2 border px-3 py-1 rounded-md text-sm"
                 >
                   {tech.icon}
                   {tech.title}
