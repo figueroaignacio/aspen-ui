@@ -49,9 +49,9 @@ export const CopyButton = ({ children }: { children: React.ReactNode }) => {
       size="icon"
     >
       {isCopied ? (
-        <CheckIcon className="size-5" />
+        <CheckIcon className="size-3" />
       ) : (
-        <ClipboardIcon className="size-5" />
+        <ClipboardIcon className="size-3" />
       )}
     </Button>
   );
