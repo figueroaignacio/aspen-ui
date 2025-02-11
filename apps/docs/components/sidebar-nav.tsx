@@ -31,7 +31,7 @@ export function SidebarNav() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={`block rounded-md py-2 text-sm hover:bg-primary-foreground px-3 ${
+                    className={`block rounded-md py-2 text-sm hover:bg-primary-foreground transition-all duration-150 px-3 ${
                       pathname === `${item.href}`
                         ? "bg-primary-foreground"
                         : "text-muted-foreground hover:text-muted"
