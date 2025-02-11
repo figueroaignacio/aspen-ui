@@ -118,7 +118,7 @@ importers:
         specifier: ^0.1.1
         version: 0.1.1(acorn@8.14.0)
 
-  packages/css-modules-ui:
+  packages/ui-css:
     dependencies:
       class-variance-authority:
         specifier: ^0.7.1
