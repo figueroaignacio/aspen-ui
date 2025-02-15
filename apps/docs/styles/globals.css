@@ -75,17 +75,21 @@
   }
 
   .bg-grid-pattern {
-    background-image: linear-gradient(to right, #e5e7eb 1px, transparent 1px),
-      linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+    background-image: linear-gradient(
+        to right,
+        rgba(229, 231, 235, 0.5) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(229, 231, 235, 0.5) 1px, transparent 1px);
     background-size: 20px 20px;
   }
 
   .dark .bg-grid-pattern {
     background-image: linear-gradient(
         to right,
-        rgba(255, 255, 255, 0.04) 1px,
+        rgba(255, 255, 255, 0.02) 1px,
         transparent 1px
       ),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   }
 }
