@@ -79,14 +79,7 @@ export const TabsContent = React.forwardRef<
   if (!context) throw new Error("TabsContent must be used within Tabs");
 
   return context.activeTab === value ? (
-    <div
-      ref={ref}
-      className={cn(
-        "mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-        className
-      )}
-      {...props}
-    />
+    <div ref={ref} className={cn("mt-2", className)} {...props} />
   ) : null;
 });
 TabsContent.displayName = "TabsContent";
