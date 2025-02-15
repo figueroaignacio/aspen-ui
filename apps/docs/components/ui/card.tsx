@@ -7,7 +7,7 @@ const cardVariants = cva(
   {
     variants: {
       variant: {
-        default: "hover:shadow-md",
+        default: "",
         outline: "border-2",
         ghost: "border-none shadow-none bg-transparent",
       },
