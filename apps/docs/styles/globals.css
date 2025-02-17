@@ -31,7 +31,7 @@
     --accent-foreground: hsl(240 5% 64.9%);
     --muted: hsl(240 4.8% 95.9%);
     --muted-foreground: hsl(240 3.8% 70%);
-    --border: hsl(220, 15%, 19%);
+    --border: hsl(220, 15%, 12%);
   }
 }
 
