@@ -78,46 +78,51 @@ export default async function DocPage({
           <SidebarNav />
         </div>
       </div>
-      <div className="w-full mx-auto min-w-0 lg:px-24 mt-12">
-        <Breadcrumb className="mb-4">
-          <BreadcrumbList>
-            {doc.slug.split("/").map((slug, index) => (
-              <div className="flex items-center gap-2" key={index}>
-                <BreadcrumbItem>
-                  <BreadcrumbLink
-                    href={`/${doc.slug
-                      .split("/")
-                      .slice(0, index + 1)
-                      .join("/")}`}
-                    className={cn(
-                      index === doc.slug.split("/").length - 1
-                        ? "text-foreground"
-                        : "text-muted-foreground"
-                    )}
-                  >
-                    {slug.charAt(0).toUpperCase() + slug.slice(1)}
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                {index < doc.slug.split("/").length - 1 && (
-                  <BreadcrumbSeparator />
-                )}
-              </div>
-            ))}
-          </BreadcrumbList>
-        </Breadcrumb>
-        <div className="my-6">
-          <div className="space-y-2 border-b border-dashed pb-6">
-            <h1 className={cn("scroll-m-20 text-3xl font-bold tracking-tight")}>
-              {doc.title}
-            </h1>
-            {doc && (
-              <p className="text-base text-muted-foreground">
-                <Balancer>{doc.description}</Balancer>
-              </p>
-            )}
-          </div>
-          <div className="pb-12 pt-6">
-            <MDXContentRenderer code={doc.body} />
+      <div className="w-full mx-auto min-w-0 lg:px-7 relative">
+        <div className="absolute inset-0 bg-diagonal-lines pointer-events-none -z-40"></div>
+        <div className="pt-12 bg-background lg:px-12">
+          <Breadcrumb className="mb-4">
+            <BreadcrumbList>
+              {doc.slug.split("/").map((slug, index) => (
+                <div className="flex items-center gap-2" key={index}>
+                  <BreadcrumbItem>
+                    <BreadcrumbLink
+                      href={`/${doc.slug
+                        .split("/")
+                        .slice(0, index + 1)
+                        .join("/")}`}
+                      className={cn(
+                        index === doc.slug.split("/").length - 1
+                          ? "text-foreground"
+                          : "text-muted-foreground"
+                      )}
+                    >
+                      {slug.charAt(0).toUpperCase() + slug.slice(1)}
+                    </BreadcrumbLink>
+                  </BreadcrumbItem>
+                  {index < doc.slug.split("/").length - 1 && (
+                    <BreadcrumbSeparator />
+                  )}
+                </div>
+              ))}
+            </BreadcrumbList>
+          </Breadcrumb>
+          <div className="my-6">
+            <div className="space-y-2 border-b border-dashed pb-6">
+              <h1
+                className={cn("scroll-m-20 text-3xl font-bold tracking-tight")}
+              >
+                {doc.title}
+              </h1>
+              {doc && (
+                <p className="text-base text-muted-foreground">
+                  <Balancer>{doc.description}</Balancer>
+                </p>
+              )}
+            </div>
+            <div className="pb-12 pt-6">
+              <MDXContentRenderer code={doc.body} />
+            </div>
           </div>
         </div>
       </div>
