@@ -4,9 +4,9 @@
 
 @layer {
   :root {
-    --background: hsl(0, 0%, 96%);
+    --background: hsl(0, 0%, 100%);
     --foreground: hsl(220, 20%, 20%);
-    --card: hsl(0, 0%, 100%);
+    --card: hsl(0, 0%, 99%);
     --primary: hsl(212, 24%, 89%);
     --primary-foreground: hsl(212, 24%, 89%);
     --secondary: hsl(200, 60%, 50%);
