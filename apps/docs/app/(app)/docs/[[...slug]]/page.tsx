@@ -72,13 +72,13 @@ export default async function DocPage({
   }
 
   return (
-    <main className="xl:grid xl:grid-cols-[200px_1fr_200px] xl:gap-10 max-w-[1580px] mx-auto mt-6">
-      <div className="hidden xl:block">
+    <main className="xl:grid xl:grid-cols-[200px_1fr_200px] max-w-[1280px] mx-auto">
+      <div className="hidden xl:block border-1 h-full border-r border-dashed">
         <div className="sticky top-24 left-0 h-auto">
           <SidebarNav />
         </div>
       </div>
-      <div className="w-full mx-auto min-w-0 lg:px-24">
+      <div className="w-full mx-auto min-w-0 lg:px-24 mt-12">
         <Breadcrumb className="mb-4">
           <BreadcrumbList>
             {doc.slug.split("/").map((slug, index) => (
@@ -105,21 +105,23 @@ export default async function DocPage({
             ))}
           </BreadcrumbList>
         </Breadcrumb>
-        <div className="space-y-2 border-b pb-6">
-          <h1 className={cn("scroll-m-20 text-3xl font-bold tracking-tight")}>
-            {doc.title}
-          </h1>
-          {doc && (
-            <p className="text-base text-muted-foreground">
-              <Balancer>{doc.description}</Balancer>
-            </p>
-          )}
-        </div>
-        <div className="pb-12 pt-6">
-          <MDXContentRenderer code={doc.body} />
+        <div className="my-6">
+          <div className="space-y-2 border-b border-dashed pb-6">
+            <h1 className={cn("scroll-m-20 text-3xl font-bold tracking-tight")}>
+              {doc.title}
+            </h1>
+            {doc && (
+              <p className="text-base text-muted-foreground">
+                <Balancer>{doc.description}</Balancer>
+              </p>
+            )}
+          </div>
+          <div className="pb-12 pt-6">
+            <MDXContentRenderer code={doc.body} />
+          </div>
         </div>
       </div>
-      <div className="hidden xl:block">
+      <div className="hidden xl:block border-l border-dashed h-full">
         <div className="sticky top-24 left-0">
           {doc.toc.visible && <Toc toc={doc.toc.content} />}
         </div>

@@ -34,7 +34,7 @@ export function Toc({ toc }: TocProps) {
   const mounted = useMounted();
 
   return mounted ? (
-    <div className="space-y-2 border-l border-dashed pl-4 h-[calc(100vh-5rem)] ">
+    <div className="space-y-2 pl-4 h-[calc(100vh-5rem)] ">
       <p className="font-medium">On this page</p>
       <Tree tree={toc} activeItem={activeHeading} />
     </div>

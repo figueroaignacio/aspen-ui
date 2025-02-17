@@ -41,7 +41,7 @@ export function SiteMobileHeader({ navigation }: SiteMobileNavbarProps) {
         onClick={toggleMenu}
       />
       <div
-        className={`fixed inset-0 w-full h-[100vh] backdrop-blur-sm bg-black/40 z-10 transition-opacity duration-300 ease-in-out ${
+        className={`fixed inset-0 w-full h-[100vh] backdrop-blur-sm  z-10 transition-opacity duration-300 ease-in-out ${
           isMenuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -53,7 +53,7 @@ export function SiteMobileHeader({ navigation }: SiteMobileNavbarProps) {
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between border-b-[1px] border-border">
+        <div className="flex items-center justify-between border-b border-dashed">
           <div onClick={toggleMenu} className="flex justify-start p-3.5">
             <Logo />
           </div>
