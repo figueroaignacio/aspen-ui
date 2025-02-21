@@ -16,7 +16,7 @@ export function SidebarNav() {
   const pathname = usePathname();
 
   return (
-    <aside className="h-[calc(100vh-5rem)] hidden lg:block pr-4">
+    <aside className="h-[calc(100vh-5rem)] hidden lg:block">
       <nav>
         {docsNavigation.map((section, index) => (
           <div
@@ -31,7 +31,7 @@ export function SidebarNav() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={`block rounded-md py-2 text-sm hover:bg-primary-foreground transition-all duration-150 px-3 ${
+                    className={`block rounded-l-md py-2 text-sm hover:bg-primary-foreground transition-all duration-150 px-3 ${
                       pathname === `${item.href}`
                         ? "bg-primary-foreground"
                         : "text-muted-foreground hover:text-muted"
