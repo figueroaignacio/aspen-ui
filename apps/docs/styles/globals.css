@@ -22,7 +22,7 @@
   :root.dark {
     --background: hsl(0, 0%, 0%);
     --foreground: hsl(210, 20%, 98%);
-    --card: hsl(0, 0%, 3%);
+    --card: hsl(0, 0%, 1%);
     --primary: hsl(220, 15%, 20%);
     --primary-foreground: hsl(220, 15%, 20%);
     --secondary: hsl(200, 60%, 60%);
