@@ -52,6 +52,6 @@ const config: Config = {
       sm: "calc(var(--radius) - 4px)",
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography"), require("tailwindcss-animate")],
 };
 export default config;

@@ -12,6 +12,12 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image, { type ImageProps } from "next/image";
 import Link from "next/link";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../ui/accordion";
 import { Callout, CalloutDescription, CalloutTitle } from "./callout";
 import { CodeBlockWrapper } from "./code-block-wrapper";
 import { CodeBlock } from "./codeblock";
@@ -26,6 +32,10 @@ import { cn } from "@/lib/utils";
 import "@/styles/code.css";
 
 export const mdxComponents = {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
   ComponentPreview,
   Card,
   CardContent,
