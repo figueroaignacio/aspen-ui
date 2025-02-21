@@ -87,10 +87,10 @@
   .dark .bg-grid-pattern {
     background-image: linear-gradient(
         to right,
-        rgba(255, 255, 255, 0.01) 1px,
+        rgba(255, 255, 255, 0.02) 1px,
         transparent 1px
       ),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   }
 
   .bg-diagonal-lines {
@@ -98,8 +98,8 @@
       45deg,
       transparent,
       transparent 10px,
-      var(--border) 10px,
-      var(--border) 11px
+      rgba(229, 231, 235, 0.8) 10px,
+      rgba(229, 231, 235, 0.8) 11px
     );
   }
 
@@ -108,8 +108,8 @@
       45deg,
       transparent,
       transparent 10px,
-      var(--border) 10px,
-      var(--border) 11px
+      rgba(255, 255, 255, 0.04) 10px,
+      rgba(255, 255, 255, 0.04) 11px
     );
   }
 }

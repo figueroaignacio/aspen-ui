@@ -72,26 +72,25 @@ export default async function DocPage({
   }
 
   return (
-    <main className="xl:grid xl:grid-cols-[200px_1fr_200px] max-w-[1280px] mx-auto">
-      <div className="hidden xl:block border-1 h-full border-r border-dashed">
-        <div className="sticky top-24 left-0 h-auto">
-          <SidebarNav />
-        </div>
-      </div>
-      <div className="w-full mx-auto min-w-0 lg:px-7 relative">
-        <div className="absolute inset-0 bg-diagonal-lines pointer-events-none -z-40"></div>
-        <div className="pt-12 bg-background lg:px-12">
+    <div className="grid grid-cols-1 lg:grid-cols-[270px_1fr_270px] gap-6">
+      <aside className="sticky top-14 h-[calc(100vh-3.5rem)] border-r border-dashed py-6 pl-6 hidden md:block bg-diagonal-lines">
+        <SidebarNav />
+      </aside>
+
+      <main className="min-w-0 py-6">
+        <div className="mx-auto">
           <Breadcrumb className="mb-4">
             <BreadcrumbList>
               {doc.slug.split("/").map((slug, index) => (
                 <div className="flex items-center gap-2" key={index}>
                   <BreadcrumbItem>
                     <BreadcrumbLink
-                      href={`/${doc.slug
+                      href={`/docs/${doc.slug
                         .split("/")
                         .slice(0, index + 1)
                         .join("/")}`}
                       className={cn(
+                        "hover:text-foreground",
                         index === doc.slug.split("/").length - 1
                           ? "text-foreground"
                           : "text-muted-foreground"
@@ -107,30 +106,29 @@ export default async function DocPage({
               ))}
             </BreadcrumbList>
           </Breadcrumb>
-          <div className="my-6">
-            <div className="space-y-2 border-b border-dashed pb-6">
-              <h1
-                className={cn("scroll-m-20 text-3xl font-bold tracking-tight")}
-              >
-                {doc.title}
-              </h1>
-              {doc && (
-                <p className="text-base text-muted-foreground">
-                  <Balancer>{doc.description}</Balancer>
-                </p>
-              )}
-            </div>
-            <div className="pb-12 pt-6">
-              <MDXContentRenderer code={doc.body} />
-            </div>
+          <div className="space-y-2">
+            <h1 className="scroll-m-20 text-2xl font-bold tracking-tight">
+              {doc.title}
+            </h1>
+            {doc.description && (
+              <p className="text-muted-foreground">
+                <Balancer>{doc.description}</Balancer>
+              </p>
+            )}
+          </div>
+          <div className="pb-12 pt-8">
+            <MDXContentRenderer code={doc.body} />
           </div>
         </div>
-      </div>
-      <div className="hidden xl:block border-l border-dashed h-full">
-        <div className="sticky top-24 left-0">
-          {doc.toc.visible && <Toc toc={doc.toc.content} />}
-        </div>
-      </div>
-    </main>
+      </main>
+
+      {doc.toc?.visible && (
+        <aside className="sticky top-14 h-[calc(100vh-3.5rem)] border-l border-dashed py-6 pl-6 hidden md:block bg-diagonal-lines">
+          <div className="text-sm">
+            <Toc toc={doc.toc.content} />
+          </div>
+        </aside>
+      )}
+    </div>
   );
 }
