@@ -46,7 +46,8 @@ export default async function RootLayout(props: LocaleLayoutProps) {
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body>
+      <body className="relative">
+        <div className="bg-dots absolute inset-0 -z-50"></div>
         <ThemeProvider>
           <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
             <Navbar />

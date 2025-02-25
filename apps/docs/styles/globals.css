@@ -20,9 +20,9 @@
   }
 
   :root.dark {
-    --background: hsl(0, 0%, 0%);
+    --background: hsl(220, 15%, 5%);
     --foreground: hsl(210, 20%, 98%);
-    --card: hsl(0, 0%, 1%);
+    --card: hsl(220, 15%, 4%);
     --primary: hsl(220, 15%, 20%);
     --primary-foreground: hsl(220, 15%, 20%);
     --secondary: hsl(200, 60%, 60%);
@@ -31,6 +31,7 @@
     --accent-foreground: hsl(240 5% 64.9%);
     --muted: hsl(240 4.8% 95.9%);
     --muted-foreground: hsl(240 3.8% 70%);
+    --input: hsl(220, 15%, 12%);
     --border: hsl(220, 15%, 12%);
   }
 }

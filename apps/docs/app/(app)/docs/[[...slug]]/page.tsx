@@ -72,13 +72,13 @@ export default async function DocPage({
   }
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-[270px_1fr_270px] gap-6">
-      <aside className="sticky top-14 h-[calc(100vh-3.5rem)] border-r border-dashed py-6 pl-6 hidden md:block bg-diagonal-lines">
+    <div className="grid grid-cols-1 lg:grid-cols-[270px_1fr_270px] gap-6 bg-background">
+      <aside className="sticky top-14 h-[calc(100vh-3.5rem)] border-r border-dashed py-6 pl-6 hidden md:block bg-diagonal-lines bg-background">
         <SidebarNav />
       </aside>
 
       <main className="min-w-0 py-6">
-        <div className="mx-auto">
+        <div className="mx-auto bg-background">
           <Breadcrumb className="mb-4">
             <BreadcrumbList>
               {doc.slug.split("/").map((slug, index) => (
@@ -123,7 +123,7 @@ export default async function DocPage({
       </main>
 
       {doc.toc?.visible && (
-        <aside className="sticky top-14 h-[calc(100vh-3.5rem)] border-l border-dashed py-6 pl-6 hidden md:block bg-diagonal-lines">
+        <aside className="sticky top-14 h-[calc(100vh-3.5rem)] border-l border-dashed py-6 pl-6 hidden md:block bg-diagonal-lines bg-background">
           <div className="text-sm">
             <Toc toc={doc.toc.content} />
           </div>

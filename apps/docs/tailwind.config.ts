@@ -44,6 +44,9 @@ const config: Config = {
           DEFAULT: "var(--muted)",
           foreground: "var(--muted-foreground)",
         },
+        input: {
+          DEFAULT: "var(--input)",
+        },
       },
     },
     borderRadius: {

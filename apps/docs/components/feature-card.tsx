@@ -11,8 +11,8 @@ interface FeatureCardProps {
 
 export function FeatureCard({ description, icon, title }: FeatureCardProps) {
   return (
-    <Card className="p-6 relative overflow-hidden h-full ">
-      <div className="absolute inset-0 bg-grid-pattern" />
+    <Card className="p-6 relative overflow-hidden h-full">
+      <div className="absolute inset-0 bg-dots" />
       <div className="absolute inset-0 bg-[radial-gradient(70%_80%_at_center_0%,theme(colors.gray.100/40)_5%,theme(colors.gray.100/0)_60%)] dark:bg-[radial-gradient(60%_30%_at_center_0%,theme(colors.gray.800/70)_1%,theme(colors.gray.900/0)_70%)] blur-lg" />
       <CardHeader className="gap-3 relative">
         {icon}
