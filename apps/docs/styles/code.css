@@ -7,17 +7,27 @@ html.dark[data-theme="light"] {
 }
 
 [data-rehype-pretty-code-figure] {
+  @apply bg-background border;
+}
+
+[data-rehype-pretty-code-figure] pre {
+  @apply bg-background p-0;
+}
+
+[data-rehype-pretty-code-figure] {
   @apply rounded-md my-3;
 }
 
 [data-rehype-pretty-code-figure] code {
-  @apply grid min-w-full break-words border-none bg-transparent pl-3 text-sm rounded-md;
+  @apply grid min-w-full h-full break-words border-none bg-background text-sm py-2 leading-6;
   counter-reset: line;
   box-decoration-break: clone;
 }
 
-[data-rehype-pretty-code-figure] .line {
-  @apply px-4 py-1;
+[data-rehype-pretty-code-figure] code > [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  @apply mr-4 inline-block w-4 text-right text-gray-500;
 }
 
 [data-rehype-pretty-code-figure] code[data-line-numbers] {
@@ -27,7 +37,7 @@ html.dark[data-theme="light"] {
 [data-rehype-pretty-code-figure] code[data-line-numbers] > [data-line]::before {
   counter-increment: line;
   content: counter(line);
-  @apply mr-4 inline-block w-4 text-right text-gray-500;
+  @apply mr-4 inline-block w-4 text-right;
 }
 
 [data-rehype-pretty-code-figure] .line--highlighted {

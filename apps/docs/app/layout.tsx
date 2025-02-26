@@ -9,7 +9,7 @@ import { Navbar } from "@/components/header";
 import "@/styles/globals.css";
 
 // Font
-import "@fontsource-variable/onest";
+import { onest } from "@/lib/font";
 
 // Metadata
 import { siteConfig } from "@/config/siteConfig";
@@ -46,12 +46,12 @@ export default async function RootLayout(props: LocaleLayoutProps) {
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className="relative">
-        <div className="bg-dots absolute inset-0 -z-50"></div>
+      <body className={`relative ${onest.className}`}>
+        <div className="md:bg-dots absolute inset-0 -z-50"></div>
         <ThemeProvider>
           <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
             <Navbar />
-            <main className="w-full max-w-full px-5 md:px-10 lg:px-20 mx-auto overflow-x-hidden lg:overflow-x-visible">
+            <main className="w-full max-w-[1580px] mx-auto px-5 md:px-10 lg:px-20 overflow-x-hidden lg:overflow-x-visible">
               {children}
             </main>
             <Footer />

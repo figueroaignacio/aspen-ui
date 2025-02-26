@@ -1,3 +1,5 @@
+import { jetbrains } from "@/lib/font";
+
 // Components
 import { ComponentSource } from "@/components/mdx/component-source";
 import { Button } from "@/components/ui/button";
@@ -188,7 +190,7 @@ export const mdxComponents = {
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={cn(
-        "relative rounded px-5 py-[0.2rem] font-mono text-sm",
+        `relative rounded px-5 py-[0.2rem] ${jetbrains.className}`,
         className
       )}
       {...props}

@@ -35,7 +35,7 @@ export function SiteMobileHeader({ navigation }: SiteMobileNavbarProps) {
   };
 
   return (
-    <div className="md:hidden flex items-center relative justify-between w-full">
+    <div className="lg:hidden flex items-center relative justify-between w-full">
       <HamburgerMenuIcon
         className="h-6 w-6 cursor-pointer"
         onClick={toggleMenu}

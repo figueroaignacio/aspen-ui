@@ -20,7 +20,7 @@ export function SiteHeader({ navigation }: SiteNavbarProps) {
   const pathname = usePathname();
 
   return (
-    <nav className="hidden md:flex items-center justify-between w-full">
+    <nav className="hidden lg:flex items-center justify-between w-full">
       <ul className="flex items-center">
         <li className="mr-6">
           <Logo />

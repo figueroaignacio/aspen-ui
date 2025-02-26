@@ -6,14 +6,14 @@ import { heroLinks, technologies } from "@/lib/constants";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden py-20 md:py-32">
+    <section className="relative overflow-hidden min-h-[90dvh] flex flex-col justify-center">
       <div className="grid gap-12 md:grid-cols-2 items-center">
         <div className="space-y-8">
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold">
+            <h1 className="text-3xl font-extrabold">
               UI Components for your web projects
             </h1>
-            <h2 className="text-xl text-gray-600 dark:text-gray-300">
+            <h2 className=" text-gray-600 dark:text-gray-300">
               A collection of customizable, open-source components that work
               seamlessly with your workflow.
             </h2>
