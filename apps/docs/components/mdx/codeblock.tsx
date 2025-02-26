@@ -10,7 +10,7 @@ export const CodeBlock = ({
   ...props
 }: React.HTMLAttributes<HTMLPreElement>) => {
   return (
-    <div className="relative rounded-xl font-mono text-sm">
+    <div className="relative rounded-xl font-mono text-sm border-dotted">
       <div className="absolute top-3 right-3 z-10">
         <CopyButton>{children}</CopyButton>
       </div>

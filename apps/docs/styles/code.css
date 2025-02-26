@@ -7,11 +7,11 @@ html.dark[data-theme="light"] {
 }
 
 [data-rehype-pretty-code-figure] {
-  @apply bg-background border;
+  @apply bg-background border border-dotted py-0;
 }
 
 [data-rehype-pretty-code-figure] pre {
-  @apply bg-background p-0;
+  @apply bg-card p-0;
 }
 
 [data-rehype-pretty-code-figure] {
@@ -19,7 +19,7 @@ html.dark[data-theme="light"] {
 }
 
 [data-rehype-pretty-code-figure] code {
-  @apply grid min-w-full h-full break-words border-none bg-background text-sm py-2 leading-6;
+  @apply grid min-w-full h-full break-words border-none bg-card text-sm py-2 leading-6;
   counter-reset: line;
   box-decoration-break: clone;
 }
