@@ -7,6 +7,7 @@ import { useState } from "react";
 // Components
 import Link from "next/link";
 import { Logo } from "./logo";
+import { Searcher } from "./searcher";
 import { ToggleTheme } from "./toggle-theme";
 
 // Icons
@@ -92,6 +93,7 @@ export function SiteMobileHeader({ navigation }: SiteMobileNavbarProps) {
         </div>
       </nav>
       <div className="flex items-center gap-4">
+        <Searcher />
         <ToggleTheme />
       </div>
     </div>

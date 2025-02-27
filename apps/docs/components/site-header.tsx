@@ -7,6 +7,10 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Logo } from "./logo";
 import { ToggleTheme } from "./toggle-theme";
+
+// Radix UI Icons
+import { Searcher } from "./searcher";
+
 interface NavigationProps {
   href: string;
   title: string;
@@ -42,6 +46,7 @@ export function SiteHeader({ navigation }: SiteNavbarProps) {
       </ul>
       <div className="flex items-center gap-4">
         <ToggleTheme />
+        <Searcher />
       </div>
     </nav>
   );
