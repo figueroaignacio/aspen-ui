@@ -5,11 +5,10 @@ import { usePathname } from "next/navigation";
 
 // Components
 import Link from "next/link";
+import { GitHubLink } from "./github-link";
 import { Logo } from "./logo";
-import { ToggleTheme } from "./toggle-theme";
-
-// Radix UI Icons
 import { Searcher } from "./searcher";
+import { ToggleTheme } from "./toggle-theme";
 
 interface NavigationProps {
   href: string;
@@ -45,8 +44,9 @@ export function SiteHeader({ navigation }: SiteNavbarProps) {
         ))}
       </ul>
       <div className="flex items-center gap-4">
-        <ToggleTheme />
         <Searcher />
+        <GitHubLink />
+        <ToggleTheme />
       </div>
     </nav>
   );

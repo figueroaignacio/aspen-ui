@@ -6,6 +6,7 @@ import { useState } from "react";
 
 // Components
 import Link from "next/link";
+import { GitHubLink } from "./github-link";
 import { Logo } from "./logo";
 import { Searcher } from "./searcher";
 import { ToggleTheme } from "./toggle-theme";
@@ -94,6 +95,7 @@ export function SiteMobileHeader({ navigation }: SiteMobileNavbarProps) {
       </nav>
       <div className="flex items-center gap-4">
         <Searcher />
+        <GitHubLink />
         <ToggleTheme />
       </div>
     </div>
