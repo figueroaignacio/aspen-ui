@@ -48,7 +48,7 @@ export default async function RootLayout(props: LocaleLayoutProps) {
     <html lang={locale} suppressHydrationWarning>
       <body className={`relative ${onest.className}`}>
         <div className="md:bg-dots absolute inset-0 -z-50"></div>
-        <ThemeProvider>
+        <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
           <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
             <Navbar />
             <main className="w-full max-w-[1580px] mx-auto px-5 md:px-10 lg:px-20 overflow-x-hidden lg:overflow-x-visible">
