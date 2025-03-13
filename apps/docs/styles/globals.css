@@ -128,4 +128,24 @@
     );
     background-size: 16px 16px;
   }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .delay-700 {
+    animation-delay: 700ms;
+  }
+
+  .delay-1000 {
+    animation-delay: 1000ms;
+  }
 }

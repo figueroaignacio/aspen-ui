@@ -1,3 +1,4 @@
+import { BlurBackground } from "@/components/blur-background";
 import { Button } from "@/components/ui/button";
 import { heroLinks, technologies } from "@/lib/constants";
 import Link from "next/link";
@@ -12,7 +13,7 @@ export function Hero() {
               Open-source UI components
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-primary via-purple-500 to-pink-600 text-transparent bg-clip-text">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">
               UI Components for your web projects
             </h1>
 
@@ -36,7 +37,7 @@ export function Hero() {
             ))}
           </div>
 
-          <div className="w-full max-w-2xl mx-auto mt-12 pt-8 border-t border-border">
+          <div className="w-full max-w-2xl mx-auto mt-12 pt-8">
             <h3 className="text-base font-medium text-muted-foreground mb-4">
               Perfect for projects built with
             </h3>
@@ -70,10 +71,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Subtle background elements */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary/5 blur-3xl"></div>
-      </div>
+      {/* Use the BlurBackground component */}
+      <BlurBackground />
     </section>
   );
 }
