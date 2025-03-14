@@ -1,4 +1,3 @@
-import { BlurBackground } from "@/components/blur-background";
 import { Button } from "@/components/ui/button";
 import { heroLinks, technologies } from "@/lib/constants";
 import Link from "next/link";
@@ -70,9 +69,6 @@ export function Hero() {
           </div>
         </div>
       </div>
-
-      {/* Use the BlurBackground component */}
-      <BlurBackground />
     </section>
   );
 }
