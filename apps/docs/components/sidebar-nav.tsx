@@ -16,7 +16,7 @@ export function SidebarNav() {
   const pathname = usePathname();
 
   return (
-    <aside className="h-[calc(100vh-5rem)] hidden lg:block">
+    <aside className="h-[calc(100vh-5rem)] hidden lg:block bg-transparent">
       <nav>
         {docsNavigation.map((section, index) => (
           <div

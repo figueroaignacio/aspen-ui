@@ -76,7 +76,7 @@ export default async function DocPage({
     <>
       <BgBlur />
       <div className="grid grid-cols-1 lg:grid-cols-[270px_1fr_270px] gap-6 bg-background">
-        <aside className="sticky top-14 h-[calc(100vh-3.5rem)] border-r border-dashed py-6 pl-6 hidden lg:block bg-background">
+        <aside className="sticky top-14 h-[calc(100vh-3.5rem)] border-r border-dashed py-6 pl-6 hidden lg:block z-20">
           <SidebarNav />
         </aside>
 
@@ -126,10 +126,8 @@ export default async function DocPage({
         </main>
 
         {doc.toc?.visible && (
-          <aside className="sticky top-14 h-[calc(100vh-3.5rem)] border-l border-dashed py-6 pl-6 hidden md:block bg-background">
-            <div className="text-sm">
-              <Toc toc={doc.toc.content} />
-            </div>
+          <aside className="sticky top-14 h-[calc(100vh-3.5rem)] border-l border-dashed py-6 pl-6 hidden md:block">
+            <Toc toc={doc.toc.content} />
           </aside>
         )}
       </div>
