@@ -1,59 +1,72 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "tw-animate-css";
 
-@layer {
-  :root {
-    --background: hsl(0, 0%, 100%);
-    --foreground: hsl(220, 20%, 20%);
-    --card: hsl(0, 0%, 99%);
-    --primary: hsl(212, 24%, 89%);
-    --primary-foreground: hsl(212, 24%, 89%);
-    --secondary: hsl(200, 60%, 50%);
-    --secondary-foreground: hsl(210, 30%, 98%);
-    --accent: hsl(340, 70%, 60%);
-    --accent-foreground: hsl(200, 27%, 98%);
-    --muted: hsl(240 3.8% 25.1%);
-    --muted-foreground: hsl(240 3.8% 30.1%);
-    --border: hsl(210, 20%, 79%);
-    --radius: 1rem;
-  }
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(220, 20%, 20%);
+  --card: hsl(0, 0%, 99%);
+  --primary: hsl(212, 24%, 89%);
+  --primary-foreground: hsl(212, 24%, 89%);
+  --secondary: hsl(200, 60%, 50%);
+  --secondary-foreground: hsl(210, 30%, 98%);
+  --accent: hsl(340, 70%, 60%);
+  --accent-foreground: hsl(200, 27%, 98%);
+  --muted: hsl(220, 15%, 90%);
+  --muted-foreground: hsl(220, 15%, 40%);
+  --border: hsl(210, 20%, 79%);
+  --radius: 1rem;
+}
 
-  :root.dark {
-    --background: hsl(220, 15%, 5%);
-    --foreground: hsl(210, 20%, 98%);
-    --card: hsl(216, 16%, 6%);
-    --primary: hsl(220, 15%, 20%);
-    --primary-foreground: hsl(220, 15%, 20%);
-    --secondary: hsl(200, 60%, 60%);
-    --secondary-foreground: hsl(220, 15%, 10%);
-    --accent: hsl(340, 70%, 70%);
-    --accent-foreground: hsl(240 5% 64.9%);
-    --muted: hsl(240 4.8% 95.9%);
-    --muted-foreground: hsl(240 3.8% 70%);
-    --input: hsl(220, 15%, 12%);
-    --border: hsl(220, 15%, 12%);
-  }
+:root.dark {
+  --background: hsl(220, 15%, 5%);
+  --foreground: hsl(210, 20%, 98%);
+  --card: hsl(216, 16%, 6%);
+  --primary: hsl(220, 15%, 20%);
+  --primary-foreground: hsl(220, 15%, 20%);
+  --secondary: hsl(200, 60%, 60%);
+  --secondary-foreground: hsl(220, 15%, 10%);
+  --accent: hsl(340, 70%, 70%);
+  --accent-foreground: hsl(240 5% 64.9%);
+  --muted: hsl(240 4.8% 16.1%);
+  --muted-foreground: hsl(240 3.8% 70%);
+  --input: hsl(220, 15%, 12%);
+  --border: hsl(220, 15%, 12%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-input: var(--input);
+  --color-border: var(--border);
 }
 
 @layer base {
-  * {
-    @apply border-border scroll-smooth;
-  }
-
-  ::-webkit-scrollbar {
+  body::-webkit-scrollbar {
     width: 5px;
   }
-  ::-webkit-scrollbar-track {
+
+  body::-webkit-scrollbar-track {
     background: transparent;
   }
-  ::-webkit-scrollbar-thumb {
+
+  body::-webkit-scrollbar-thumb {
     background: var(--border);
     border-radius: 5px;
   }
+
   * {
     scrollbar-width: thin;
     scrollbar-color: var(--border) transparent;
+    @apply border-border scroll-smooth;
   }
 
   body {
@@ -61,91 +74,35 @@
   }
 }
 
-@layer utilities {
-  .gradient-text {
-    @apply bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-transparent bg-clip-text;
-  }
+.gradient-text {
+  @apply bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-transparent bg-clip-text;
+}
 
-  .highlighted-text {
-    @apply bg-purple-400 px-2 py-0.5 rounded-md text-white;
-  }
+.highlighted-text {
+  @apply bg-purple-400 px-2 py-0.5 rounded-md text-white;
+}
 
-  .grid-main-container {
-    @apply grid grid-rows-[auto_1fr_auto];
-  }
+.grid-main-container {
+  @apply grid grid-rows-[auto_1fr_auto];
+}
 
-  .bg-grid-pattern {
-    background-image: linear-gradient(
-        to right,
-        rgba(229, 231, 235, 0.3) 1px,
-        transparent 1px
-      ),
-      linear-gradient(to bottom, rgba(229, 231, 235, 0.3) 1px, transparent 1px);
-    background-size: 20px 20px;
-  }
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, var(--muted) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--muted) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
 
-  .dark .bg-grid-pattern {
-    background-image: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0.02) 1px,
-        transparent 1px
-      ),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  }
+.bg-diagonal-lines {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    var(--muted) 10px,
+    var(--muted) 11px
+  );
+}
 
-  .bg-diagonal-lines {
-    background-image: repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 10px,
-      rgba(229, 231, 235, 0.8) 10px,
-      rgba(229, 231, 235, 0.8) 11px
-    );
-  }
-
-  .dark .bg-diagonal-lines {
-    background-image: repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 10px,
-      rgba(255, 255, 255, 0.04) 10px,
-      rgba(255, 255, 255, 0.04) 11px
-    );
-  }
-
-  .bg-dots {
-    background-image: radial-gradient(
-      rgba(229, 231, 235, 0.8) 1px,
-      transparent 1px
-    );
-    background-size: 16px 16px;
-  }
-
-  .dark .bg-dots {
-    background-image: radial-gradient(
-      rgba(255, 255, 255, 0.04) 1px,
-      transparent 1px
-    );
-    background-size: 16px 16px;
-  }
-
-  .text-balance {
-    text-wrap: balance;
-  }
-
-  .delay-300 {
-    animation-delay: 300ms;
-  }
-
-  .delay-500 {
-    animation-delay: 500ms;
-  }
-
-  .delay-700 {
-    animation-delay: 700ms;
-  }
-
-  .delay-1000 {
-    animation-delay: 1000ms;
-  }
+.bg-dots {
+  background-image: radial-gradient(var(--muted) 1px, transparent 1px);
+  background-size: 16px 16px;
 }

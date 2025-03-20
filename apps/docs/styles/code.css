@@ -1,3 +1,5 @@
+@import "./globals.css";
+
 html.light[data-theme="dark"] {
   display: none;
 }
@@ -37,7 +39,7 @@ html.dark[data-theme="light"] {
 }
 
 [data-rehype-pretty-code-figure] .line--highlighted {
-  @apply bg-slate-300 bg-opacity-10;
+  @apply bg-slate-300;
 }
 
 [data-rehype-pretty-code-figure] .line-highlighted span {
@@ -45,11 +47,11 @@ html.dark[data-theme="light"] {
 }
 
 [data-highlighted-line] {
-  @apply bg-slate-300 bg-opacity-10;
+  @apply bg-slate-300;
 }
 
 [data-rehype-pretty-code-figure] .word--highlighted {
-  @apply rounded-md bg-slate-300 bg-opacity-10 p-1;
+  @apply rounded-md bg-slate-300 p-1;
 }
 
 [data-rehype-pretty-code-title] {
