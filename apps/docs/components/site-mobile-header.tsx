@@ -79,8 +79,8 @@ export function SiteMobileHeader({ navigation }: SiteMobileNavbarProps) {
                     onClick={toggleMenu}
                     className={`mr-6 text-sm ${
                       pathname === item.href
-                        ? "text-muted"
-                        : "text-muted-foreground hover:text-muted"
+                        ? "text-foreground"
+                        : "text-muted-foreground"
                     }`}
                   >
                     <Link href={item.href} className="block py-2 text-sm">

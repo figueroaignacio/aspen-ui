@@ -47,6 +47,9 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-input: var(--input);
   --color-border: var(--border);
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
 }
 
 @layer base {
@@ -105,4 +108,21 @@
 .bg-dots {
   background-image: radial-gradient(var(--muted) 1px, transparent 1px);
   background-size: 16px 16px;
+}
+
+.bg-highlighted-gradient {
+  @apply absolute inset-0 blur-lg;
+  background: radial-gradient(
+    70% 80% at center 0%,
+    rgba(243, 244, 246, 0.4) 5%,
+    rgba(243, 244, 246, 0) 60%
+  );
+}
+
+.dark .bg-highlighted-gradient {
+  background: radial-gradient(
+    60% 30% at center 0%,
+    rgba(31, 41, 55, 0.7) 1%,
+    rgba(17, 24, 39, 0) 70%
+  );
 }

@@ -34,8 +34,8 @@ export function SiteHeader({ navigation }: SiteNavbarProps) {
               href={navItem.href}
               className={`mr-6 text-sm ${
                 pathname === `/${navItem.href}`
-                  ? "text-muted"
-                  : "text-muted-foreground hover:text-muted"
+                  ? "text-foreground"
+                  : "hover:text-muted-foreground"
               }`}
             >
               {navItem.title}
