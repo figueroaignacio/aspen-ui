@@ -1,13 +1,11 @@
 import {
   CssIcon,
-  Github,
   NextIcon,
   ReactIcon,
   TailwindIcon,
   TypescriptIcon,
 } from "@/components/icons";
 import {
-  ArrowRightIcon,
   CodeIcon,
   ColorWheelIcon,
   MobileIcon,
@@ -71,19 +69,4 @@ export const technologies = [
   { title: "Next.js", icon: <NextIcon /> },
   { title: "Tailwind", icon: <TailwindIcon /> },
   { title: "CSS Modules", icon: <CssIcon /> },
-];
-
-export const heroLinks = [
-  {
-    label: "Get Started",
-    href: "/docs",
-    icon: <ArrowRightIcon className="w-5 h-5" />,
-    variant: "primary" as const,
-  },
-  {
-    label: "GitHub",
-    href: "https://github.com/figueroaignacio/aspen-ui",
-    icon: <Github />,
-    variant: "ghost" as const,
-  },
 ];

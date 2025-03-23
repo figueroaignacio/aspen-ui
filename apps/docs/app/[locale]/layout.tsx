@@ -1,11 +1,17 @@
 // Provider
 import { Providers } from "@/components/providers";
 
-import { unstable_ViewTransition as ViewTransition } from "react";
-
 // Components
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/header";
+import { NextIntlClientProvider } from "next-intl";
+import { unstable_ViewTransition as ViewTransition } from "react";
+
+// Utils
+import { routing } from "@/i18n/routing";
+import { hasLocale } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
 
 // Global Styles
 import "@/styles/globals.css";
@@ -17,13 +23,7 @@ import { onest } from "@/lib/font";
 import { siteConfig } from "@/config/siteConfig";
 
 export async function generateMetadata() {
-  // const metadataBase =
-  //   locale === "es"
-  //     ? process.env.NEXT_PUBLIC_URL_ES
-  //     : process.env.NEXT_PUBLIC_URL_EN;
-
   return {
-    // metadataBase: new URL(metadataBase ?? "http://localhost:3000"),
     title: {
       default: siteConfig.title.default,
       template: `%s - ${siteConfig.title.template}`,
@@ -41,8 +41,12 @@ interface LocaleLayoutProps {
 
 export default async function RootLayout(props: LocaleLayoutProps) {
   const params = await props.params;
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
 
-  const { locale } = params;
+  setRequestLocale(locale);
 
   const { children } = props;
 
@@ -55,7 +59,7 @@ export default async function RootLayout(props: LocaleLayoutProps) {
             <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
               <Navbar />
               <main className="w-full max-w-[1580px] mx-auto px-5 md:px-10 lg:px-20 overflow-x-hidden lg:overflow-x-visible">
-                {children}
+                <NextIntlClientProvider>{children}</NextIntlClientProvider>
               </main>
               <Footer />
             </div>

@@ -1,0 +1,15 @@
+{
+  "hero": {
+    "badge": "Componentes de Código Abierto",
+    "title": "Componentes para tus proyectos web",
+    "subtitle": "Una colección de componentes personalizables y de código abierto que funcionan perfectamente con su flujo de trabajo.",
+    "actions": {
+      "getStarted": "Comenzar"
+    },
+    "ecosystem": "Perfecto para proyectos construidos en el ecosistema de React",
+    "stats": {
+      "stars": "Más de 0 estrellas en GitHub xD",
+      "components": "Más de 20 componentes listos para usar"
+    }
+  }
+}
