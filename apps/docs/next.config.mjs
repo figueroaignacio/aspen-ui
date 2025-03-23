@@ -13,7 +13,7 @@ if (!process.env.VELITE_STARTED && (isDev || isBuild)) {
  */
 const nextConfig = {
   experimental: {
-    ViewTransition: true,
+    viewTransition: true,
   },
   images: {
     formats: ["image/webp"],

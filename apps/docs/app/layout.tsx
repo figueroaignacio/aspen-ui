@@ -1,6 +1,8 @@
 // Provider
 import { Providers } from "@/components/providers";
 
+import { unstable_ViewTransition as ViewTransition } from "react";
+
 // Components
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/header";
@@ -47,16 +49,18 @@ export default async function RootLayout(props: LocaleLayoutProps) {
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={`relative ${onest.className}`}>
-        <div className="lg:bg-dots absolute inset-0 -z-50"></div>
-        <Providers>
-          <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
-            <Navbar />
-            <main className="w-full max-w-[1580px] mx-auto px-5 md:px-10 lg:px-20 overflow-x-hidden lg:overflow-x-visible">
-              {children}
-            </main>
-            <Footer />
-          </div>
-        </Providers>
+        <ViewTransition>
+          <div className="lg:bg-dots absolute inset-0 -z-50"></div>
+          <Providers>
+            <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
+              <Navbar />
+              <main className="w-full max-w-[1580px] mx-auto px-5 md:px-10 lg:px-20 overflow-x-hidden lg:overflow-x-visible">
+                {children}
+              </main>
+              <Footer />
+            </div>
+          </Providers>
+        </ViewTransition>
       </body>
     </html>
   );
