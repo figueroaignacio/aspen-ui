@@ -11,5 +11,54 @@
       "stars": "Más de 0 estrellas en GitHub xD",
       "components": "Más de 20 componentes listos para usar"
     }
+  },
+  "features": {
+    "items": [
+      {
+        "title": "Personalizable",
+        "description": "Adapta fácilmente la UI para que coincida con la identidad de tu marca.",
+        "icon": "colorWheel"
+      },
+      {
+        "title": "Diseño Responsivo",
+        "description": "Experiencias fluidas en todos los dispositivos.",
+        "icon": "mobile"
+      },
+      {
+        "title": "Experiencia para Desarrolladores",
+        "description": "Documentación intuitiva y detallada.",
+        "icon": "code"
+      },
+      {
+        "title": "Modo Oscuro",
+        "description": "Modo oscuro incorporado para una mejor experiencia en entornos con poca luz.",
+        "icon": "moon"
+      },
+      {
+        "title": "TypeScript",
+        "description": "Desarrollo con seguridad de tipos gracias a TypeScript.",
+        "icon": "typescript"
+      },
+      {
+        "title": "Tailwind CSS",
+        "description": "Soporte para componentes con Tailwind CSS para un estilo rápido.",
+        "icon": "tailwind"
+      },
+      {
+        "title": "CSS Modules",
+        "description": "Soporte para componentes con CSS Modules para estilos encapsulados.",
+        "icon": "css"
+      },
+      {
+        "title": "Temas",
+        "description": "Diseño coherente con un sistema de temas robusto.",
+        "icon": "colorWheel"
+      },
+      {
+        "title": "Documentación",
+        "description": "Documentación completa y rica en ejemplos.",
+        "icon": "reader"
+      }
+    ]
   }
 }

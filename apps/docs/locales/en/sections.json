@@ -11,5 +11,54 @@
       "stars": "Over 0 start on GitHub xD",
       "components": "Over 20 components ready to use"
     }
+  },
+  "features": {
+    "items": [
+      {
+        "title": "Customizable",
+        "description": "Easily adapt UI to match your brand identity.",
+        "icon": "colorWheel"
+      },
+      {
+        "title": "Responsive Design",
+        "description": "Seamless experiences on all devices.",
+        "icon": "mobile"
+      },
+      {
+        "title": "Developer Experience",
+        "description": "Intuitive and detailed documentation.",
+        "icon": "code"
+      },
+      {
+        "title": "Dark Mode",
+        "description": "Built-in dark mode for better low-light UX.",
+        "icon": "moon"
+      },
+      {
+        "title": "TypeScript",
+        "description": "Type-safe development with TypeScript.",
+        "icon": "typescript"
+      },
+      {
+        "title": "Tailwind CSS",
+        "description": "Tailwind CSS components supported for quick styling.",
+        "icon": "tailwind"
+      },
+      {
+        "title": "CSS Modules",
+        "description": "CSS Modules components supported for scoped styles",
+        "icon": "css"
+      },
+      {
+        "title": "Theming",
+        "description": "Consistent design with robust theming.",
+        "icon": "colorWheel"
+      },
+      {
+        "title": "Documentation",
+        "description": "Comprehensive, example-rich documentation.",
+        "icon": "reader"
+      }
+    ]
   }
 }
