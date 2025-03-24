@@ -6,17 +6,14 @@ import { useState } from "react";
 
 // Components
 import { Link } from "@/i18n/navigation";
-import { GitHubLink } from "./github-link";
-import { LocaleSwitcher } from "./locale-switcher";
 import { Logo } from "./logo";
-import { Searcher } from "./searcher";
-import { ToggleTheme } from "./toggle-theme";
 
 // Icons
 import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 // Definitions
 import { DocSection } from "@/lib/definitions";
+import { HeaderActions } from "./header-actions";
 
 interface SiteMobileNavbarProps {
   navigation: DocSection[];
@@ -87,12 +84,7 @@ export function SiteMobileHeader({ navigation }: SiteMobileNavbarProps) {
           ))}
         </div>
       </nav>
-      <div className="flex items-center gap-4">
-        <Searcher />
-        <LocaleSwitcher />
-        <GitHubLink />
-        <ToggleTheme />
-      </div>
+      <HeaderActions />
     </div>
   );
 }

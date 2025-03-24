@@ -5,11 +5,8 @@ import { usePathname } from "next/navigation";
 
 // Components
 import { Link } from "@/i18n/navigation";
-import { GitHubLink } from "./github-link";
-import { LocaleSwitcher } from "./locale-switcher";
+import { HeaderActions } from "./header-actions";
 import { Logo } from "./logo";
-import { Searcher } from "./searcher";
-import { ToggleTheme } from "./toggle-theme";
 
 interface NavigationProps {
   url: string;
@@ -44,12 +41,7 @@ export function SiteHeader({ navigation }: SiteNavbarProps) {
           </li>
         ))}
       </ul>
-      <div className="flex items-center gap-4">
-        <Searcher />
-        <LocaleSwitcher />
-        <GitHubLink />
-        <ToggleTheme />
-      </div>
+      <HeaderActions />
     </nav>
   );
 }
