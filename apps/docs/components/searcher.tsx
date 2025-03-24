@@ -23,9 +23,6 @@ import {
   DialogTrigger,
 } from "./ui/dialog";
 
-// Config
-import { docsNavigation } from "@/config/navigation";
-
 interface SearchResultItem {
   title: string;
   href: string;
@@ -36,7 +33,11 @@ export function Searcher() {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<SearchResultItem[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
-  const t = useTranslations("components");
+  const t = useTranslations();
+  const docsNavigation: {
+    title: string;
+    items: { title: string; href: string }[];
+  }[] = t.raw("ui.docsNavigation");
 
   const getCategoryIcon = (category: string) => {
     switch (category.toLowerCase()) {
@@ -112,7 +113,7 @@ export function Searcher() {
     <Dialog onOpenChange={handleDialogOpenChange}>
       <DialogTrigger asChild>
         <Button variant="primary" size="sm" className="gap-2">
-          <span>{t("searcher.label")}</span>
+          <span>{t("components.searcher.label")}</span>
           <MagnifyingGlassIcon className="h-4 w-4" />
         </Button>
       </DialogTrigger>
