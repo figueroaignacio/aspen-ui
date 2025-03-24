@@ -11,7 +11,7 @@ import { Searcher } from "./searcher";
 import { ToggleTheme } from "./toggle-theme";
 
 interface NavigationProps {
-  href: string;
+  url: string;
   title: string;
 }
 
@@ -31,9 +31,9 @@ export function SiteHeader({ navigation }: SiteNavbarProps) {
         {navigation.map((navItem: NavigationProps, index: number) => (
           <li key={index}>
             <Link
-              href={navItem.href}
+              href={navItem.url}
               className={`mr-6 text-sm ${
-                pathname === `/${navItem.href}`
+                pathname === `/${navItem.url}`
                   ? "text-foreground"
                   : "hover:text-muted-foreground"
               }`}

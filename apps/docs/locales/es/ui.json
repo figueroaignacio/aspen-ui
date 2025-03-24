@@ -1,0 +1,52 @@
+{
+  "navigation": [
+    {
+      "title": "Documentación",
+      "url": "/docs"
+    },
+    {
+      "title": "Componentes",
+      "url": "/components"
+    },
+    {
+      "title": "Bloques",
+      "url": "/blocks"
+    },
+    {
+      "title": "Templates",
+      "url": "/templates"
+    }
+  ],
+  "docsNavigation": [
+    {
+      "title": "Comenzando",
+      "items": [
+        {
+          "title": "Introducción",
+          "href": "/docs"
+        },
+        {
+          "title": "Instalación",
+          "href": "/docs/installation/"
+        },
+        {
+          "title": "Modo Oscuro",
+          "href": "/docs/dark-mode"
+        }
+      ]
+    },
+    {
+      "title": "Componentes",
+      "items": [
+        {
+          "title": "Button",
+          "href": "/docs/components/button"
+        },
+        {
+          "title": "Tabs",
+          "href": "/docs/components/tabs"
+        }
+      ]
+    }
+  ]
+}
