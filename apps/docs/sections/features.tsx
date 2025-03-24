@@ -35,7 +35,9 @@ export function Features() {
   return (
     <section className="relative overflow-hidden">
       <div className="mx-auto relative z-10">
-        <h2 className="text-xl font-bold mb-12 text-center">Main Features</h2>
+        <h2 className="text-xl font-bold mb-12 text-center">
+          {t("sections.features.title")}
+        </h2>
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => {
             const IconComponent =
