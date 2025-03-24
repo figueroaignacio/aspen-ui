@@ -1,13 +1,19 @@
+import { setRequestLocale } from "next-intl/server";
+
 // Sections
 import { BlurBackground } from "@/components/blur-background";
 import { Features } from "@/sections/features";
 import { Hero } from "@/sections/hero";
 
-// Utils
-import { setRequestLocale } from "next-intl/server";
+type PageProps = {
+  params: Promise<{
+    locale: string;
+  }>;
+};
 
-export default function HomePage({ params }: { params: { locale: string } }) {
-  const { locale } = params;
+export default async function HomePage({ params }: PageProps) {
+  const { locale } = await params;
+
   setRequestLocale(locale);
 
   return (

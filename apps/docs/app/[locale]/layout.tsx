@@ -39,6 +39,10 @@ interface LocaleLayoutProps {
   params: Promise<{ locale: string }>;
 }
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
 export default async function RootLayout(props: LocaleLayoutProps) {
   const params = await props.params;
   const { locale } = await params;
