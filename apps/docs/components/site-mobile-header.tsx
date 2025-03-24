@@ -7,6 +7,7 @@ import { useState } from "react";
 // Components
 import { Link } from "@/i18n/navigation";
 import { GitHubLink } from "./github-link";
+import { LocaleSwitcher } from "./locale-switcher";
 import { Logo } from "./logo";
 import { Searcher } from "./searcher";
 import { ToggleTheme } from "./toggle-theme";
@@ -88,6 +89,7 @@ export function SiteMobileHeader({ navigation }: SiteMobileNavbarProps) {
       </nav>
       <div className="flex items-center gap-4">
         <Searcher />
+        <LocaleSwitcher />
         <GitHubLink />
         <ToggleTheme />
       </div>
