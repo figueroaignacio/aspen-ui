@@ -43,10 +43,8 @@ import { routing } from "./routing";
 async function loadTranslations(locale: Locale) {
   const messages: Record<string, any> = {};
 
-  // Ruta base a los archivos de traducción
   const basePath = path.join(process.cwd(), "locales", locale.toString());
 
-  // Cargar cada módulo de traducción
   for (const namespace of namespaces) {
     try {
       const filePath = path.join(basePath, `${namespace}.json`);

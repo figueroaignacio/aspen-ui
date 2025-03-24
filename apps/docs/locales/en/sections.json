@@ -61,5 +61,8 @@
         "icon": "reader"
       }
     ]
+  },
+  "footer": {
+    "sourceCode": "The source code is available on "
   }
 }

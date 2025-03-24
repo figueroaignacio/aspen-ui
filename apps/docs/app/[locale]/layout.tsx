@@ -36,23 +36,25 @@ export async function generateMetadata() {
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: Promise<{
+    locale: string;
+  }>;
 }
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export default async function RootLayout(props: LocaleLayoutProps) {
-  const params = await props.params;
+export default async function RootLayout({
+  params,
+  children,
+}: LocaleLayoutProps) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
 
   setRequestLocale(locale);
-
-  const { children } = props;
 
   return (
     <html lang={locale} suppressHydrationWarning>
