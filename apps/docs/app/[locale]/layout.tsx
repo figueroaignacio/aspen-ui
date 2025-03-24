@@ -63,11 +63,13 @@ export default async function RootLayout({
           <div className="lg:bg-dots absolute inset-0 -z-50"></div>
           <Providers>
             <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
-              <Navbar />
-              <main className="w-full max-w-[1580px] mx-auto px-5 md:px-10 lg:px-20 overflow-x-hidden lg:overflow-x-visible">
-                <NextIntlClientProvider>{children}</NextIntlClientProvider>
-              </main>
-              <Footer />
+              <NextIntlClientProvider>
+                <Navbar />
+                <main className="w-full max-w-[1580px] mx-auto px-5 md:px-10 lg:px-20 overflow-x-hidden lg:overflow-x-visible">
+                  {children}
+                </main>
+                <Footer />
+              </NextIntlClientProvider>
             </div>
           </Providers>
         </ViewTransition>

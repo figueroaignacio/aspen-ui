@@ -1,6 +1,7 @@
 "use client";
 
 // Hooks
+import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 
 // Components
@@ -35,6 +36,7 @@ export function Searcher() {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<SearchResultItem[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
+  const t = useTranslations("components");
 
   const getCategoryIcon = (category: string) => {
     switch (category.toLowerCase()) {
@@ -110,7 +112,7 @@ export function Searcher() {
     <Dialog onOpenChange={handleDialogOpenChange}>
       <DialogTrigger asChild>
         <Button variant="primary" size="sm" className="gap-2">
-          <span>Search documentation...</span>
+          <span>{t("searcher.label")}</span>
           <MagnifyingGlassIcon className="h-4 w-4" />
         </Button>
       </DialogTrigger>
