@@ -6,6 +6,7 @@ import { useState } from "react";
 
 // Components
 import { Link } from "@/i18n/navigation";
+import { HeaderActions } from "./header-actions";
 import { Logo } from "./logo";
 
 // Icons
@@ -13,7 +14,6 @@ import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 // Definitions
 import { DocSection } from "@/lib/definitions";
-import { HeaderActions } from "./header-actions";
 
 interface SiteMobileNavbarProps {
   navigation: DocSection[];
