@@ -12,8 +12,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Link } from "@/i18n/navigation";
 import Image, { type ImageProps } from "next/image";
-import Link from "next/link";
 import {
   Accordion,
   AccordionContent,

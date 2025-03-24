@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 // Components
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { GitHubLink } from "./github-link";
 import { Logo } from "./logo";
 import { Searcher } from "./searcher";
@@ -14,15 +14,8 @@ import { ToggleTheme } from "./toggle-theme";
 // Icons
 import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 
-interface DocItem {
-  title: string;
-  href: string;
-}
-
-interface DocSection {
-  title: string;
-  items: DocItem[];
-}
+// Definitions
+import { DocSection } from "@/lib/definitions";
 
 interface SiteMobileNavbarProps {
   navigation: DocSection[];

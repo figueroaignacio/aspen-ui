@@ -4,7 +4,7 @@
 import { usePathname } from "next/navigation";
 
 // Components
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { GitHubLink } from "./github-link";
 import { Logo } from "./logo";
 import { Searcher } from "./searcher";

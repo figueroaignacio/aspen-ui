@@ -4,8 +4,8 @@ import { useTranslations } from "next-intl";
 // Components
 import { Github } from "@/components/icons";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
-import Link from "next/link";
 
 // lib
 import { technologies } from "@/lib/constants";

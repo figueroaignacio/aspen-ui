@@ -1,5 +1,5 @@
+import { Link } from "@/i18n/navigation";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 
 export function GitHubLink() {

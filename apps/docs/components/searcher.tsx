@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 
 // Components
+import { Link } from "@/i18n/navigation";
 import {
   CodeIcon,
   Cross2Icon,
@@ -12,7 +13,6 @@ import {
   MagnifyingGlassIcon,
   RocketIcon,
 } from "@radix-ui/react-icons";
-import Link from "next/link";
 import { Button } from "./ui/button";
 import {
   Dialog,
