@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 // Definitions
 import { DocItem, DocSection } from "@/lib/definitions";
 
-export function SidebarNav() {
+export function Sidebar() {
   const pathname = usePathname();
   const t = useTranslations("ui");
   const docsNavigation = t.raw("docsNavigation");

@@ -1,7 +1,7 @@
 // Components
 import { MDXContentRenderer } from "@/components/mdx/mdx-content-renderer";
 import { Toc } from "@/components/mdx/toc";
-import { SidebarNav } from "@/components/sidebar-nav";
+import { Sidebar } from "@/components/sidebar";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -77,9 +77,8 @@ export default async function DocPage({
       <BgBlur />
       <div className="grid grid-cols-1 lg:grid-cols-[270px_1fr_270px] gap-6 bg-background">
         <aside className="sticky top-14 h-[calc(100vh-3.5rem)] border-r border-dashed py-6 pl-6 hidden lg:block z-20">
-          <SidebarNav />
+          <Sidebar />
         </aside>
-
         <main className="min-w-0 py-6">
           <div className="mx-auto md:px-4 lg:px-0">
             <Breadcrumb className="mb-4">
@@ -124,7 +123,6 @@ export default async function DocPage({
             </div>
           </div>
         </main>
-
         {doc.toc?.visible && (
           <aside className="sticky top-14 h-[calc(100vh-3.5rem)] border-l border-dashed py-6 pl-6 hidden md:block">
             <Toc toc={doc.toc.content} />
