@@ -1,4 +1,5 @@
 // Components
+import { BgBlur } from "@/components/bg-blur";
 import { MDXContentRenderer } from "@/components/mdx/mdx-content-renderer";
 import { Toc } from "@/components/mdx/toc";
 import { Sidebar } from "@/components/sidebar";
@@ -11,7 +12,6 @@ import { docs } from "@content";
 import { notFound } from "next/navigation";
 
 // Metadata
-import { BgBlur } from "@/components/bg-blur";
 import type { Metadata } from "next";
 
 type DocPageProps = {
