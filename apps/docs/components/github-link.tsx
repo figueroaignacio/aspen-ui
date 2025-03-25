@@ -7,7 +7,10 @@ export function GitHubLink() {
     <Link
       href="google.com"
       target="_blank"
-      className={buttonVariants({ variant: "ghost", size: "icon" })}
+      className={`${buttonVariants({
+        variant: "ghost",
+        size: "icon",
+      })} hidden lg:flex`}
     >
       <GitHubLogoIcon />
     </Link>
