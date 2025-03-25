@@ -10,7 +10,7 @@ export function GitHubLink() {
       className={`${buttonVariants({
         variant: "ghost",
         size: "icon",
-      })} hidden lg:flex`}
+      })}`}
     >
       <GitHubLogoIcon />
     </Link>
