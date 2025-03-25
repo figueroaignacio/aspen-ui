@@ -17,7 +17,7 @@
   --radius: 1rem;
 }
 
-:root.dark {
+.dark {
   --background: hsl(220, 15%, 5%);
   --foreground: hsl(210, 20%, 98%);
   --card: hsl(216, 16%, 6%);

@@ -129,7 +129,6 @@ export function Searcher() {
               type="text"
               placeholder="Type a command or search..."
               value={searchQuery}
-              autoFocus
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full rounded-md border bg-background px-9 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             />
