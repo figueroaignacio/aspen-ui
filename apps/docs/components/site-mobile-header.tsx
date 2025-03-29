@@ -28,7 +28,7 @@ export function SiteMobileHeader({ navigation }: SiteMobileNavbarProps) {
   };
 
   return (
-    <div className="lg:hidden flex items-center relative justify-between w-full">
+    <div className="lg:hidden flex items-center relative justify-between w-full py-5">
       <HamburgerMenuIcon
         className="h-6 w-6 cursor-pointer"
         onClick={toggleMenu}
@@ -47,7 +47,7 @@ export function SiteMobileHeader({ navigation }: SiteMobileNavbarProps) {
         }`}
       >
         <div className="flex items-center justify-between border-b border-dashed">
-          <div onClick={toggleMenu} className="flex justify-start p-3.5">
+          <div onClick={toggleMenu} className="flex justify-start">
             <Logo />
           </div>
           <div className="flex justify-end p-3.5">

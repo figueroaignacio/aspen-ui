@@ -21,8 +21,8 @@ export function SiteHeader({ navigation }: SiteNavbarProps) {
   const pathname = usePathname();
 
   return (
-    <nav className="hidden lg:flex items-center justify-between w-full">
-      <ul className="flex items-center">
+    <nav className="hidden lg:flex items-center justify-between w-full px-3 border-r border-l border-dashed">
+      <ul className="flex items-center  py-4">
         <li className="mr-6">
           <Logo />
         </li>
