@@ -4,7 +4,7 @@ export function Footer() {
   const t = useTranslations("sections");
 
   return (
-    <footer className="border-t border-dashed py-4 text-sm text-foreground px-5 flex border-b md:px-10 lg:px-20  backdrop-blur-sm z-50 max-w-[1580px] mx-auto w-full">
+    <footer className="border-t py-4 text-sm text-foreground px-5 flex border-b md:px-10 lg:px-20  backdrop-blur-sm z-50 max-w-[1580px] mx-auto w-full">
       <p>
         {t("footer.sourceCode")}
         <a

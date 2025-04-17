@@ -68,7 +68,7 @@ export default async function DocPage({
     <>
       <BgBlur />
       <div className="grid grid-cols-1 lg:grid-cols-[270px_1fr_270px] gap-6 bg-background">
-        <aside className="sticky top-14 h-[calc(100vh-3.5rem)] py-6 pl-6 hidden lg:block z-20">
+        <aside className="sticky top-14 h-[calc(100vh-3.5rem)] py-6 px-3 hidden lg:block z-20 border-r">
           <Sidebar />
         </aside>
         <main className="min-w-0 py-6">
