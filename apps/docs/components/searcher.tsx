@@ -112,7 +112,7 @@ export function Searcher() {
   return (
     <Dialog onOpenChange={handleDialogOpenChange}>
       <DialogTrigger asChild>
-        <Button variant="primary" size="sm" className="gap-2">
+        <Button variant="secondary" size="sm" className="gap-2">
           <span>{t("components.searcher.label")}</span>
           <MagnifyingGlassIcon className="h-4 w-4" />
         </Button>

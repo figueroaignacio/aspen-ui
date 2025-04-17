@@ -33,19 +33,16 @@ export function Hero() {
       <div className="mx-auto lg:px-8">
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
           <div className="space-y-6 w-full">
-            <div className="inline-block bg-primary px-3 py-1 text-sm rounded-full">
+            <div className="inline-block bg-primary px-3 py-1 text-sm rounded-full text-white">
               {t("sections.hero.badge")}
             </div>
-
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">
               {t("sections.hero.title")}
             </h1>
-
             <p className="text-xl text-muted-foreground mx-auto max-w-2xl">
               {t("sections.hero.subtitle")}
             </p>
           </div>
-
           <div className="flex flex-wrap justify-center gap-4 mt-8">
             {heroLinks.map((item, index) => (
               <Button key={index} variant={item.variant}>
@@ -75,7 +72,6 @@ export function Hero() {
               ))}
             </ul>
           </div>
-
           <div className="mt-16 w-full max-w-md mx-auto">
             <div className="p-4 rounded-lg text-sm text-center ">
               <p>{t("sections.hero.stats.stars")}</p>

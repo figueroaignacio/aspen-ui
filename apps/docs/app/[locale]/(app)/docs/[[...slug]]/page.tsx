@@ -71,7 +71,7 @@ export default async function DocPage({
         <aside className="sticky top-14 h-[calc(100vh-3.5rem)] py-6 px-3 hidden lg:block z-20 border-r">
           <Sidebar />
         </aside>
-        <main className="min-w-0 py-6 relative z-50">
+        <main className="min-w-0 py-6 relative ">
           <div className="mx-auto md:px-4 lg:px-0">
             <div className="space-y-2">
               <h1 className="scroll-m-20 text-2xl font-bold tracking-tight">

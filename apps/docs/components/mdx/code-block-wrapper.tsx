@@ -29,9 +29,7 @@ export function CodeBlockWrapper({
 
   return (
     <Collapsible open={isOpened} onOpenChange={setIsOpened}>
-      {fileLocation ? (
-        <div className="px-3 py-1 text-sm">{fileLocation}</div>
-      ) : null}
+      {fileLocation ? <div className="py-3 text-sm">{fileLocation}</div> : null}
       <div className={cn("relative overflow-hidden", className)} {...props}>
         <CollapsibleContent
           forceMount
