@@ -1,36 +1,45 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: hsl(0, 0%, 100%);
   --foreground: hsl(220, 20%, 20%);
   --card: hsl(0, 0%, 99%);
-  --primary: hsl(212, 24%, 89%);
+  --primary: hsl(210, 70%, 45%);
   --primary-foreground: hsl(212, 24%, 89%);
-  --secondary: hsl(200, 60%, 50%);
-  --secondary-foreground: hsl(210, 30%, 98%);
-  --accent: hsl(340, 70%, 60%);
-  --accent-foreground: hsl(200, 27%, 98%);
-  --muted: hsl(220, 15%, 90%);
+  --secondary: hsl(215, 25%, 27%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --accent: hsl(200, 60%, 50%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(220, 15%, 95%);
   --muted-foreground: hsl(220, 15%, 40%);
-  --border: hsl(210, 20%, 79%);
-  --radius: 1rem;
+  --destructive: hsl(0, 65%, 50%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(220, 15%, 85%);
+  --input: hsl(220, 15%, 85%);
+  --ring: hsl(210, 70%, 45%);
 }
 
 .dark {
   --background: hsl(220, 15%, 5%);
   --foreground: hsl(210, 20%, 98%);
-  --card: hsl(216, 16%, 6%);
-  --primary: hsl(220, 15%, 20%);
+  --card: hsl(216, 16%, 8%);
+  --card-foreground: hsl(210, 20%, 98%);
+  --primary: hsl(210, 70%, 55%);
   --primary-foreground: hsl(220, 15%, 20%);
-  --secondary: hsl(200, 60%, 60%);
-  --secondary-foreground: hsl(220, 15%, 10%);
-  --accent: hsl(340, 70%, 70%);
-  --accent-foreground: hsl(240 5% 64.9%);
-  --muted: hsl(240 4.8% 16.1%);
-  --muted-foreground: hsl(240 3.8% 70%);
-  --input: hsl(220, 15%, 12%);
-  --border: hsl(220, 15%, 12%);
+  --secondary: hsl(215, 25%, 27%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --accent: hsl(200, 60%, 60%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(220, 15%, 15%);
+  --muted-foreground: hsl(220, 15%, 65%);
+  --destructive: hsl(0, 65%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(220, 16%, 15%);
+  --input: hsl(220, 15%, 20%);
+  --ring: hsl(210, 70%, 55%);
 }
 
 @theme inline {
@@ -45,6 +54,8 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
   --color-input: var(--input);
   --color-border: var(--border);
   --radius-sm: 0.5rem;
