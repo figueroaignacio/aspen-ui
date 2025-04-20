@@ -29,54 +29,62 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative overflow-hidden py-16 md:py-24 lg:py-32 min-h-[80dvh] flex flex-col justify-center">
-      <div className="mx-auto lg:px-8">
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
+    <section className="relative overflow-hidden py-16 md:py-24 lg:py-32 min-h-[80dvh]">
+      <div>
+        <div className="flex flex-col items-start text-left max-w-4xl">
+          <div className="inline-flex items-center px-3 py-1 mb-6 text-sm font-medium rounded-full bg-accent text-accent-foreground">
+            <span className="mr-2">🚀</span>
+            {t("sections.hero.badge")}
+            <ArrowRightIcon className="w-4 h-4 ml-2" />
+          </div>
+
           <div className="space-y-6 w-full">
-            <div className="inline-block bg-primary px-3 py-1 text-sm rounded-full text-white">
-              {t("sections.hero.badge")}
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">
-              {t("sections.hero.title")}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight leading-tight">
+              {t("sections.hero.title")}{" "}
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                with speed
+              </span>
             </h1>
-            <p className="text-xl text-muted-foreground mx-auto max-w-2xl">
-              {t("sections.hero.subtitle")}
+
+            <p className="text-xl text-muted-foreground max-w-2xl">
+              {t("sections.hero.subtitle")}{" "}
+              <span className="font-medium text-foreground">
+                Works with React.js
+              </span>
             </p>
           </div>
-          <div className="flex flex-wrap justify-center gap-4 mt-8">
-            {heroLinks.map((item, index) => (
-              <Button key={index} variant={item.variant}>
-                <Link
-                  href={item.href}
-                  className={`inline-flex items-center justify-center`}
-                >
-                  {item.label}
-                  <span className="ml-2 inline-block">{item.icon}</span>
-                </Link>
-              </Button>
-            ))}
+
+          <div className="flex flex-wrap gap-4 mt-10">
+            <Button
+              variant="primary"
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-base font-medium rounded-md"
+            >
+              <Link
+                href={heroLinks[0].href}
+                className="inline-flex items-center justify-center"
+              >
+                {heroLinks[0].label}
+                <span className="ml-2 inline-block">{heroLinks[0].icon}</span>
+              </Link>
+            </Button>
           </div>
-          <div className="w-full max-w-2xl mx-auto mt-12 pt-8">
+
+          <div className="w-full mt-16 pt-8 ">
             <h3 className="text-base font-medium text-muted-foreground mb-4">
               {t("sections.hero.ecosystem")}
             </h3>
-            <ul className="flex justify-center flex-wrap gap-3">
+            <ul className="flex flex-wrap gap-4">
               {technologies.map((tech, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-2 border px-3 py-1 rounded-md text-sm"
+                  className="flex items-center gap-2 px-3 py-1 rounded-md text-sm bg-background/50 border border-border hover:bg-background transition-colors"
                 >
                   {tech.icon}
                   {tech.title}
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="mt-16 w-full max-w-md mx-auto">
-            <div className="p-4 rounded-lg text-sm text-center ">
-              <p>{t("sections.hero.stats.stars")}</p>
-              <p>{t("sections.hero.stats.components")}</p>
-            </div>
           </div>
         </div>
       </div>
