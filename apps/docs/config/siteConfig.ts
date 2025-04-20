@@ -1,7 +1,7 @@
 export const siteConfig = {
   title: {
-    default: "aspen - UI Components for your react projects",
-    template: "aspen",
+    default: "n3o/ui - UI Components for your react projects",
+    template: "n3o/ui",
   },
   description:
     "A collection of customizable, open-source components that work seamlessly with your workflow.",

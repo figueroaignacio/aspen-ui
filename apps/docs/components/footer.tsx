@@ -8,7 +8,7 @@ export function Footer() {
       <p>
         {t("footer.sourceCode")}
         <a
-          href="https://github.com/figueroaignacio/aspen-ui"
+          href="https://github.com/figueroaignacio/n3o/ui-ui"
           target="blank"
           className="underline"
         >

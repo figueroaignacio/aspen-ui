@@ -22,7 +22,7 @@ export function Hero() {
     },
     {
       label: "GitHub",
-      href: "https://github.com/figueroaignacio/aspen-ui",
+      href: "https://github.com/figueroaignacio/n3o/ui-ui",
       icon: <Github />,
       variant: "ghost" as const,
     },
