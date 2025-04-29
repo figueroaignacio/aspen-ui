@@ -26,12 +26,21 @@
           "href": "/docs"
         },
         {
-          "title": "Installation",
-          "href": "/docs/installation/"
+          "title": "Use Mode",
+          "href": "/docs/use-mode"
+        }
+      ]
+    },
+    {
+      "title": "Concepts",
+      "items": [
+        {
+          "title": "Theming",
+          "href": "/docs/concepts/theming"
         },
         {
-          "title": "Dark Mode",
-          "href": "/docs/dark-mode"
+          "title": "Use Mode",
+          "href": "/docs/concepts/dark-mode"
         }
       ]
     },
@@ -41,10 +50,6 @@
         {
           "title": "Button",
           "href": "/docs/components/button"
-        },
-        {
-          "title": "Tabs",
-          "href": "/docs/components/tabs"
         }
       ]
     }

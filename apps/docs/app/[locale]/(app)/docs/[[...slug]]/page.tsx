@@ -1,5 +1,4 @@
 // Components
-import { BgBlur } from "@/components/bg-blur";
 import { MDXContentRenderer } from "@/components/mdx/mdx-content-renderer";
 import { Toc } from "@/components/mdx/toc";
 import { Sidebar } from "@/components/sidebar";
@@ -66,7 +65,7 @@ export default async function DocPage({
 
   return (
     <>
-      <BgBlur />
+      {/* <BgBlur /> */}
       <div className="grid grid-cols-1 lg:grid-cols-[270px_1fr_270px] gap-6 bg-background">
         <aside className="sticky top-14 h-[calc(100vh-3.5rem)] py-6 px-3 hidden lg:block z-20 border-r">
           <Sidebar />
