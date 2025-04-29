@@ -119,7 +119,7 @@ export function Searcher() {
       </DialogTrigger>
       <DialogContent className="max-w-sm sm:max-w-lg rounded-xl">
         <DialogHeader>
-          <DialogTitle>n3o/ui docs</DialogTitle>
+          <DialogTitle>i7a/ui docs</DialogTitle>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <div className="relative">

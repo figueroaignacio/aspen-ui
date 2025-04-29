@@ -1,6 +1,6 @@
-# **n3o/ui - UI Kit in Development**
+# **i7a/ui - UI Kit in Development**
 
-Welcome to **n3o/ui**, the go-to library for innovative, customizable user interface components. Elevate your projects with a versatile, cutting-edge library packed with UI elements that adapt to your creative vision.
+Welcome to **i7a/ui**, the go-to library for innovative, customizable user interface components. Elevate your projects with a versatile, cutting-edge library packed with UI elements that adapt to your creative vision.
 
 ## **Technologies**
 
@@ -29,4 +29,4 @@ Got questions, suggestions, or just want to connect? I’d love to hear from you
 - **GitHub**: [figueroaignacio](https://github.com/figueroaignacio/)
 - **LinkedIn**: [Ignacio Figueroa](https://www.linkedin.com/in/ignacio-figueroa-0a1ba0263)
 
-Share your projects built with **n3o/ui**—I’d love to check them out! Cheers.
+Share your projects built with **i7a/ui**—I’d love to check them out! Cheers.

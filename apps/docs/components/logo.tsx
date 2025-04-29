@@ -5,7 +5,7 @@ export function Logo() {
       href="/"
       className="text-xl font-extrabold text-foreground rounded-sm"
     >
-      N3O/UI
+      i7a/ui
     </Link>
   );
 }
