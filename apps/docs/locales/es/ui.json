@@ -26,12 +26,21 @@
           "href": "/docs"
         },
         {
-          "title": "Instalación",
-          "href": "/docs/installation/"
+          "title": "Modo de Uso",
+          "href": "/docs/use-mode"
+        }
+      ]
+    },
+    {
+      "title": "Conceptos",
+      "items": [
+        {
+          "title": "Tematizar",
+          "href": "/docs/concepts/theming"
         },
         {
           "title": "Modo Oscuro",
-          "href": "/docs/dark-mode"
+          "href": "/docs/concepts/dark-mode"
         }
       ]
     },
