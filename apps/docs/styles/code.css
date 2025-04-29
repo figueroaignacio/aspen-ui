@@ -9,7 +9,7 @@ html.dark[data-theme="light"] {
 }
 
 [data-rehype-pretty-code-figure] {
-  @apply bg-background border border-dotted py-0 rounded-md my-3;
+  @apply bg-background border border-dotted py-0 rounded-xl my-3;
 }
 
 [data-rehype-pretty-code-figure] pre {
@@ -51,7 +51,7 @@ html.dark[data-theme="light"] {
 }
 
 [data-rehype-pretty-code-figure] .word--highlighted {
-  @apply rounded-md bg-slate-300 p-1;
+  @apply rounded-xl bg-slate-300 p-1;
 }
 
 [data-rehype-pretty-code-title] {

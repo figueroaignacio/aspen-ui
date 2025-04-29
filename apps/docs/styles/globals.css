@@ -4,69 +4,74 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: hsl(0, 0%, 100%);
-  --foreground: hsl(220, 20%, 20%);
-  --card: hsl(0, 0%, 99%);
-  --card-foreground: hsl(220, 20%, 20%);
-  --primary: hsl(210, 70%, 45%);
-  --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(215, 25%, 27%);
-  --secondary-foreground: hsl(0, 0%, 100%);
-  --accent: hsl(200, 60%, 50%);
-  --accent-foreground: hsl(0, 0%, 100%);
-  --muted: hsl(220, 15%, 95%);
-  --muted-foreground: hsl(220, 15%, 40%);
-  --destructive: hsl(0, 65%, 50%);
-  --destructive-foreground: hsl(0, 0%, 100%);
-  --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(220, 20%, 20%);
-  --border: hsl(220, 15%, 85%);
-  --input: hsl(220, 15%, 85%);
-  --ring: hsl(210, 70%, 45%);
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --primary: #3b82f6;
+  --primary-foreground: #f8fafc;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #0f172a;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #f1f5f9;
+  --accent-foreground: #0f172a;
+  --destructive: #ef4444;
+  --destructive-foreground: #f8fafc;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #3b82f6;
   --radius: 0.5rem;
 }
 
 .dark {
-  --background: hsl(220, 15%, 5%);
-  --foreground: hsl(210, 20%, 98%);
-  --card: hsl(216, 16%, 8%);
-  --card-foreground: hsl(210, 20%, 98%);
-  --primary: hsl(210, 70%, 55%);
-  --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(215, 25%, 27%);
-  --secondary-foreground: hsl(0, 0%, 100%);
-  --accent: hsl(200, 60%, 60%);
-  --accent-foreground: hsl(0, 0%, 100%);
-  --muted: hsl(220, 15%, 15%);
-  --muted-foreground: hsl(220, 15%, 65%);
-  --destructive: hsl(0, 65%, 60%);
-  --destructive-foreground: hsl(0, 0%, 100%);
-  --popover: hsl(220, 15%, 8%);
-  --popover-foreground: hsl(210, 20%, 98%);
-  --border: hsl(220, 15%, 20%);
-  --input: hsl(220, 15%, 20%);
-  --ring: hsl(210, 70%, 55%);
+  --background: #0b0c0f;
+  --foreground: #f8fafc;
+  --card: #0b0c0f;
+  --card-foreground: #f8fafc;
+  --popover: #0b0c0f;
+  --popover-foreground: #f8fafc;
+  --primary: #3b82f6;
+  --primary-foreground: #0b0c0f;
+  --secondary: #131519;
+  --secondary-foreground: #f8fafc;
+  --muted: #131519;
+  --muted-foreground: #94a3b8;
+  --accent: #131519;
+  --accent-foreground: #f8fafc;
+  --destructive: #7f1d1d;
+  --destructive-foreground: #ef4444;
+  --border: #131519;
+  --input: #131519;
+  --ring: #2563eb;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
-  --color-input: var(--input);
   --color-border: var(--border);
-  --radius-sm: 0.5rem;
-  --radius-md: 0.75rem;
-  --radius-lg: 1rem;
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
 @layer base {
@@ -99,7 +104,7 @@
 }
 
 .highlighted-text {
-  @apply bg-purple-400 px-2 py-0.5 rounded-md text-white;
+  @apply bg-purple-400 px-2 py-0.5 rounded-xl text-white;
 }
 
 .grid-main-container {

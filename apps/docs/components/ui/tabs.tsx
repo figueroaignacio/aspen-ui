@@ -32,7 +32,7 @@ export const TabsList = React.forwardRef<
     <div
       ref={ref}
       className={cn(
-        "relative inline-flex h-9 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground border-dotted",
+        "relative inline-flex h-9 items-center justify-center rounded-xl bg-muted p-1 text-muted-foreground border-dotted",
         className
       )}
       {...props}

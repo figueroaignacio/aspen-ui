@@ -1,8 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 
 // Sections
-import { BlurBackground } from "@/components/blur-background";
-import { Features } from "@/sections/features";
 import { Hero } from "@/sections/hero";
 
 type PageProps = {
@@ -18,9 +16,7 @@ export default async function HomePage({ params }: PageProps) {
 
   return (
     <div className="pb-16">
-      <BlurBackground />
       <Hero />
-      <Features />
     </div>
   );
 }

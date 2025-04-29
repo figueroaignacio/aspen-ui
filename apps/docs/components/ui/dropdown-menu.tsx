@@ -68,7 +68,7 @@ function DropdownMenuTrigger({
       aria-expanded={false}
       aria-controls="dropdown-menu-content"
       className={cn(
-        "inline-flex justify-between w-full rounded-md border px-4 py-2 hover:bg-primary-foreground text-sm font-medium text-foregroundz active:scale-95 transition-all duration-200",
+        "inline-flex justify-between w-full rounded-xl border px-4 py-2 hover:bg-primary-foreground text-sm font-medium text-foregroundz active:scale-95 transition-all duration-200",
         className
       )}
     >
@@ -135,7 +135,7 @@ function DropdownMenuItem({
         closeMenu?.();
       }}
       className={cn(
-        "cursor-pointer block px-4 py-2 text-sm rounded-md text-foreground hover:bg-primary-foreground",
+        "cursor-pointer block px-4 py-2 text-sm rounded-xl text-foreground hover:bg-primary-foreground",
         className
       )}
       role="menuitem"

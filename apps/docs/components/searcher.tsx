@@ -117,7 +117,7 @@ export function Searcher() {
           <MagnifyingGlassIcon className="h-4 w-4" />
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-sm sm:max-w-lg rounded-md">
+      <DialogContent className="max-w-sm sm:max-w-lg rounded-xl">
         <DialogHeader>
           <DialogTitle>n3o/ui docs</DialogTitle>
         </DialogHeader>
@@ -130,7 +130,7 @@ export function Searcher() {
               placeholder="Type a command or search..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full rounded-md border bg-background px-9 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              className="w-full rounded-xl border bg-background px-9 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             />
             {searchQuery && (
               <Cross2Icon
