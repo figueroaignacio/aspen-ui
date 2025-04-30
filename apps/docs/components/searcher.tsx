@@ -40,10 +40,14 @@ export function Searcher() {
   }[] = t.raw("ui.docsNavigation");
 
   const getCategoryIcon = (category: string) => {
-    switch (category.toLowerCase()) {
+    const lowerCaseCategory = category.toLowerCase();
+
+    switch (lowerCaseCategory) {
       case "getting started":
+      case "comenzando":
         return <RocketIcon className="h-4 w-4" />;
       case "components":
+      case "componentes":
         return <CodeIcon className="h-4 w-4" />;
       default:
         return <FileIcon className="h-4 w-4" />;
@@ -182,7 +186,7 @@ export function Searcher() {
                       {section.items.map((item) => (
                         <li
                           key={item.href}
-                          className="py-2 px-3 hover:bg-primary rounded-sm text-foreground active:scale-95 transition-transform duration-200 ring-primary ring-offset-background text-sm"
+                          className="py-2 px-3 hover:bg-secondary rounded-xl text-foreground active:scale-95 transition-transform duration-200 ring-primary ring-offset-background text-sm"
                         >
                           <DialogClose className="w-full h-full">
                             <Link
