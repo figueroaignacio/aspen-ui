@@ -5,9 +5,7 @@ interface AppLayoutProps {
 export default function AppLayout({ children }: AppLayoutProps) {
   return (
     <div className="flex flex-1 flex-col">
-      <main className="flex flex-1 flex-col md:border-l md:border-r">
-        {children}
-      </main>
+      <main className="flex flex-1 flex-col">{children}</main>
     </div>
   );
 }

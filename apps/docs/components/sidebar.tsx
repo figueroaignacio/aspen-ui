@@ -19,7 +19,7 @@ export function Sidebar() {
   const docsNavigation = t.raw("docsNavigation");
 
   return (
-    <aside className="h-[calc(100vh-5rem)] hidden lg:block bg-transparent">
+    <aside className="h-[calc(100vh-5rem)] hidden lg:block">
       <nav>
         {docsNavigation.map((section: DocSection, index: number) => (
           <div
