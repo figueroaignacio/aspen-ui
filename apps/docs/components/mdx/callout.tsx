@@ -23,7 +23,7 @@ const calloutVariants = cva(
           "border-rose-100 bg-rose-50/50 dark:border-rose-900/30 dark:bg-rose-900/10",
         success:
           "border-emerald-100 bg-emerald-50/50 dark:border-emerald-900/30 dark:bg-emerald-900/10",
-        tip: "border-violet-100 bg-violet-50/50 dark:border-violet-900/30 dark:bg-violet-900/10",
+        tip: "bg-secondary text-primary",
       },
     },
     defaultVariants: {
@@ -40,7 +40,7 @@ const iconVariants = cva("flex-shrink-0 h-5 w-5", {
       warning: "text-amber-400 dark:text-amber-300",
       danger: "text-rose-400 dark:text-rose-300",
       success: "text-emerald-400 dark:text-emerald-300",
-      tip: "text-violet-400 dark:text-violet-300",
+      tip: "text-primary",
     },
   },
   defaultVariants: {
