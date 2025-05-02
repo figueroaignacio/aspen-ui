@@ -17,7 +17,7 @@ import { notFound } from "next/navigation";
 import "@/styles/globals.css";
 
 // Font
-import { fontMono, fontSans } from "@/lib/font";
+import { fontSans } from "@/lib/font";
 
 // Metadata
 import { siteConfig } from "@/config/siteConfig";
@@ -58,7 +58,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`relative ${fontSans.variable} ${fontMono.variable}`}>
+      <body className={`relative ${fontSans.className}`}>
         <ViewTransition>
           <div className="lg:bg-dots absolute inset-0 -z-50"></div>
           <Providers>

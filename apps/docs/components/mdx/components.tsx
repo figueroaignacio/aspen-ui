@@ -1,5 +1,3 @@
-import { jetbrains } from "@/lib/font";
-
 // Components
 import { ComponentSource } from "@/components/mdx/component-source";
 import { Button } from "@/components/ui/button";
@@ -30,6 +28,7 @@ import { Step, Steps } from "./steps";
 import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
 
 // Utils
+import { fontSans } from "@/lib/font";
 import { cn } from "@/lib/utils";
 import "@/styles/code.css";
 
@@ -190,7 +189,7 @@ export const mdxComponents = {
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={cn(
-        `relative rounded px-5 py-[0.2rem] ${jetbrains.className}`,
+        `relative rounded px-5 py-[0.2rem] ${fontSans.className}`,
         className
       )}
       {...props}
