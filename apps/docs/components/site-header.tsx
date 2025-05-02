@@ -1,7 +1,7 @@
 "use client";
 
 // Hooks
-import { usePathname } from "next/navigation";
+import { usePathname } from "@/i18n/navigation";
 
 // Components
 import { Link } from "@/i18n/navigation";
@@ -30,10 +30,8 @@ export function SiteHeader({ navigation }: SiteNavbarProps) {
           <li key={index}>
             <Link
               href={navItem.url}
-              className={`mr-6 text-sm ${
-                pathname === `/${navItem.url}`
-                  ? "text-foreground"
-                  : "hover:text-muted-foreground"
+              className={`mr-6 text-sm text-muted-foreground hover:text-foreground ${
+                pathname === `/${navItem.url}` ? "text-foreground" : ""
               }`}
             >
               {navItem.title}
