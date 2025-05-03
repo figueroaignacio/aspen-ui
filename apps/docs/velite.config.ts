@@ -7,10 +7,20 @@ import remarkMath from "remark-math";
 import { visit } from "unist-util-visit";
 import { defineCollection, defineConfig, s } from "velite";
 
-const computedFields = <T extends { slug: string }>(data: T) => ({
-  ...data,
-  slugAsParams: data.slug.split("/").slice(1).join("/"),
-});
+const computedFields = <T extends { slug: string; locale: "es" | "en" }>(
+  data: T
+) => {
+  const slugParts = data.slug.split("/");
+  const cleanedSlug = slugParts
+    .filter((part) => part !== "en" && part !== "es")
+    .join("/");
+  return {
+    ...data,
+    slug: cleanedSlug,
+    slugAsParams: cleanedSlug.split("/").slice(1).join("/"),
+    localeSlug: `${data.locale}/${cleanedSlug.split("/").slice(1).join("/")}`,
+  };
+};
 
 export const docs = defineCollection({
   name: "Docs",

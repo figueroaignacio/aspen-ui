@@ -13,20 +13,26 @@ import { notFound } from "next/navigation";
 // Metadata
 import type { Metadata } from "next";
 
+enum Locale {
+  EN = "en",
+  ES = "es",
+}
+
 type DocPageProps = {
   slug: string[];
+  locale?: Locale;
 };
 
 async function getDocFromParams({ params }: { params: Promise<DocPageProps> }) {
   const parameters = await params;
   const slug = parameters.slug?.join("/") || "";
-  const doc = docs.find((doc) => doc.slugAsParams === slug);
+  const locale = parameters.locale || "en";
 
-  if (!doc) {
-    return null;
-  }
+  const doc = docs.find(
+    (doc) => doc.slugAsParams === slug && doc.locale === locale
+  );
 
-  return doc;
+  return doc || null;
 }
 
 export async function generateMetadata({
@@ -59,7 +65,7 @@ export default async function DocPage({
 }) {
   const doc = await getDocFromParams({ params });
 
-  if (!doc) {
+  if (!doc || !doc.published) {
     notFound();
   }
 

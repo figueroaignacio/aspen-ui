@@ -1,0 +1,40 @@
+---
+title: Button
+description: Muestra un botón o un componente que parece un botón.
+published: true
+toc:
+  visible: true
+date: 2024-03-14
+locale: "es"
+---
+
+<Callout variant="tip">
+  <CalloutTitle>Información</CalloutTitle>
+  <CalloutDescription>
+    Esta parte de la documentación aún está en proceso de escritura además de
+    que el componente esta en proceso de desarrollo, por lo que puede no
+    funcionar como se espera. Por favor, vuelve en otro momento.
+  </CalloutDescription>
+</Callout>
+
+<Tabs defaultValue="preview">
+  <TabsList>
+    <TabsTrigger value="preview">Preview</TabsTrigger>
+    <TabsTrigger value="code">Code</TabsTrigger>
+  </TabsList>
+  <TabsContent value="preview">
+    <ComponentPreview>
+      <Button>Button</Button>
+    </ComponentPreview>
+  </TabsContent>
+  <TabsContent value="code">
+    ```tsx
+    import { Button } from "@/components/ui/button"
+
+    export function ButtonDemo() {
+      return <Button variant="secondary">Button</Button>
+    }
+    ```
+
+  </TabsContent>
+</Tabs>
