@@ -1,7 +1,7 @@
 export const siteConfig = {
   title: {
-    default: "i7a/ui - UI Components for your react projects",
-    template: "i7a/ui",
+    default: "I7A/UI - UI Components for your react projects",
+    template: "I7A/UI",
   },
   description:
     "A collection of customizable, open-source components that work seamlessly with your workflow.",

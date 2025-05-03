@@ -6,7 +6,7 @@ export function Logo() {
       href="/"
       className="flex items-center gap-1.5 px-3 py-1 rounded-xl transition-all duration-300 bg-secondary"
     >
-      <span className="text-xl text-foreground">i7a/ui</span>
+      <span className="text-xl text-foreground">I7A/UI</span>
     </Link>
   );
 }

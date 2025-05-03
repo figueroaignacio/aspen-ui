@@ -8,7 +8,7 @@ export function Footer() {
       <p>
         {t("footer.sourceCode")}
         <a
-          href="https://github.com/figueroaignacio/i7a/ui-ui"
+          href="https://github.com/figueroaignacio/I7A/UI-ui"
           target="blank"
           className="underline"
         >
