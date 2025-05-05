@@ -47,7 +47,7 @@ export function SiteMobileHeader({ navigation }: SiteMobileNavbarProps) {
         }`}
       >
         <div className="flex items-center justify-between border-b">
-          <div onClick={toggleMenu} className="flex justify-start">
+          <div onClick={toggleMenu} className="flex justify-start pl-4">
             <Logo />
           </div>
           <div className="flex justify-end p-3.5">
