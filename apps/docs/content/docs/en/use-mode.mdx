@@ -1,6 +1,6 @@
 ---
-title: Use Mode
-description: How to get started with I7A/UI
+title: Usage Mode
+description: How to start using the I7A/UI components?
 published: true
 toc:
   visible: true
@@ -9,9 +9,51 @@ locale: "en"
 ---
 
 <Callout variant="tip">
-  <CalloutTitle>Info</CalloutTitle>
+  <CalloutTitle>Information</CalloutTitle>
   <CalloutDescription>
-    This section of the documentation is still being written. Please check back
+    This part of the documentation is still being written. Please check back
     later.
   </CalloutDescription>
 </Callout>
+
+## Installation?
+
+As mentioned in the introduction, I7A/UI is not a library in the traditional sense but rather a collection of reusable components that you can directly incorporate into your project. Therefore, there is no single installation for the entire set. Instead, each component includes its source code available in the documentation, ready to be copied, adapted, and used according to your needs.
+
+<Callout variant="tip">
+  <CalloutTitle>However...</CalloutTitle>
+  <CalloutDescription>
+    For the components to work correctly, it is necessary to install some
+    complementary utilities that work alongside CSS. Below are the ones you need
+    to consider.
+  </CalloutDescription>
+</Callout>
+
+## Utilities
+
+<Steps>
+
+  <Step>
+    Install the following utilities to ensure the components work correctly:
+
+    ```bash
+    pnpm i clsx tailwind-merge
+    ```
+
+  </Step>
+
+  <Step>
+    Create a utility file in your project, for example, `utils.ts`, and copy the following code:
+
+    ```ts
+    import { clsx, type ClassValue } from "clsx";
+    import { twMerge } from "tailwind-merge";
+
+    export function cn(...inputs: ClassValue[]) {
+      return twMerge(clsx(inputs));
+    }
+    ```
+
+  </Step>
+
+</Steps>

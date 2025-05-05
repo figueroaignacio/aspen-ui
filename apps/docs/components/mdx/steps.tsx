@@ -20,8 +20,6 @@ export const Steps = ({ children }: { children: React.ReactNode }) => {
               relative pl-8 pb-6 [counter-increment:step]
               before:content-[counter(step)] before:absolute before:left-0 before:flex
               before:items-center before:justify-center
-              before:w-6 before:h-6 before:rounded-sm
-              before:bg-primary-foreground 
               before:text-sm before:font-bold
               after:absolute after:top-10 after:bottom-0 after:left-3
               after:w-px after:bg-border
