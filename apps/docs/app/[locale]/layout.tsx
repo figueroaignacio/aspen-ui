@@ -5,7 +5,6 @@ import { Providers } from "@/components/providers";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/header";
 import { NextIntlClientProvider } from "next-intl";
-import { unstable_ViewTransition as ViewTransition } from "react";
 
 // Utils
 import { routing } from "@/i18n/routing";
@@ -59,20 +58,18 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={`relative ${fontSans.className}`}>
-        <ViewTransition>
-          <div className="lg:bg-dots absolute inset-0 -z-50"></div>
-          <Providers>
-            <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
-              <NextIntlClientProvider>
-                <Navbar />
-                <main className="w-full max-w-[1580px] mx-auto px-5 md:px-10 lg:px-20 overflow-x-hidden lg:overflow-x-visible">
-                  {children}
-                </main>
-                <Footer />
-              </NextIntlClientProvider>
-            </div>
-          </Providers>
-        </ViewTransition>
+        <div className="lg:bg-dots absolute inset-0 -z-50"></div>
+        <Providers>
+          <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
+            <NextIntlClientProvider>
+              <Navbar />
+              <main className="w-full max-w-[1580px] mx-auto px-5 md:px-10 lg:px-20 overflow-x-hidden lg:overflow-x-visible">
+                {children}
+              </main>
+              <Footer />
+            </NextIntlClientProvider>
+          </div>
+        </Providers>
       </body>
     </html>
   );
