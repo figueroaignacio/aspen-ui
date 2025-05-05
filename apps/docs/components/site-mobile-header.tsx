@@ -28,13 +28,13 @@ export function SiteMobileHeader({ navigation }: SiteMobileNavbarProps) {
   };
 
   return (
-    <div className="lg:hidden flex items-center relative justify-between w-full py-5">
+    <div className="lg:hidden flex items-center relative justify-between w-full py-5 z-50">
       <HamburgerMenuIcon
         className="h-6 w-6 cursor-pointer"
         onClick={toggleMenu}
       />
       <div
-        className={`fixed inset-0 w-full h-[100vh] backdrop-blur-sm bg-black/80 z-10 transition-opacity duration-300 ease-in-out ${
+        className={`fixed inset-0 w-full h-[100vh] bg-black/80 z-10 transition-opacity duration-300 ease-in-out ${
           isMenuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
