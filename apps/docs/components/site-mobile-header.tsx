@@ -1,7 +1,6 @@
 "use client";
 
 // Hooks
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 // Components
@@ -21,7 +20,6 @@ interface SiteMobileNavbarProps {
 
 export function SiteMobileHeader({ navigation }: SiteMobileNavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -58,21 +56,20 @@ export function SiteMobileHeader({ navigation }: SiteMobileNavbarProps) {
           </div>
         </div>
         <div className="space-y-6 px-5 py-4 overflow-y-scroll">
-          {navigation.map((section, index) => (
-            <div key={section.title} className={index !== 0 ? "pt-2" : ""}>
+          {navigation.map((section, sectionIndex) => (
+            <div
+              key={`section-${sectionIndex}`}
+              className={sectionIndex !== 0 ? "pt-2" : ""}
+            >
               <h2 className="mb-2 text-sm font-semibold tracking-tight">
                 {section.title}
               </h2>
               <ul>
-                {section.items.map((item) => (
+                {section.items.map((item, itemIndex) => (
                   <li
-                    key={item.href}
+                    key={`item-${sectionIndex}-${itemIndex}`}
                     onClick={toggleMenu}
-                    className={`mr-6 text-sm ${
-                      pathname === item.href
-                        ? "text-foreground"
-                        : "text-muted-foreground"
-                    }`}
+                    className={`mr-6 text-sm`}
                   >
                     <Link href={item.href} className="block py-2 text-sm">
                       {item.title}

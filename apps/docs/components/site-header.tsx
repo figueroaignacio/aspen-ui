@@ -30,9 +30,7 @@ export function SiteHeader({ navigation }: SiteNavbarProps) {
           <li key={index}>
             <Link
               href={navItem.url}
-              className={`mr-6 text-sm text-muted-foreground hover:text-foreground ${
-                pathname === `/${navItem.url}` ? "text-foreground" : ""
-              }`}
+              className={`mr-6 text-sm text-muted-foreground hover:text-foreground`}
             >
               {navItem.title}
             </Link>
