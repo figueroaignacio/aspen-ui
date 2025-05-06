@@ -2,11 +2,8 @@ import { Link } from "@/i18n/navigation";
 
 export function Logo() {
   return (
-    <Link
-      href="/"
-      className="flex items-center gap-1.5 px-3 py-1 rounded-xl transition-all duration-300 bg-secondary"
-    >
-      <span className="text-xl text-foreground">I7A/UI</span>
+    <Link href="/" className="gap-1.5 px-1 lg:px-2.5 py-1">
+      <span className="font-bold text-foreground">I7A/UI</span>
     </Link>
   );
 }
