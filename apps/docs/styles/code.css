@@ -9,7 +9,7 @@ html.dark[data-theme="light"] {
 }
 
 [data-rehype-pretty-code-figure] {
-  @apply bg-background border border-dotted py-0 rounded-xl my-3;
+  @apply bg-background py-0 rounded-xl my-3;
 }
 
 [data-rehype-pretty-code-figure] pre {

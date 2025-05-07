@@ -8,13 +8,13 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary text-white shadow-sm hover:bg-primary/90 hover:shadow-md hover:translate-y-[-1px] active:shadow-inner active:translate-y-[1px]",
+          "bg-primary text-white hover:bg-primary/90 hover:translate-y-[-1px] active:shadow-inner active:translate-y-[1px]",
         destructive:
-          "bg-destructive text-white shadow-sm hover:bg-destructive/90 hover:shadow-md hover:translate-y-[-1px] active:shadow-inner active:translate-y-[1px] focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40",
+          "bg-destructive text-white hover:bg-destructive/90 hover:shadow-md hover:translate-y-[-1px] active:shadow-inner active:translate-y-[1px] focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40",
         outline:
-          "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground hover:shadow-md hover:translate-y-[-1px] active:shadow-inner active:translate-y-[1px]",
+          "border border-input bg-background hover:bg-accent hover:text-accent-foreground hover:translate-y-[-1px] active:shadow-inner active:translate-y-[1px]",
         secondary:
-          "bg-secondary text-muted-secondary rounded-xl hover:bg-secondary/80 hover:shadow-md hover:translate-y-[-1px] active:shadow-inner active:translate-y-[1px]",
+          "bg-secondary text-muted-secondary rounded-xl hover:bg-secondary/80 hover:translate-y-[-1px] active:shadow-inner active:translate-y-[1px]",
         ghost:
           "hover:bg-accent hover:text-accent-foreground hover:translate-y-[-1px] active:shadow-inner active:translate-y-[1px]",
         link: "text-primary underline-offset-4 hover:underline hover:animate-pulse active:animate-heartBeat",
