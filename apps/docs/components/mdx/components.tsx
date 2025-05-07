@@ -22,6 +22,7 @@ import { Callout, CalloutDescription, CalloutTitle } from "./callout";
 import { CodeBlockWrapper } from "./code-block-wrapper";
 import { CodeBlock } from "./codeblock";
 import { ComponentPreview } from "./component-preview";
+import { LinkComponent } from "./link-component";
 import { Step, Steps } from "./steps";
 
 // Icons
@@ -47,6 +48,7 @@ export const mdxComponents = {
   Callout,
   CalloutTitle,
   CalloutDescription,
+  LinkComponent,
   Steps,
   Step,
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
