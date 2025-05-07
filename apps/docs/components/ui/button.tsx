@@ -8,7 +8,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-accent text-white shadow-sm hover:bg-primary/90 hover:shadow-md hover:translate-y-[-1px] active:shadow-inner active:translate-y-[1px]",
+          "bg-primary text-white shadow-sm hover:bg-primary/90 hover:shadow-md hover:translate-y-[-1px] active:shadow-inner active:translate-y-[1px]",
         destructive:
           "bg-destructive text-white shadow-sm hover:bg-destructive/90 hover:shadow-md hover:translate-y-[-1px] active:shadow-inner active:translate-y-[1px] focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40",
         outline:
