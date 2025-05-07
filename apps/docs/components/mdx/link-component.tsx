@@ -16,7 +16,7 @@ export function LinkComponent({
 }: LinkComponentProps) {
   return (
     <Link href={`/docs/components/${componentLink}`}>
-      <Card className="flex-col flex p-4 hover:brightness-150 hover:scale-[1.03] gap-y-6">
+      <Card className="flex-col flex p-4 hover:text-primary hover:scale-[1.02] gap-y-6">
         <div>
           <h6 className="text-lg font-semibold">{label}</h6>
           <span className="text-muted-foreground text-xs">{variants}</span>
