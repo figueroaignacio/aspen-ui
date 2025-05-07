@@ -194,7 +194,7 @@ export const mdxComponents = {
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={cn(
-        `relative rounded px-5 py-[0.2rem] ${fontSans.className}`,
+        `relative px-5 py-[0.2rem] ${fontSans.className}`,
         className
       )}
       {...props}
@@ -257,7 +257,7 @@ export const mdxComponents = {
   ),
   ComponentSource,
   CodeBlockWrapper: ({ ...props }) => (
-    <CodeBlockWrapper className="rounded-xl border" {...props} />
+    <CodeBlockWrapper children={undefined} className="" {...props} />
   ),
   Button,
 };

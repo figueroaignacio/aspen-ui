@@ -104,7 +104,7 @@
 }
 
 .highlighted-text {
-  @apply bg-purple-400 px-2 py-0.5 rounded-xl text-white;
+  @apply bg-purple-400 px-2 py-0.5 text-white;
 }
 
 .grid-main-container {
