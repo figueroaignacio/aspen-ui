@@ -2,42 +2,36 @@
 
 import * as React from "react";
 
-// Components
 import { Button } from "@/components/ui/button";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-
-// Utils
 import { cn } from "@/lib/utils";
 
 interface CodeBlockProps extends React.HTMLAttributes<HTMLDivElement> {
   expandButtonTitle?: string;
-  fileLocation?: string;
 }
 
 export function CodeBlockWrapper({
   expandButtonTitle = "View Code",
   className,
   children,
-  fileLocation,
   ...props
 }: CodeBlockProps) {
   const [isOpened, setIsOpened] = React.useState(false);
 
   return (
-    <Collapsible open={isOpened} onOpenChange={setIsOpened}>
-      {fileLocation ? <div className="py-3 text-sm">{fileLocation}</div> : null}
+    <Collapsible open={isOpened} onOpenChange={setIsOpened} className="mt-5">
       <div className={cn("relative overflow-hidden", className)} {...props}>
         <CollapsibleContent
           forceMount
-          className={cn("overflow-hidden border-none", !isOpened && "max-h-48")}
+          className={cn("overflow-hidden", !isOpened && "max-h-32")}
         >
           <div
             className={cn(
-              "[&_[data-rehype-pretty-code-figure]]:my-0 [&_pre]:max-h-[750px] [&_pre]:pb-[100px] rounded-lg",
+              "[&_[data-rehype-pretty-code-figure]]:my-0 [&_pre]:max-h-[650px] [&_pre]:pb-[100px]",
               !isOpened ? "[&_pre]:overflow-hidden" : "[&_pre]:overflow-auto]"
             )}
           >
@@ -46,17 +40,14 @@ export function CodeBlockWrapper({
         </CollapsibleContent>
         <div
           className={cn(
-            "absolute flex items-center justify-center p-2",
+            "absolute flex items-center justify-center",
             isOpened
-              ? "inset-x-0 bottom-0 h-12 mx-[2px] backdrop-blur-sm bg-black/10"
+              ? "inset-x-0 bottom-0 h-12 from-[#17191E] mx-[2px]"
               : "inset-0"
           )}
         >
-          {!isOpened && (
-            <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-black/10 via-black/5 to-transparent backdrop-blur-sm" />
-          )}
           <CollapsibleTrigger asChild>
-            <Button className="relative z-10">
+            <Button variant="default" className="h-8 text-xs">
               {isOpened ? "Collapse" : expandButtonTitle}
             </Button>
           </CollapsibleTrigger>
