@@ -17,11 +17,11 @@ interface TocEntry {
   title: string;
 }
 
-interface TocMobileProps {
+interface MobileTocProps {
   toc: TocEntry[];
 }
 
-export function TocMobile({ toc }: TocMobileProps) {
+export function MobileToc({ toc }: MobileTocProps) {
   const [open, setOpen] = React.useState(false);
   const t = useTranslations("components");
 
