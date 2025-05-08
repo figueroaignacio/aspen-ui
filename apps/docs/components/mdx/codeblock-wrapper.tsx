@@ -28,7 +28,7 @@ export function CodeBlockWrapper({
   const [isOpened, setIsOpened] = React.useState(false);
 
   return (
-    <Collapsible open={isOpened} onOpenChange={setIsOpened}>
+    <Collapsible open={isOpened} onOpenChange={setIsOpened} className="mt-5">
       <div className="overflow-hidden border rounded-md">
         <div className="flex items-center justify-between px-4 py-2 border-b">
           <div className="flex items-center gap-2 text-xs">
