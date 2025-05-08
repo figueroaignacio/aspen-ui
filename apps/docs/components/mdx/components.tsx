@@ -19,8 +19,8 @@ import {
   AccordionTrigger,
 } from "../ui/accordion";
 import { Callout, CalloutDescription, CalloutTitle } from "./callout";
-import { CodeBlockWrapper } from "./code-block-wrapper";
 import { CodeBlock } from "./codeblock";
+import { CodeBlockWrapper } from "./codeblock-wrapper";
 import { ComponentPreview } from "./component-preview";
 import { LinkComponent } from "./link-component";
 import { Step, Steps } from "./steps";

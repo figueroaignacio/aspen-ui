@@ -3,7 +3,7 @@
 import * as React from "react";
 
 // Components
-import { CodeBlockWrapper } from "./code-block-wrapper";
+import { CodeBlockWrapper } from "./codeblock-wrapper";
 
 // Utils
 import { cn } from "@/lib/utils";
