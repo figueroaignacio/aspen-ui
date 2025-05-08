@@ -1,5 +1,10 @@
 {
   "searcher": {
     "label": "Search"
+  },
+  "toc": {
+    "mobile": {
+      "label": "Table of Content"
+    }
   }
 }

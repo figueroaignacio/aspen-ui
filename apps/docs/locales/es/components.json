@@ -1,5 +1,10 @@
 {
   "searcher": {
     "label": "Buscar"
+  },
+  "toc": {
+    "mobile": {
+      "label": "Tabla de Contenido"
+    }
   }
 }
