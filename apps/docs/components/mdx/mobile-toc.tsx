@@ -6,10 +6,11 @@ import * as React from "react";
 import { useTranslations } from "next-intl";
 
 // Components
-import { Cross1Icon, ViewVerticalIcon } from "@radix-ui/react-icons";
+import { ViewVerticalIcon } from "@radix-ui/react-icons";
 
 // Utils
 import { cn } from "@/lib/utils";
+import { Drawer, DrawerContent, DrawerTrigger } from "../ui/drawer";
 
 interface TocEntry {
   items?: TocEntry[];
@@ -27,33 +28,15 @@ export function MobileToc({ toc }: MobileTocProps) {
 
   return (
     <div>
-      <button onClick={() => setOpen(true)} className="flex gap-x-2 mt-5">
-        <ViewVerticalIcon />
-        <span className="text-xs">{t("toc.mobile.label")}</span>
-      </button>
-
-      {open && (
-        <>
-          <div
-            className="fixed inset-0 backdrop-blur-md z-40"
-            onClick={() => setOpen(false)}
-          />
-
-          <div className="fixed bottom-0 left-0 right-0 z-50 animate-slide-up rounded-t-xl bg-background p-4 shadow-2xl border-t max-h-[70vh] overflow-y-auto">
-            <div className="flex justify-between items-center mb-2">
-              <span className="text-xs">{t("toc.mobil.label")}</span>
-              <button
-                onClick={() => setOpen(false)}
-                className="text-sm text-muted-foreground hover:underline"
-              >
-                <Cross1Icon />
-              </button>
-            </div>
-
-            <TreeMobile tree={toc} onLinkClick={() => setOpen(false)} />
-          </div>
-        </>
-      )}
+      <Drawer>
+        <DrawerTrigger className="flex space-x-3 mt-5">
+          <ViewVerticalIcon />
+          <span className="text-xs">{t("toc.mobile.label")}</span>
+        </DrawerTrigger>
+        <DrawerContent side="bottom" size="lg">
+          <TreeMobile tree={toc} onLinkClick={() => setOpen(false)} />
+        </DrawerContent>
+      </Drawer>
     </div>
   );
 }
