@@ -2,6 +2,7 @@
 
 import * as React from "react";
 
+// Components
 import { Button } from "@/components/ui/button";
 import {
   Collapsible,
@@ -14,7 +15,6 @@ interface CodeBlockWrapperProps extends React.HTMLAttributes<HTMLDivElement> {
   expandButtonTitle?: string;
   language?: string;
   fileName?: string;
-  children: React.ReactNode;
 }
 
 export function CodeBlockWrapper({

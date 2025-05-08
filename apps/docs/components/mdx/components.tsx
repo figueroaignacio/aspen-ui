@@ -256,8 +256,6 @@ export const mdxComponents = {
     />
   ),
   ComponentSource,
-  CodeBlockWrapper: ({ ...props }) => (
-    <CodeBlockWrapper children={undefined} className="" {...props} />
-  ),
+  CodeBlockWrapper: ({ ...props }) => <CodeBlockWrapper {...props} />,
   Button,
 };
