@@ -59,12 +59,11 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={`relative ${fontSans.className}`}>
-        <div className="lg:bg-dots absolute inset-0 -z-50"></div>
         <Providers>
           <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
             <NextIntlClientProvider>
               <Navbar />
-              <main className="w-full max-w-[1580px] mx-auto px-5 md:px-10 lg:px-20 overflow-x-hidden lg:overflow-x-visible">
+              <main className="w-full max-w-[1580px] mx-auto px-5 md:px-10 lg:px-20">
                 {children}
               </main>
               <Footer />

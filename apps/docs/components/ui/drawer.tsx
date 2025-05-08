@@ -54,7 +54,7 @@ export function DrawerOverlay({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity",
+        "fixed inset-0 z-50 bg-black/50 backdrop-blur-sm animate-in fade-in duration-300",
         className
       )}
       onClick={() => setOpen(false)}
@@ -64,14 +64,14 @@ export function DrawerOverlay({ className }: { className?: string }) {
 
 // Variants
 const drawerVariants = cva(
-  "fixed z-50 bg-background border shadow-xl transition-transform duration-300 ease-out overflow-auto",
+  "fixed z-50 bg-background border shadow-xl transition-transform overflow-auto",
   {
     variants: {
       side: {
-        bottom: "left-0 right-0 bottom-0 rounded-t-xl",
-        top: "left-0 right-0 top-0 rounded-b-xl",
-        left: "left-0 top-0 bottom-0 h-full rounded-r-xl",
-        right: "right-0 top-0 bottom-0 h-full rounded-l-xl",
+        bottom: "left-0 right-0 bottom-0 rounded-t-xl slide-in-from-bottom",
+        top: "left-0 right-0 top-0 rounded-b-xl slide-in-from-top",
+        left: "left-0 top-0 bottom-0 h-full rounded-r-xl slide-in-from-left",
+        right: "right-0 top-0 bottom-0 h-full rounded-l-xl slide-in-from-right",
       },
       size: {
         sm: "h-full w-1/4",
@@ -100,6 +100,7 @@ interface DrawerContentProps
   children: React.ReactNode;
 }
 
+// Content
 export function DrawerContent({
   children,
   className,
@@ -114,7 +115,14 @@ export function DrawerContent({
   return (
     <>
       <DrawerOverlay />
-      <div className={cn(drawerVariants({ side, size }), className)} {...props}>
+      <div
+        className={cn(
+          "animate-in duration-300 ease-out",
+          drawerVariants({ side, size }),
+          className
+        )}
+        {...props}
+      >
         <div className="flex justify-end p-2">
           <button
             onClick={() => setOpen(false)}
@@ -126,5 +134,14 @@ export function DrawerContent({
         <div className="p-4">{children}</div>
       </div>
     </>
+  );
+}
+
+export function DrawerClose({ children }: { children: React.ReactNode }) {
+  const { setOpen } = useDrawerContext();
+  return (
+    <div className="w-full" onClick={() => setOpen(false)}>
+      {children}
+    </div>
   );
 }
