@@ -31,9 +31,9 @@ export function CodeBlockWrapper({
     <Collapsible open={isOpened} onOpenChange={setIsOpened}>
       <div className="overflow-hidden border rounded-md">
         <div className="flex items-center justify-between px-4 py-2 border-b">
-          <div className="flex items-center gap-2 text-xs text-muted-foreground">
-            {fileName && <span className="font-medium">{fileName}</span>}
-            {language && <span className="opacity-70">{language}</span>}
+          <div className="flex items-center gap-2 text-xs">
+            {fileName && <span className="">{fileName}</span>}
+            {language && <span className="">{language}</span>}
           </div>
 
           <CollapsibleTrigger asChild>
@@ -61,9 +61,7 @@ export function CodeBlockWrapper({
               {children}
             </div>
           </CollapsibleContent>
-          {!isOpened && (
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-          )}
+          {!isOpened && <div className="absolute inset-0" />}
         </div>
       </div>
     </Collapsible>
