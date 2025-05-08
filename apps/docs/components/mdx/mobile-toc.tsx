@@ -29,7 +29,7 @@ export function MobileToc({ toc }: MobileTocProps) {
     <div>
       <button onClick={() => setOpen(true)} className="flex gap-x-2 mt-5">
         <ViewVerticalIcon />
-        <span className="text-xs">{t("toc.mobil.label")}</span>
+        <span className="text-xs">{t("toc.mobile.label")}</span>
       </button>
 
       {open && (
