@@ -25,7 +25,7 @@ html.dark[data-theme="light"] {
 [data-rehype-pretty-code-figure] code > [data-line]::before {
   counter-increment: line;
   content: counter(line);
-  @apply mr-4 inline-block w-4 text-right text-gray-500;
+  @apply mr-4 inline-block w-4;
 }
 
 [data-rehype-pretty-code-figure] code[data-line-numbers] {
