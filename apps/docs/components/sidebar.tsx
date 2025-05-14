@@ -19,7 +19,7 @@ export function Sidebar() {
   const docsNavigation = t.raw('docsNavigation');
 
   return (
-    <aside className="h-[calc(100vh-5rem)] hidden lg:block">
+    <aside className="hidden h-[calc(100vh-5rem)] lg:block">
       <nav>
         {docsNavigation.map((section: DocSection, index: number) => (
           <div key={section.title} className={cn('pb-4', index !== 0 && 'pt-4')}>
@@ -29,7 +29,7 @@ export function Sidebar() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={`block rounded-xl py-2 text-sm hover:bg-secondary hover:text-primary transition-all duration-150 px-3 ${
+                    className={`hover:bg-secondary hover:text-primary block rounded-xl px-3 py-2 text-sm transition-all duration-150 ${
                       pathname === item.href ? 'bg-secondary text-primary' : ''
                     }`}
                   >

@@ -21,8 +21,8 @@ export function SiteHeader({ navigation }: SiteNavbarProps) {
   const pathname = usePathname();
 
   return (
-    <nav className="hidden lg:flex items-center justify-between w-full">
-      <ul className="flex items-center  py-4">
+    <nav className="hidden w-full items-center justify-between lg:flex">
+      <ul className="flex items-center py-4">
         <li className="mr-6">
           <Logo />
         </li>
@@ -30,7 +30,7 @@ export function SiteHeader({ navigation }: SiteNavbarProps) {
           <li key={index}>
             <Link
               href={navItem.url}
-              className={`mr-6 text-sm text-muted-foreground hover:text-foreground`}
+              className={`text-muted-foreground hover:text-foreground mr-6 text-sm`}
             >
               {navItem.title}
             </Link>

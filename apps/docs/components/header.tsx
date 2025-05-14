@@ -10,7 +10,7 @@ export function Navbar() {
   const docsNavigation = t.raw('ui.docsNavigation');
 
   return (
-    <header className="flex border-b px-5 md:px-10 lg:px-20 justify-between items-center sticky top-0 left-0 backdrop-blur-xl z-50 max-w-[1580px] mx-auto w-full">
+    <header className="sticky top-0 left-0 z-50 mx-auto flex w-full max-w-[1580px] items-center justify-between border-b px-5 backdrop-blur-xl md:px-10 lg:px-20">
       <SiteHeader navigation={navigation} />
       <SiteMobileHeader navigation={docsNavigation} />
     </header>

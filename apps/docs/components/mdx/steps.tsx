@@ -11,7 +11,7 @@ export const Step = ({ children, className }: StepProps) => {
 
 export const Steps = ({ children }: { children: React.ReactNode }) => {
   return (
-    <ol className="space-y-6 [counter-reset:step] mt-5">
+    <ol className="mt-5 space-y-6 [counter-reset:step]">
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child) && child.type === Step) {
           return React.cloneElement(child as React.ReactElement<StepProps>, {

@@ -117,24 +117,24 @@ export function Searcher() {
           <MagnifyingGlassIcon className="h-4 w-4" />
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-sm sm:max-w-lg rounded-xl">
+      <DialogContent className="max-w-sm rounded-xl sm:max-w-lg">
         <DialogHeader>
           <DialogTitle>I7A/UI docs</DialogTitle>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <div className="relative">
-            <MagnifyingGlassIcon className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
+            <MagnifyingGlassIcon className="text-muted-foreground absolute top-2.5 left-2 h-4 w-4" />
             <input
               ref={inputRef}
               type="text"
               placeholder="Type a command or search..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full rounded-xl border bg-background px-9 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              className="bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring w-full rounded-xl border px-9 py-2 text-sm focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             />
             {searchQuery && (
               <Cross2Icon
-                className="absolute right-2 top-2.5 h-4 w-4 text-muted-foreground cursor-pointer hover:text-foreground"
+                className="text-muted-foreground hover:text-foreground absolute top-2.5 right-2 h-4 w-4 cursor-pointer"
                 onClick={() => setSearchQuery('')}
               />
             )}
@@ -142,18 +142,18 @@ export function Searcher() {
 
           {searchResults.length > 0 ? (
             <div className="my-4 max-h-64 overflow-hidden">
-              <ul className="overflow-y-auto max-h-96 space-y-1 pr-2">
+              <ul className="max-h-96 space-y-1 overflow-y-auto pr-2">
                 {searchResults.map((item) => (
                   <li
                     key={item.href}
-                    className="py-2 px-3 hover:bg-primary rounded-sm text-foreground active:scale-95 transition-transform duration-200 ring-primary ring-offset-background text-sm"
+                    className="hover:bg-primary text-foreground ring-primary ring-offset-background rounded-sm px-3 py-2 text-sm transition-transform duration-200 active:scale-95"
                   >
-                    <DialogClose className="w-full h-full">
+                    <DialogClose className="h-full w-full">
                       <Link href={item.href} className="flex items-center gap-x-4">
                         {getCategoryIcon(item.category)}
-                        <div className="flex justify-between items-center w-full">
+                        <div className="flex w-full items-center justify-between">
                           <div className="text-sm">{item.title}</div>
-                          <div className="text-xs text-muted-foreground">{item.category}</div>
+                          <div className="text-muted-foreground text-xs">{item.category}</div>
                         </div>
                       </Link>
                     </DialogClose>
@@ -162,20 +162,20 @@ export function Searcher() {
               </ul>
             </div>
           ) : searchQuery ? (
-            <div className="text-center py-8 text-muted-foreground">No results found.</div>
+            <div className="text-muted-foreground py-8 text-center">No results found.</div>
           ) : (
             <div className="max-h-64 overflow-hidden">
-              <div className="overflow-y-auto max-h-64 pr-2">
+              <div className="max-h-64 overflow-y-auto pr-2">
                 {docsNavigation.map((section) => (
                   <div key={section.title}>
-                    <h2 className="text-xs text-muted-foreground my-4">{section.title}</h2>
+                    <h2 className="text-muted-foreground my-4 text-xs">{section.title}</h2>
                     <ul className="space-y-3">
                       {section.items.map((item) => (
                         <li
                           key={item.href}
-                          className="py-2 px-3 hover:bg-secondary rounded-xl text-foreground active:scale-95 transition-transform duration-200 ring-primary ring-offset-background text-sm"
+                          className="hover:bg-secondary text-foreground ring-primary ring-offset-background rounded-xl px-3 py-2 text-sm transition-transform duration-200 active:scale-95"
                         >
-                          <DialogClose className="w-full h-full">
+                          <DialogClose className="h-full w-full">
                             <Link href={item.href} className="flex items-center gap-x-4">
                               {getCategoryIcon(section.title)}
                               {item.title}

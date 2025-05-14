@@ -34,7 +34,7 @@ function DropdownMenu({ children, className }: { children: React.ReactNode; clas
   );
 
   return (
-    <div className={cn('relative inline-block text-left dropdown-menu', className)}>{items}</div>
+    <div className={cn('dropdown-menu relative inline-block text-left', className)}>{items}</div>
   );
 }
 
@@ -63,7 +63,7 @@ function DropdownMenuTrigger({
     >
       {children}
       <svg
-        className="ml-2 h-5 w-5 transition-transform transform"
+        className="ml-2 h-5 w-5 transform transition-transform"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
@@ -93,7 +93,7 @@ function DropdownMenuContent({
       <div
         id="dropdown-menu-content"
         className={cn(
-          'absolute mt-2 w-full rounded-xl bg-card shadow-lg z-10 border border-border px-2',
+          'bg-card border-border absolute z-10 mt-2 w-full rounded-xl border px-2 shadow-lg',
           className,
         )}
         role="menu"
@@ -124,7 +124,7 @@ function DropdownMenuItem({
         closeMenu?.();
       }}
       className={cn(
-        'cursor-pointer block px-4 py-2 text-sm rounded-xl text-foreground hover:bg-accent',
+        'text-foreground hover:bg-accent block cursor-pointer rounded-xl px-4 py-2 text-sm',
         className,
       )}
       role="menuitem"

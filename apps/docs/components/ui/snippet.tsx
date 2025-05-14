@@ -1,7 +1,7 @@
 export function Snippet({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex items-center min-h-[100px]">
-      <div className="bg-primary-foreground px-6 py-3 w-full rounded-xl">{children}</div>
+    <div className="flex min-h-[100px] items-center">
+      <div className="bg-primary-foreground w-full rounded-xl px-6 py-3">{children}</div>
     </div>
   );
 }

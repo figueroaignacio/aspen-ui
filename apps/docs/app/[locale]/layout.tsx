@@ -57,10 +57,10 @@ export default async function RootLayout({ params, children }: LocaleLayoutProps
     <html lang={locale} suppressHydrationWarning>
       <body className={`relative ${fontSans.className}`}>
         <Providers>
-          <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
+          <div className="grid min-h-[100dvh] grid-rows-[auto_1fr_auto]">
             <NextIntlClientProvider>
               <Navbar />
-              <main className="w-full max-w-[1580px] mx-auto px-5 md:px-10 lg:px-20">
+              <main className="mx-auto w-full max-w-[1580px] px-5 md:px-10 lg:px-20">
                 {children}
               </main>
               <Footer />

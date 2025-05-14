@@ -52,7 +52,7 @@ export const CopyButton = ({ children }: { children: React.ReactNode }) => {
       {isCopied ? (
         <CheckIcon className="size-4 text-white" />
       ) : (
-        <ClipboardIcon className="size-4 text-foreground" />
+        <ClipboardIcon className="text-foreground size-4" />
       )}
     </Button>
   );

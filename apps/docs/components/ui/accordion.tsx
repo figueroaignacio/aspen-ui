@@ -22,8 +22,8 @@ function Accordion({ type = 'single', defaultValue, children, className, ref }: 
           ? []
           : [value]
         : prev.includes(value)
-        ? prev.filter((item) => item !== value)
-        : [...prev, value],
+          ? prev.filter((item) => item !== value)
+          : [...prev, value],
     );
   };
 
@@ -99,7 +99,7 @@ function AccordionTrigger({ children, isOpen, onToggle, className, ref }: Accord
         strokeLinecap="round"
         strokeLinejoin="round"
         className={cn(
-          'h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200',
+          'text-muted-foreground h-4 w-4 shrink-0 transition-transform duration-200',
           isOpen && 'rotate-180',
         )}
       >
@@ -126,7 +126,7 @@ function AccordionContent({ children, isOpen, className, ref }: AccordionContent
         className,
       )}
     >
-      <div className="pb-4 pt-0">{children}</div>
+      <div className="pt-0 pb-4">{children}</div>
     </div>
   );
 }

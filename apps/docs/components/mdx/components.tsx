@@ -90,7 +90,7 @@ export const mdxComponents = {
   ),
   a: ({ className, ...props }: React.HTMLAttributes<HTMLAnchorElement>) => (
     <a
-      className={cn('font-medium text-primary underline underline-offset-4', className)}
+      className={cn('text-primary font-medium underline underline-offset-4', className)}
       {...props}
     />
   ),
@@ -109,12 +109,12 @@ export const mdxComponents = {
   blockquote: ({ className, ...props }: React.HTMLAttributes<HTMLQuoteElement>) => (
     <blockquote
       className={cn(
-        'border p-2 rounded-lg [&>*]:text-foreground/70 [&>*]:dark:text-muted-foreground text-sm flex gap-2',
+        '[&>*]:text-foreground/70 [&>*]:dark:text-muted-foreground flex gap-2 rounded-lg border p-2 text-sm',
         className,
       )}
       {...props}
     >
-      <div className="flex-shrink-0 mt-1">
+      <div className="mt-1 flex-shrink-0">
         <ExclamationTriangleIcon className="fill-blue-500 stroke-zinc-100 dark:stroke-zinc-800" />
       </div>
       <div>{props.children}</div>
@@ -131,7 +131,7 @@ export const mdxComponents = {
     </div>
   ),
   tr: ({ className, ...props }: React.HTMLAttributes<HTMLTableRowElement>) => (
-    <tr className={cn('m-0 border-t p-0 even:bg-muted', className)} {...props} />
+    <tr className={cn('even:bg-muted m-0 border-t p-0', className)} {...props} />
   ),
   th: ({ className, ...props }: React.HTMLAttributes<HTMLTableHeaderCellElement>) => (
     <th
@@ -168,7 +168,7 @@ export const mdxComponents = {
   TabsTrigger: ({ className, ...props }: React.ComponentProps<typeof TabsTrigger>) => (
     <TabsTrigger
       className={cn(
-        'relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:bg-transparent data-[state=active]:text-foreground data-[state=active]:shadow-none',
+        'text-muted-foreground data-[state=active]:border-b-primary data-[state=active]:text-foreground relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pt-2 pb-3 font-semibold shadow-none transition-none data-[state=active]:bg-transparent data-[state=active]:shadow-none',
         className,
       )}
       {...props}
@@ -189,7 +189,7 @@ export const mdxComponents = {
   LinkedCard: ({ className, ...props }: React.ComponentProps<typeof Link>) => (
     <Link
       className={cn(
-        'flex w-full flex-col items-center rounded-xl border bg-card p-6 text-card-foreground shadow transition-colors hover:bg-muted/50 sm:p-10',
+        'bg-card text-card-foreground hover:bg-muted/50 flex w-full flex-col items-center rounded-xl border p-6 shadow transition-colors sm:p-10',
         className,
       )}
       {...props}

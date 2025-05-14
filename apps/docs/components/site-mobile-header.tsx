@@ -26,16 +26,16 @@ export function SiteMobileHeader({ navigation }: SiteMobileNavbarProps) {
   };
 
   return (
-    <div className="lg:hidden flex items-center relative justify-between w-full py-5 z-50">
+    <div className="relative z-50 flex w-full items-center justify-between py-5 lg:hidden">
       <HamburgerMenuIcon className="h-6 w-6 cursor-pointer" onClick={toggleMenu} />
       <div
-        className={`fixed inset-0 w-full h-[100vh] bg-black/80 z-10 transition-opacity duration-300 ease-in-out ${
-          isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        className={`fixed inset-0 z-10 h-[100vh] w-full bg-black/80 transition-opacity duration-300 ease-in-out ${
+          isMenuOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
         }`}
         onClick={toggleMenu}
       ></div>
       <nav
-        className={`fixed top-0 left-0 h-screen w-64 z-20 bg-background transition-transform duration-300 ease-in-out border-r ${
+        className={`bg-background fixed top-0 left-0 z-20 h-screen w-64 border-r transition-transform duration-300 ease-in-out ${
           isMenuOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
@@ -47,7 +47,7 @@ export function SiteMobileHeader({ navigation }: SiteMobileNavbarProps) {
             <Cross1Icon className="size-8 cursor-pointer" onClick={toggleMenu} />
           </div>
         </div>
-        <div className="space-y-6 px-5 py-4 overflow-y-scroll">
+        <div className="space-y-6 overflow-y-scroll px-5 py-4">
           {navigation.map((section, sectionIndex) => (
             <div key={`section-${sectionIndex}`} className={sectionIndex !== 0 ? 'pt-2' : ''}>
               <h2 className="mb-2 text-sm font-semibold tracking-tight">{section.title}</h2>

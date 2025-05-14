@@ -29,7 +29,7 @@ export function MobileToc({ toc }: MobileTocProps) {
   return (
     <div>
       <Drawer>
-        <DrawerTrigger className="flex space-x-3 mt-5">
+        <DrawerTrigger className="mt-5 flex space-x-3">
           <ViewVerticalIcon />
           <span className="text-xs">{t('toc.mobile.label')}</span>
         </DrawerTrigger>
@@ -53,11 +53,11 @@ function TreeMobile({
   return tree.length && level < 3 ? (
     <ul className={cn('list-none', { 'pl-4': level !== 1 })}>
       {tree.map((item, index) => (
-        <li key={index} className="mb-5 mt-5">
+        <li key={index} className="mt-5 mb-5">
           <a
             href={item.url}
             onClick={onLinkClick}
-            className="block text-sm text-muted-foreground hover:underline hover:text-foreground transition"
+            className="text-muted-foreground hover:text-foreground block text-sm transition hover:underline"
           >
             {item.title}
           </a>
