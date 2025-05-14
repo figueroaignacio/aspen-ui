@@ -1,22 +1,22 @@
 // Components
-import { MDXContentRenderer } from "@/components/mdx/mdx-content-renderer";
-import { MobileToc } from "@/components/mdx/mobile-toc";
-import { Toc } from "@/components/mdx/toc";
-import { Sidebar } from "@/components/sidebar";
-import Balancer from "react-wrap-balancer";
+import { MDXContentRenderer } from '@/components/mdx/mdx-content-renderer';
+import { MobileToc } from '@/components/mdx/mobile-toc';
+import { Toc } from '@/components/mdx/toc';
+import { Sidebar } from '@/components/sidebar';
+import Balancer from 'react-wrap-balancer';
 
 // Content
-import { docs } from "@content";
+import { docs } from '@content';
 
 // Utils
-import { notFound } from "next/navigation";
+import { notFound } from 'next/navigation';
 
 // Metadata
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 
 enum Locale {
-  EN = "en",
-  ES = "es",
+  EN = 'en',
+  ES = 'es',
 }
 
 type DocPageProps = {
@@ -26,12 +26,10 @@ type DocPageProps = {
 
 async function getDocFromParams({ params }: { params: Promise<DocPageProps> }) {
   const parameters = await params;
-  const slug = parameters.slug?.join("/") || "";
-  const locale = parameters.locale || "en";
+  const slug = parameters.slug?.join('/') || '';
+  const locale = parameters.locale || 'en';
 
-  const doc = docs.find(
-    (doc) => doc.slugAsParams === slug && doc.locale === locale
-  );
+  const doc = docs.find((doc) => doc.slugAsParams === slug && doc.locale === locale);
 
   return doc || null;
 }
@@ -55,15 +53,11 @@ export async function generateMetadata({
 
 export async function generateStaticParams(): Promise<{ slug: string[] }[]> {
   return docs.map((doc) => ({
-    slug: doc.slugAsParams.split("/"),
+    slug: doc.slugAsParams.split('/'),
   }));
 }
 
-export default async function DocPage({
-  params,
-}: {
-  params: Promise<DocPageProps>;
-}) {
+export default async function DocPage({ params }: { params: Promise<DocPageProps> }) {
   const doc = await getDocFromParams({ params });
 
   if (!doc || !doc.published) {
@@ -82,9 +76,7 @@ export default async function DocPage({
         <main className="min-w-0 py-6 relative ">
           <div className="mx-auto md:px-4 lg:px-0">
             <div className="space-y-2">
-              <h1 className="scroll-m-20 text-2xl font-bold tracking-tight">
-                {doc.title}
-              </h1>
+              <h1 className="scroll-m-20 text-2xl font-bold tracking-tight">{doc.title}</h1>
               {doc.description && (
                 <p className="text-muted-foreground">
                   <Balancer>{doc.description}</Balancer>

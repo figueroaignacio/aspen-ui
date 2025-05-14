@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import * as React from "react";
+import * as React from 'react';
 
 // Hooks
-import { useTranslations } from "next-intl";
+import { useTranslations } from 'next-intl';
 
 // Components
-import { ViewVerticalIcon } from "@radix-ui/react-icons";
+import { ViewVerticalIcon } from '@radix-ui/react-icons';
 
 // Utils
-import { cn } from "@/lib/utils";
-import { Drawer, DrawerContent, DrawerTrigger } from "../ui/drawer";
+import { cn } from '@/lib/utils';
+import { Drawer, DrawerContent, DrawerTrigger } from '../ui/drawer';
 
 interface TocEntry {
   items?: TocEntry[];
@@ -24,14 +24,14 @@ interface MobileTocProps {
 
 export function MobileToc({ toc }: MobileTocProps) {
   const [open, setOpen] = React.useState(false);
-  const t = useTranslations("components");
+  const t = useTranslations('components');
 
   return (
     <div>
       <Drawer>
         <DrawerTrigger className="flex space-x-3 mt-5">
           <ViewVerticalIcon />
-          <span className="text-xs">{t("toc.mobile.label")}</span>
+          <span className="text-xs">{t('toc.mobile.label')}</span>
         </DrawerTrigger>
         <DrawerContent side="bottom" size="lg">
           <TreeMobile tree={toc} onLinkClick={() => setOpen(false)} />
@@ -51,7 +51,7 @@ function TreeMobile({
   onLinkClick?: () => void;
 }) {
   return tree.length && level < 3 ? (
-    <ul className={cn("list-none", { "pl-4": level !== 1 })}>
+    <ul className={cn('list-none', { 'pl-4': level !== 1 })}>
       {tree.map((item, index) => (
         <li key={index} className="mb-5 mt-5">
           <a
@@ -62,11 +62,7 @@ function TreeMobile({
             {item.title}
           </a>
           {item.items?.length ? (
-            <TreeMobile
-              tree={item.items}
-              level={level + 1}
-              onLinkClick={onLinkClick}
-            />
+            <TreeMobile tree={item.items} level={level + 1} onLinkClick={onLinkClick} />
           ) : null}
         </li>
       ))}

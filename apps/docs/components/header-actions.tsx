@@ -1,7 +1,7 @@
 // Components
-import { LocaleSwitcher } from "./locale-switcher";
-import { Searcher } from "./searcher";
-import { ToggleTheme } from "./toggle-theme";
+import { LocaleSwitcher } from './locale-switcher';
+import { Searcher } from './searcher';
+import { ToggleTheme } from './toggle-theme';
 
 export function HeaderActions() {
   return (

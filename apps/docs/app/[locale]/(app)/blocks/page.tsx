@@ -1,5 +1,5 @@
 // Icons
-import { CodeIcon } from "@radix-ui/react-icons";
+import { CodeIcon } from '@radix-ui/react-icons';
 
 export default function BlocksPage() {
   return (

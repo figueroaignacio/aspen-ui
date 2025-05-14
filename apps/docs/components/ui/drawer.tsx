@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { cn } from "@/lib/utils";
-import { Cross1Icon } from "@radix-ui/react-icons";
-import { cva, type VariantProps } from "class-variance-authority";
-import * as React from "react";
+import { cn } from '@/lib/utils';
+import { Cross1Icon } from '@radix-ui/react-icons';
+import { cva, type VariantProps } from 'class-variance-authority';
+import * as React from 'react';
 
 // Context
 type DrawerContextProps = {
@@ -11,25 +11,18 @@ type DrawerContextProps = {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const DrawerContext = React.createContext<DrawerContextProps | undefined>(
-  undefined
-);
+const DrawerContext = React.createContext<DrawerContextProps | undefined>(undefined);
 
 function useDrawerContext() {
   const context = React.useContext(DrawerContext);
-  if (!context)
-    throw new Error("Drawer components must be used within <Drawer>");
+  if (!context) throw new Error('Drawer components must be used within <Drawer>');
   return context;
 }
 
 // Root
 export function Drawer({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = React.useState(false);
-  return (
-    <DrawerContext.Provider value={{ open, setOpen }}>
-      {children}
-    </DrawerContext.Provider>
-  );
+  return <DrawerContext.Provider value={{ open, setOpen }}>{children}</DrawerContext.Provider>;
 }
 
 // Trigger
@@ -54,8 +47,8 @@ export function DrawerOverlay({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "fixed inset-0 z-50 bg-black/50 backdrop-blur-sm animate-in fade-in duration-300",
-        className
+        'fixed inset-0 z-50 bg-black/50 backdrop-blur-sm animate-in fade-in duration-300',
+        className,
       )}
       onClick={() => setOpen(false)}
     />
@@ -64,33 +57,33 @@ export function DrawerOverlay({ className }: { className?: string }) {
 
 // Variants
 const drawerVariants = cva(
-  "fixed z-50 bg-background border shadow-xl transition-transform overflow-auto",
+  'fixed z-50 bg-background border shadow-xl transition-transform overflow-auto',
   {
     variants: {
       side: {
-        bottom: "left-0 right-0 bottom-0 rounded-t-xl slide-in-from-bottom",
-        top: "left-0 right-0 top-0 rounded-b-xl slide-in-from-top",
-        left: "left-0 top-0 bottom-0 h-full rounded-r-xl slide-in-from-left",
-        right: "right-0 top-0 bottom-0 h-full rounded-l-xl slide-in-from-right",
+        bottom: 'left-0 right-0 bottom-0 rounded-t-xl slide-in-from-bottom',
+        top: 'left-0 right-0 top-0 rounded-b-xl slide-in-from-top',
+        left: 'left-0 top-0 bottom-0 h-full rounded-r-xl slide-in-from-left',
+        right: 'right-0 top-0 bottom-0 h-full rounded-l-xl slide-in-from-right',
       },
       size: {
-        sm: "h-full w-1/4",
-        md: "h-full w-1/2",
-        lg: "h-full w-3/4",
-        full: "h-full w-full",
+        sm: 'h-full w-1/4',
+        md: 'h-full w-1/2',
+        lg: 'h-full w-3/4',
+        full: 'h-full w-full',
       },
     },
     compoundVariants: [
-      { side: "top", size: "md", class: "h-1/2 w-full" },
-      { side: "bottom", size: "lg", class: "h-3/4 w-full" },
-      { side: "left", size: "md", class: "w-1/2 h-full" },
-      { side: "right", size: "sm", class: "w-1/4 h-full" },
+      { side: 'top', size: 'md', class: 'h-1/2 w-full' },
+      { side: 'bottom', size: 'lg', class: 'h-3/4 w-full' },
+      { side: 'left', size: 'md', class: 'w-1/2 h-full' },
+      { side: 'right', size: 'sm', class: 'w-1/4 h-full' },
     ],
     defaultVariants: {
-      side: "bottom",
-      size: "md",
+      side: 'bottom',
+      size: 'md',
     },
-  }
+  },
 );
 
 // Content
@@ -101,13 +94,7 @@ interface DrawerContentProps
 }
 
 // Content
-export function DrawerContent({
-  children,
-  className,
-  side,
-  size,
-  ...props
-}: DrawerContentProps) {
+export function DrawerContent({ children, className, side, size, ...props }: DrawerContentProps) {
   const { open, setOpen } = useDrawerContext();
 
   if (!open) return null;
@@ -117,9 +104,9 @@ export function DrawerContent({
       <DrawerOverlay />
       <div
         className={cn(
-          "animate-in duration-300 ease-out",
+          'animate-in duration-300 ease-out',
           drawerVariants({ side, size }),
-          className
+          className,
         )}
         {...props}
       >

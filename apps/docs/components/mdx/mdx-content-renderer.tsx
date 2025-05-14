@@ -1,6 +1,6 @@
-import "katex/dist/katex.min.css";
-import * as runtime from "react/jsx-runtime";
-import { mdxComponents } from "./components";
+import 'katex/dist/katex.min.css';
+import * as runtime from 'react/jsx-runtime';
+import { mdxComponents } from './components';
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);

@@ -1,24 +1,24 @@
-"use client";
+'use client';
 
 // Hooks
-import { usePathname, useRouter } from "@/i18n/navigation";
-import { useLocale } from "next-intl";
-import { useTransition } from "react";
+import { usePathname, useRouter } from '@/i18n/navigation';
+import { useLocale } from 'next-intl';
+import { useTransition } from 'react';
 
 // Components
-import { GlobeIcon } from "@radix-ui/react-icons";
+import { GlobeIcon } from '@radix-ui/react-icons';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
+} from './ui/dropdown-menu';
 
 // Config
-import { locales } from "@/i18n/routing";
+import { locales } from '@/i18n/routing';
 
 // Types
-import { Locale } from "next-intl";
+import { Locale } from 'next-intl';
 
 export function LocaleSwitcher() {
   const router = useRouter();
@@ -45,7 +45,7 @@ export function LocaleSwitcher() {
             key={localeOption}
             onClick={() => onLocaleChange(localeOption)}
             className={`flex items-center justify-between ${
-              locale === localeOption ? "text-accent-foreground" : ""
+              locale === localeOption ? 'text-accent-foreground' : ''
             }`}
           >
             {localeOption.toUpperCase()}

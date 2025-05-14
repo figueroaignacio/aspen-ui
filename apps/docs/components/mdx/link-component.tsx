@@ -1,7 +1,7 @@
 // Components
-import { Link } from "@/i18n/navigation";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
-import { Card } from "../ui/card";
+import { Link } from '@/i18n/navigation';
+import { ArrowRightIcon } from '@radix-ui/react-icons';
+import { Card } from '../ui/card';
 
 interface LinkComponentProps {
   label: string;
@@ -9,11 +9,7 @@ interface LinkComponentProps {
   variants?: string;
 }
 
-export function LinkComponent({
-  componentLink,
-  label,
-  variants,
-}: LinkComponentProps) {
+export function LinkComponent({ componentLink, label, variants }: LinkComponentProps) {
   return (
     <Link href={`/docs/components/${componentLink}`}>
       <Card className="flex-col flex p-4 hover:scale-[1.02] gap-y-6 hover:bg-accent">

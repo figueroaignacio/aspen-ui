@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
 // Hooks
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 // Components
-import { Button } from "../ui/button";
+import { Button } from '../ui/button';
 
 // Icons
-import { CheckIcon, ClipboardIcon } from "@radix-ui/react-icons";
+import { CheckIcon, ClipboardIcon } from '@radix-ui/react-icons';
 
 export const CopyButton = ({ children }: { children: React.ReactNode }) => {
   const [isCopied, setIsCopied] = useState(false);
@@ -23,22 +23,22 @@ export const CopyButton = ({ children }: { children: React.ReactNode }) => {
   };
 
   const extractSourceCode = (node: React.ReactNode): string => {
-    if (typeof node === "string") {
+    if (typeof node === 'string') {
       return node;
     }
     if (Array.isArray(node)) {
-      return node.map(extractSourceCode).join("");
+      return node.map(extractSourceCode).join('');
     }
     if (React.isValidElement(node)) {
       const { props } = node;
       const children = React.Children.map(
         // @ts-ignore
         props.children,
-        extractSourceCode
-      )?.join("");
+        extractSourceCode,
+      )?.join('');
       return `${children}`;
     }
-    return "";
+    return '';
   };
 
   return (

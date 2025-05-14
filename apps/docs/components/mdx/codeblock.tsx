@@ -1,8 +1,8 @@
 // Components
-import { CopyButton } from "./copy-button";
+import { CopyButton } from './copy-button';
 
 // Utils
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
 export const CodeBlock = ({
   children,
@@ -15,10 +15,7 @@ export const CodeBlock = ({
         <CopyButton>{children}</CopyButton>
       </div>
       <div className="w-full p-[2px]">
-        <pre
-          className={cn("overflow-x-auto rounded-xl font-mono", className)}
-          {...props}
-        >
+        <pre className={cn('overflow-x-auto rounded-xl font-mono', className)} {...props}>
           <code>{children}</code>
         </pre>
       </div>

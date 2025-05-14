@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
 // Hooks
-import { usePathname } from "@/i18n/navigation";
+import { usePathname } from '@/i18n/navigation';
 
 // Components
-import { Link } from "@/i18n/navigation";
-import { HeaderActions } from "./header-actions";
-import { Logo } from "./logo";
+import { Link } from '@/i18n/navigation';
+import { HeaderActions } from './header-actions';
+import { Logo } from './logo';
 
 interface NavigationProps {
   url: string;

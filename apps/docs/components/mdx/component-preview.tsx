@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
-import type React from "react";
+import { cn } from '@/lib/utils';
+import type React from 'react';
 
 interface ComponentPreviewProps {
   children: React.ReactNode;
@@ -7,11 +7,7 @@ interface ComponentPreviewProps {
   title?: string;
 }
 
-export function ComponentPreview({
-  children,
-  className,
-  title,
-}: ComponentPreviewProps) {
+export function ComponentPreview({ children, className, title }: ComponentPreviewProps) {
   return (
     <div className="my-6 w-full overflow-hidden border rounded-lg">
       <div className="flex items-center px-3 py-2 bg-gradient-to-b border-b">
@@ -30,8 +26,8 @@ export function ComponentPreview({
 
       <div
         className={cn(
-          "flex justify-center items-center p-6 md:p-10 min-h-[40dvh] h-auto relative overflow-hidden",
-          className
+          'flex justify-center items-center p-6 md:p-10 min-h-[40dvh] h-auto relative overflow-hidden',
+          className,
         )}
       >
         <div>{children}</div>

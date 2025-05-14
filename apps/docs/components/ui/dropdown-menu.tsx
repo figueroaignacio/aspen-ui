@@ -1,17 +1,11 @@
-"use client";
+'use client';
 
-import { cn } from "@/lib/utils";
-import * as React from "react";
-import { Button } from "./button";
+import { cn } from '@/lib/utils';
+import * as React from 'react';
+import { Button } from './button';
 
 // Dropdown Menu
-function DropdownMenu({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
+function DropdownMenu({ children, className }: { children: React.ReactNode; className?: string }) {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
@@ -20,13 +14,13 @@ function DropdownMenu({
   React.useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const menu = event.target as HTMLElement;
-      if (menu && !menu.closest(".dropdown-menu")) {
+      if (menu && !menu.closest('.dropdown-menu')) {
         closeMenu();
       }
     };
 
-    document.addEventListener("click", handleClickOutside);
-    return () => document.removeEventListener("click", handleClickOutside);
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
   }, []);
 
   const items = React.Children.map(children, (child) =>
@@ -36,15 +30,11 @@ function DropdownMenu({
           toggleMenu,
           closeMenu,
         })
-      : child
+      : child,
   );
 
   return (
-    <div
-      className={cn("relative inline-block text-left dropdown-menu", className)}
-    >
-      {items}
-    </div>
+    <div className={cn('relative inline-block text-left dropdown-menu', className)}>{items}</div>
   );
 }
 
@@ -103,8 +93,8 @@ function DropdownMenuContent({
       <div
         id="dropdown-menu-content"
         className={cn(
-          "absolute mt-2 w-full rounded-xl bg-card shadow-lg z-10 border border-border px-2",
-          className
+          'absolute mt-2 w-full rounded-xl bg-card shadow-lg z-10 border border-border px-2',
+          className,
         )}
         role="menu"
         aria-hidden={!isOpen}
@@ -134,8 +124,8 @@ function DropdownMenuItem({
         closeMenu?.();
       }}
       className={cn(
-        "cursor-pointer block px-4 py-2 text-sm rounded-xl text-foreground hover:bg-accent",
-        className
+        'cursor-pointer block px-4 py-2 text-sm rounded-xl text-foreground hover:bg-accent',
+        className,
       )}
       role="menuitem"
     >
@@ -144,9 +134,4 @@ function DropdownMenuItem({
   );
 }
 
-export {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-};
+export { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger };

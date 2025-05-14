@@ -1,15 +1,11 @@
-"use client";
+'use client';
 
-import * as React from "react";
+import * as React from 'react';
 
 // Components
-import { Button } from "@/components/ui/button";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
-import { cn } from "@/lib/utils";
+import { Button } from '@/components/ui/button';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { cn } from '@/lib/utils';
 
 interface CodeBlockWrapperProps extends React.HTMLAttributes<HTMLDivElement> {
   expandButtonTitle?: string;
@@ -18,7 +14,7 @@ interface CodeBlockWrapperProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export function CodeBlockWrapper({
-  expandButtonTitle = "View Code",
+  expandButtonTitle = 'View Code',
   className,
   children,
   fileName,
@@ -37,25 +33,18 @@ export function CodeBlockWrapper({
           </div>
 
           <CollapsibleTrigger asChild>
-            <Button
-              variant="link"
-              size="sm"
-              className="text-foreground text-xs"
-            >
-              {isOpened ? "Collapse" : expandButtonTitle}
+            <Button variant="link" size="sm" className="text-foreground text-xs">
+              {isOpened ? 'Collapse' : expandButtonTitle}
             </Button>
           </CollapsibleTrigger>
         </div>
 
-        <div className={cn("relative overflow-hidden", className)} {...props}>
-          <CollapsibleContent
-            forceMount
-            className={cn("overflow-hidden", !isOpened && "max-h-32")}
-          >
+        <div className={cn('relative overflow-hidden', className)} {...props}>
+          <CollapsibleContent forceMount className={cn('overflow-hidden', !isOpened && 'max-h-32')}>
             <div
               className={cn(
-                "[&_[data-rehype-pretty-code-figure]]:my-0 [&_pre]:max-h-[650px] [&_pre]:pb-[100px] [&_[data-rehype-pretty-code-figure]]:rounded-none [&_pre]:rounded-none",
-                !isOpened ? "[&_pre]:overflow-hidden" : "[&_pre]:overflow-auto"
+                '[&_[data-rehype-pretty-code-figure]]:my-0 [&_pre]:max-h-[650px] [&_pre]:pb-[100px] [&_[data-rehype-pretty-code-figure]]:rounded-none [&_pre]:rounded-none',
+                !isOpened ? '[&_pre]:overflow-hidden' : '[&_pre]:overflow-auto',
               )}
             >
               {children}

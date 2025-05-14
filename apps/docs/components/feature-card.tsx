@@ -1,7 +1,7 @@
-import { JSX } from "react";
+import { JSX } from 'react';
 
 // Components
-import { Card, CardContent, CardDescription, CardHeader } from "./ui/card";
+import { Card, CardContent, CardDescription, CardHeader } from './ui/card';
 
 interface FeatureCardProps {
   icon: JSX.Element;

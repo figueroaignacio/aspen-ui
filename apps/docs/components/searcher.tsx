@@ -1,19 +1,19 @@
-"use client";
+'use client';
 
 // Hooks
-import { useTranslations } from "next-intl";
-import { useEffect, useRef, useState } from "react";
+import { useTranslations } from 'next-intl';
+import { useEffect, useRef, useState } from 'react';
 
 // Components
-import { Link } from "@/i18n/navigation";
+import { Link } from '@/i18n/navigation';
 import {
   CodeIcon,
   Cross2Icon,
   FileIcon,
   MagnifyingGlassIcon,
   RocketIcon,
-} from "@radix-ui/react-icons";
-import { Button } from "./ui/button";
+} from '@radix-ui/react-icons';
+import { Button } from './ui/button';
 import {
   Dialog,
   DialogClose,
@@ -21,7 +21,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "./ui/dialog";
+} from './ui/dialog';
 
 interface SearchResultItem {
   title: string;
@@ -30,24 +30,24 @@ interface SearchResultItem {
 }
 
 export function Searcher() {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState<SearchResultItem[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const t = useTranslations();
   const docsNavigation: {
     title: string;
     items: { title: string; href: string }[];
-  }[] = t.raw("ui.docsNavigation");
+  }[] = t.raw('ui.docsNavigation');
 
   const getCategoryIcon = (category: string) => {
     const lowerCaseCategory = category.toLowerCase();
 
     switch (lowerCaseCategory) {
-      case "getting started":
-      case "comenzando":
+      case 'getting started':
+      case 'comenzando':
         return <RocketIcon className="h-4 w-4" />;
-      case "components":
-      case "componentes":
+      case 'components':
+      case 'componentes':
         return <CodeIcon className="h-4 w-4" />;
       default:
         return <FileIcon className="h-4 w-4" />;
@@ -71,7 +71,7 @@ export function Searcher() {
   };
 
   useEffect(() => {
-    if (searchQuery.trim() === "") {
+    if (searchQuery.trim() === '') {
       setSearchResults([]);
       return;
     }
@@ -84,7 +84,7 @@ export function Searcher() {
         item.title.toLowerCase() === query ||
         item.href.toLowerCase() === query ||
         item.title.toLowerCase().includes(query) ||
-        item.href.toLowerCase().includes(query)
+        item.href.toLowerCase().includes(query),
     );
 
     filtered.sort((a, b) => {
@@ -93,11 +93,7 @@ export function Searcher() {
       const aExactHrefMatch = a.href.toLowerCase() === query ? -1 : 0;
       const bExactHrefMatch = b.href.toLowerCase() === query ? -1 : 0;
 
-      return (
-        aExactTitleMatch +
-        aExactHrefMatch -
-        (bExactTitleMatch + bExactHrefMatch)
-      );
+      return aExactTitleMatch + aExactHrefMatch - (bExactTitleMatch + bExactHrefMatch);
     });
 
     setSearchResults(filtered);
@@ -109,7 +105,7 @@ export function Searcher() {
         inputRef.current?.focus();
       }, 100);
     } else {
-      setSearchQuery("");
+      setSearchQuery('');
     }
   };
 
@@ -117,7 +113,7 @@ export function Searcher() {
     <Dialog onOpenChange={handleDialogOpenChange}>
       <DialogTrigger asChild>
         <Button variant="outline" size="lg" className="gap-2">
-          <span className="font-light">{t("components.searcher.label")}</span>
+          <span className="font-light">{t('components.searcher.label')}</span>
           <MagnifyingGlassIcon className="h-4 w-4" />
         </Button>
       </DialogTrigger>
@@ -139,7 +135,7 @@ export function Searcher() {
             {searchQuery && (
               <Cross2Icon
                 className="absolute right-2 top-2.5 h-4 w-4 text-muted-foreground cursor-pointer hover:text-foreground"
-                onClick={() => setSearchQuery("")}
+                onClick={() => setSearchQuery('')}
               />
             )}
           </div>
@@ -153,16 +149,11 @@ export function Searcher() {
                     className="py-2 px-3 hover:bg-primary rounded-sm text-foreground active:scale-95 transition-transform duration-200 ring-primary ring-offset-background text-sm"
                   >
                     <DialogClose className="w-full h-full">
-                      <Link
-                        href={item.href}
-                        className="flex items-center gap-x-4"
-                      >
+                      <Link href={item.href} className="flex items-center gap-x-4">
                         {getCategoryIcon(item.category)}
                         <div className="flex justify-between items-center w-full">
                           <div className="text-sm">{item.title}</div>
-                          <div className="text-xs text-muted-foreground">
-                            {item.category}
-                          </div>
+                          <div className="text-xs text-muted-foreground">{item.category}</div>
                         </div>
                       </Link>
                     </DialogClose>
@@ -171,17 +162,13 @@ export function Searcher() {
               </ul>
             </div>
           ) : searchQuery ? (
-            <div className="text-center py-8 text-muted-foreground">
-              No results found.
-            </div>
+            <div className="text-center py-8 text-muted-foreground">No results found.</div>
           ) : (
             <div className="max-h-64 overflow-hidden">
               <div className="overflow-y-auto max-h-64 pr-2">
                 {docsNavigation.map((section) => (
                   <div key={section.title}>
-                    <h2 className="text-xs text-muted-foreground my-4">
-                      {section.title}
-                    </h2>
+                    <h2 className="text-xs text-muted-foreground my-4">{section.title}</h2>
                     <ul className="space-y-3">
                       {section.items.map((item) => (
                         <li
@@ -189,10 +176,7 @@ export function Searcher() {
                           className="py-2 px-3 hover:bg-secondary rounded-xl text-foreground active:scale-95 transition-transform duration-200 ring-primary ring-offset-background text-sm"
                         >
                           <DialogClose className="w-full h-full">
-                            <Link
-                              href={item.href}
-                              className="flex items-center gap-x-4"
-                            >
+                            <Link href={item.href} className="flex items-center gap-x-4">
                               {getCategoryIcon(section.title)}
                               {item.title}
                             </Link>

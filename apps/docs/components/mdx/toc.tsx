@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import * as React from "react";
+import * as React from 'react';
 
 // Hooks
-import { useMounted } from "@/hooks/use-mounted";
+import { useMounted } from '@/hooks/use-mounted';
 
 // Utils
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
 interface TocEntry {
   items?: TocEntry[];
@@ -26,9 +26,9 @@ export function Toc({ toc }: TocProps) {
             .flatMap((item) => [item.url, item?.items?.map((item) => item.url)])
             .flat()
             .filter(Boolean)
-            .map((id) => id?.split("#")[1])
+            .map((id) => id?.split('#')[1])
         : [],
-    [toc]
+    [toc],
   );
   const activeHeading = useActiveItem(itemIds);
   const mounted = useMounted();
@@ -42,7 +42,7 @@ export function Toc({ toc }: TocProps) {
 }
 
 function useActiveItem(itemIds: (string | undefined)[]) {
-  const [activeId, setActiveId] = React.useState<string>("");
+  const [activeId, setActiveId] = React.useState<string>('');
 
   React.useEffect(() => {
     const observer = new IntersectionObserver(
@@ -53,7 +53,7 @@ function useActiveItem(itemIds: (string | undefined)[]) {
           }
         });
       },
-      { rootMargin: `0% 0% -60% 0%` }
+      { rootMargin: `0% 0% -60% 0%` },
     );
 
     itemIds?.forEach((id) => {
@@ -92,27 +92,23 @@ interface TreeProps {
 
 function Tree({ tree, level = 1, activeItem }: TreeProps) {
   return tree.length && level < 3 ? (
-    <ul className={cn("m-0 list-none text-sm", { "pl-4": level !== 1 })}>
+    <ul className={cn('m-0 list-none text-sm', { 'pl-4': level !== 1 })}>
       {tree.map((item, index) => {
         return (
-          <li key={index} className={cn("mt-0 pt-2")}>
+          <li key={index} className={cn('mt-0 pt-2')}>
             <a
               href={item.url}
               className={cn(
-                "inline-block no-underline hover:underline hover:text-foreground transition-all duration-150 px-1 py-0.5 text-xs",
+                'inline-block no-underline hover:underline hover:text-foreground transition-all duration-150 px-1 py-0.5 text-xs',
                 item.url === `#${activeItem}`
-                  ? "font-medium underline text-foreground"
-                  : "text-muted-foreground"
+                  ? 'font-medium underline text-foreground'
+                  : 'text-muted-foreground',
               )}
             >
               {item.title}
             </a>
             {item.items?.length ? (
-              <Tree
-                tree={item.items}
-                level={level + 1}
-                activeItem={activeItem}
-              />
+              <Tree tree={item.items} level={level + 1} activeItem={activeItem} />
             ) : null}
           </li>
         );

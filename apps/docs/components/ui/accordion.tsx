@@ -1,55 +1,44 @@
-"use client";
+'use client';
 
-import * as React from "react";
+import * as React from 'react';
 
-const cn = (...classes: (string | boolean | undefined)[]) =>
-  classes.filter(Boolean).join(" ");
+const cn = (...classes: (string | boolean | undefined)[]) => classes.filter(Boolean).join(' ');
 
 interface AccordionProps {
-  type?: "single" | "multiple";
+  type?: 'single' | 'multiple';
   defaultValue?: string;
   children?: React.ReactNode;
   className?: string;
   ref?: React.RefObject<HTMLDivElement>;
 }
 
-function Accordion({
-  type = "single",
-  defaultValue,
-  children,
-  className,
-  ref,
-}: AccordionProps) {
-  const [openItems, setOpenItems] = React.useState<string[]>(
-    defaultValue ? [defaultValue] : []
-  );
+function Accordion({ type = 'single', defaultValue, children, className, ref }: AccordionProps) {
+  const [openItems, setOpenItems] = React.useState<string[]>(defaultValue ? [defaultValue] : []);
 
   const handleToggle = (value: string) => {
     setOpenItems((prev) =>
-      type === "single"
+      type === 'single'
         ? prev.includes(value)
           ? []
           : [value]
         : prev.includes(value)
         ? prev.filter((item) => item !== value)
-        : [...prev, value]
+        : [...prev, value],
     );
   };
 
   return (
-    <div ref={ref} className={cn("w-full", className)}>
+    <div ref={ref} className={cn('w-full', className)}>
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
           ? React.cloneElement(child, {
               isOpen: openItems.includes(
-                (child as React.ReactElement<AccordionItemProps>).props.value
+                (child as React.ReactElement<AccordionItemProps>).props.value,
               ),
               onToggle: () =>
-                handleToggle(
-                  (child as React.ReactElement<AccordionItemProps>).props.value
-                ),
+                handleToggle((child as React.ReactElement<AccordionItemProps>).props.value),
             } as Partial<AccordionItemProps>)
-          : child
+          : child,
       )}
     </div>
   );
@@ -64,22 +53,16 @@ interface AccordionItemProps {
   ref?: React.RefObject<HTMLDivElement>;
 }
 
-function AccordionItem({
-  children,
-  isOpen,
-  onToggle,
-  className,
-  ref,
-}: AccordionItemProps) {
+function AccordionItem({ children, isOpen, onToggle, className, ref }: AccordionItemProps) {
   return (
-    <div ref={ref} className={cn("border-b", className)}>
+    <div ref={ref} className={cn('border-b', className)}>
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
-          ? React.cloneElement(
-              child as React.ReactElement<AccordionItemProps>,
-              { isOpen, onToggle }
-            )
-          : child
+          ? React.cloneElement(child as React.ReactElement<AccordionItemProps>, {
+              isOpen,
+              onToggle,
+            })
+          : child,
       )}
     </div>
   );
@@ -93,21 +76,15 @@ interface AccordionTriggerProps {
   ref?: React.RefObject<HTMLButtonElement>;
 }
 
-function AccordionTrigger({
-  children,
-  isOpen,
-  onToggle,
-  className,
-  ref,
-}: AccordionTriggerProps) {
+function AccordionTrigger({ children, isOpen, onToggle, className, ref }: AccordionTriggerProps) {
   return (
     <button
       ref={ref}
       onClick={onToggle}
       type="button"
       className={cn(
-        "flex w-full items-center justify-between py-4 text-sm font-medium transition-all hover:underline",
-        className
+        'flex w-full items-center justify-between py-4 text-sm font-medium transition-all hover:underline',
+        className,
       )}
     >
       {children}
@@ -122,8 +99,8 @@ function AccordionTrigger({
         strokeLinecap="round"
         strokeLinejoin="round"
         className={cn(
-          "h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200",
-          isOpen && "rotate-180"
+          'h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200',
+          isOpen && 'rotate-180',
         )}
       >
         <path d="m6 9 6 6 6-6" />
@@ -139,19 +116,14 @@ interface AccordionContentProps {
   ref?: React.RefObject<HTMLDivElement>;
 }
 
-function AccordionContent({
-  children,
-  isOpen,
-  className,
-  ref,
-}: AccordionContentProps) {
+function AccordionContent({ children, isOpen, className, ref }: AccordionContentProps) {
   return (
     <div
       ref={ref}
       className={cn(
-        "overflow-hidden text-sm transition-[max-height] duration-300 ease-in-out",
-        isOpen ? "max-h-96" : "max-h-0",
-        className
+        'overflow-hidden text-sm transition-[max-height] duration-300 ease-in-out',
+        isOpen ? 'max-h-96' : 'max-h-0',
+        className,
       )}
     >
       <div className="pb-4 pt-0">{children}</div>

@@ -1,7 +1,7 @@
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from 'next-intl/server';
 
 // Sections
-import { Hero } from "@/sections/hero";
+import { Hero } from '@/sections/hero';
 
 type PageProps = {
   params: Promise<{
