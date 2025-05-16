@@ -15,8 +15,11 @@ export default async function HomePage({ params }: PageProps) {
   setRequestLocale(locale);
 
   return (
-    <div className="pb-16">
-      <Hero />
-    </div>
+    <>
+      <div className="bg-grid-pattern absolute inset-0 h-full w-full"></div>
+      <div className="pb-16">
+        <Hero />
+      </div>
+    </>
   );
 }

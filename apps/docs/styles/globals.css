@@ -24,6 +24,7 @@
   --input: #e2e8f0;
   --ring: #3b82f6;
   --radius: 0.5rem;
+  --grid-color: rgba(0, 0, 0, 0.06);
 }
 
 .dark {
@@ -46,6 +47,7 @@
   --border: #1f2227;
   --input: #131519;
   --ring: #2563eb;
+  --grid-color: rgba(255, 255, 255, 0.01);
 }
 
 @theme inline {
@@ -100,7 +102,7 @@
 }
 
 .gradient-text {
-  @apply bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-transparent bg-clip-text;
+  @apply bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent;
 }
 
 .highlighted-text {
@@ -112,39 +114,8 @@
 }
 
 .bg-grid-pattern {
-  background-image: linear-gradient(to right, var(--muted) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--muted) 1px, transparent 1px);
+  background-image:
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
   background-size: 20px 20px;
-}
-
-.bg-diagonal-lines {
-  background-image: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 10px,
-    var(--muted) 10px,
-    var(--muted) 11px
-  );
-}
-
-.bg-dots {
-  background-image: radial-gradient(var(--muted) 1px, transparent 1px);
-  background-size: 16px 16px;
-}
-
-.bg-highlighted-gradient {
-  @apply absolute inset-0 blur-lg;
-  background: radial-gradient(
-    70% 80% at center 0%,
-    rgba(243, 244, 246, 0.4) 5%,
-    rgba(243, 244, 246, 0) 60%
-  );
-}
-
-.dark .bg-highlighted-gradient {
-  background: radial-gradient(
-    60% 30% at center 0%,
-    rgba(31, 41, 55, 0.7) 1%,
-    rgba(17, 24, 39, 0) 70%
-  );
 }
