@@ -1,15 +1,11 @@
 {
   "hero": {
-    "badge": "Open-source UI components",
-    "title": "UI Components for your web projects",
-    "subtitle": "A collection of customizable, open-source components that work seamlessly with your workflow.",
+    "badge": "React Ecosystem",
+    "title": "React component system for building modern apps.",
+    "subtitle": "An indie tool to craft your own design system, using CSS Modules or Tailwind.",
     "actions": {
-      "getStarted": "Get Started"
-    },
-    "ecosystem": "Perfect for projects built with React ecosystem",
-    "stats": {
-      "stars": "Over 0 start on GitHub xD",
-      "components": "Over 20 components ready to use"
+      "getStarted": "Get Started",
+      "exploreComponents": "Explore components"
     }
   },
   "features": {

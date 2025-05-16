@@ -48,3 +48,21 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = 'Button';
 
 export { Button, buttonVariants };
+
+interface ButtonGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+  children: React.ReactNode;
+}
+
+const ButtonGroup = React.forwardRef<HTMLDivElement, ButtonGroupProps>(
+  ({ className, children, ...props }, ref) => {
+    return (
+      <div ref={ref} className={cn('inline-flex items-center gap-1', className)} {...props}>
+        {children}
+      </div>
+    );
+  },
+);
+
+ButtonGroup.displayName = 'ButtonGroup';
+
+export { ButtonGroup };

@@ -24,7 +24,7 @@
   --input: #e2e8f0;
   --ring: #3b82f6;
   --radius: 0.5rem;
-  --grid-color: rgba(0, 0, 0, 0.06);
+  --grid-color: rgba(0, 0, 0, 0.03);
 }
 
 .dark {
@@ -118,4 +118,5 @@
     linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
     linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
   background-size: 20px 20px;
+  z-index: -100;
 }
